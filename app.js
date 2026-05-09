@@ -75,20 +75,76 @@ function blankWord(word, difficulty, wordSeed) {
   return { parts };
 }
 
-function process(text, difficulty) {
-  if (!text.trim()) return { html: '', blankedCount: 0, totalWords: 0 };
+// Extrait le texte brut depuis du HTML (pour compter les mots du markdown)
+function htmlToPlainText(html) {
+  const tmp = document.createElement('div');
+  tmp.innerHTML = html;
+  return tmp.textContent;
+}
 
-  const tokens = text.match(WORD_RE) || [];
+// Applique les blancs sur les nœuds texte d'un arbre DOM (pour le rendu markdown)
+function applyBlankingToNode(node, wordsToBlank, difficulty, globalSeed, counter) {
+  if (node.nodeType === Node.TEXT_NODE) {
+    const text = node.textContent;
+    const tokens = text.match(WORD_RE);
+    if (!tokens) return;
+
+    let hasBlank = false;
+    let result = '';
+    for (const token of tokens) {
+      if (LETTER_RE.test(token[0]) && wordsToBlank.has(token.toLowerCase())) {
+        hasBlank = true;
+        counter.count++;
+        const wordSeed = (globalSeed ^ hashStr(token.toLowerCase())) >>> 0;
+        const { parts } = blankWord(token, difficulty, wordSeed);
+        for (const p of parts)
+          result += p.blank ? `<span class="blank">${p.text}</span>` : escHtml(p.text);
+      } else {
+        result += escHtml(token);
+      }
+    }
+    if (hasBlank) {
+      const span = document.createElement('span');
+      span.innerHTML = result;
+      node.parentNode.replaceChild(span, node);
+    }
+  } else if (node.nodeName !== 'SCRIPT' && node.nodeName !== 'STYLE') {
+    for (const child of [...node.childNodes])
+      applyBlankingToNode(child, wordsToBlank, difficulty, globalSeed, counter);
+  }
+}
+
+function buildWordsToBlank(plainText, difficulty) {
+  const tokens = plainText.match(WORD_RE) || [];
   const wordTokens = tokens.filter(t => LETTER_RE.test(t[0]));
-  if (!wordTokens.length) return { html: escHtml(text), blankedCount: 0, totalWords: 0 };
-
   const unique = [...new Set(wordTokens.map(w => w.toLowerCase()))];
   unique.sort((a, b) => wordComplexity(a) - wordComplexity(b));
-
   const nToBlank = Math.round(unique.length * difficulty);
-  const wordsToBlank = new Set(unique.slice(unique.length - nToBlank));
+  return { wordsToBlank: new Set(unique.slice(unique.length - nToBlank)), totalWords: wordTokens.length };
+}
+
+function process(text, difficulty, isMarkdown) {
+  if (!text.trim()) return { html: '', blankedCount: 0, totalWords: 0 };
 
   const globalSeed = hashStr(text);
+
+  if (isMarkdown) {
+    const rendered = marked.parse(text);
+    const plain = htmlToPlainText(rendered);
+    const { wordsToBlank, totalWords } = buildWordsToBlank(plain, difficulty);
+
+    const div = document.createElement('div');
+    div.innerHTML = rendered;
+    const counter = { count: 0 };
+    applyBlankingToNode(div, wordsToBlank, difficulty, globalSeed, counter);
+    return { html: div.innerHTML, blankedCount: counter.count, totalWords };
+  }
+
+  // Texte brut
+  const { wordsToBlank, totalWords } = buildWordsToBlank(text, difficulty);
+  if (!totalWords) return { html: escHtml(text), blankedCount: 0, totalWords: 0 };
+
+  const tokens = text.match(WORD_RE) || [];
   let html = '', blankedCount = 0;
 
   for (const token of tokens) {
@@ -103,7 +159,7 @@ function process(text, difficulty) {
     }
   }
 
-  return { html, blankedCount, totalWords: wordTokens.length };
+  return { html, blankedCount, totalWords };
 }
 
 function escHtml(s) {
@@ -119,6 +175,8 @@ const statsIn   = document.getElementById('statsIn');
 const statsOut  = document.getElementById('statsOut');
 const fileInput = document.getElementById('fileInput');
 
+let isMarkdown = false;
+
 function updateSliderTrack() {
   slider.style.setProperty('--pct', slider.value + '%');
 }
@@ -132,8 +190,9 @@ function render() {
   const words = (text.match(WORD_RE) || []).filter(t => LETTER_RE.test(t[0]));
   statsIn.innerHTML = `<span>${words.length}</span> mots`;
 
-  const { html, blankedCount, totalWords } = process(text, difficulty);
+  const { html, blankedCount, totalWords } = process(text, difficulty, isMarkdown);
   outputEl.innerHTML = html;
+  outputEl.dataset.mode = isMarkdown ? 'markdown' : 'plain';
 
   const pct = totalWords ? Math.round(blankedCount / totalWords * 100) : 0;
   statsOut.innerHTML = `<span>${blankedCount}</span> mots masqués sur <span>${totalWords}</span> (${pct}%)`;
@@ -145,6 +204,7 @@ inputEl.addEventListener('input', render);
 fileInput.addEventListener('change', e => {
   const file = e.target.files[0];
   if (!file) return;
+  isMarkdown = file.name.endsWith('.md');
   const reader = new FileReader();
   reader.onload = ev => { inputEl.value = ev.target.result; render(); };
   reader.readAsText(file, 'utf-8');

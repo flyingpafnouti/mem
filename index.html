@@ -29,8 +29,8 @@
 <div class="layout">
   <div class="panel">
     <div class="panel-label">Texte source</div>
-    <label class="file-btn" for="fileInput">Charger un fichier .txt</label>
-    <input type="file" id="fileInput" accept=".txt">
+    <label class="file-btn" for="fileInput">Charger un fichier .txt / .md</label>
+    <input type="file" id="fileInput" accept=".txt,.md">
     <textarea id="input" spellcheck="false" placeholder="Collez ou chargez votre texte ici…"></textarea>
     <div class="stats" id="statsIn"></div>
   </div>
@@ -42,6 +42,7 @@
   </div>
 </div>
 
+<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
 <script src="app.js"></script>
 </body>
 </html>
