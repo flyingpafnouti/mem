@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Memorize</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    font-family: 'Segoe UI', system-ui, sans-serif;
+    background: #0f0f13;
+    color: #e2e2e2;
+    min-height: 100vh;
+    padding: 2rem;
+  }
+
+  h1 {
+    font-size: 1.4rem;
+    font-weight: 600;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: #fff;
+    margin-bottom: 2rem;
+  }
+
+  h1 span {
+    color: #7c6af7;
+  }
+
+  .layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+    max-width: 1200px;
+  }
+
+  @media (max-width: 768px) {
+    .layout { grid-template-columns: 1fr; }
+  }
+
+  .panel {
+    background: #1a1a24;
+    border: 1px solid #2a2a38;
+    border-radius: 12px;
+    padding: 1.25rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  .panel-label {
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: #666;
+  }
+
+  textarea {
+    width: 100%;
+    height: 340px;
+    background: #111118;
+    border: 1px solid #2a2a38;
+    border-radius: 8px;
+    color: #c8c8d8;
+    font-family: 'Courier New', monospace;
+    font-size: 0.85rem;
+    line-height: 1.7;
+    padding: 1rem;
+    resize: vertical;
+    outline: none;
+    transition: border-color 0.2s;
+  }
+
+  textarea:focus { border-color: #7c6af7; }
+
+  .file-btn {
+    display: inline-block;
+    padding: 0.4rem 1rem;
+    background: #2a2a38;
+    border: 1px solid #3a3a50;
+    border-radius: 6px;
+    color: #aaa;
+    font-size: 0.8rem;
+    cursor: pointer;
+    transition: background 0.2s, color 0.2s;
+    width: fit-content;
+  }
+
+  .file-btn:hover { background: #3a3a50; color: #fff; }
+  input[type="file"] { display: none; }
+
+  /* Slider */
+  .slider-wrap {
+    background: #1a1a24;
+    border: 1px solid #2a2a38;
+    border-radius: 12px;
+    padding: 1.25rem 1.5rem;
+    max-width: 1200px;
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+  }
+
+  .slider-wrap label {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: #666;
+    white-space: nowrap;
+  }
+
+  .difficulty-value {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #7c6af7;
+    min-width: 2.5rem;
+    text-align: right;
+  }
+
+  input[type="range"] {
+    flex: 1;
+    -webkit-appearance: none;
+    height: 4px;
+    border-radius: 2px;
+    background: linear-gradient(to right, #7c6af7 0%, #7c6af7 var(--pct, 0%), #2a2a38 var(--pct, 0%), #2a2a38 100%);
+    outline: none;
+    cursor: pointer;
+  }
+
+  input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    background: #7c6af7;
+    box-shadow: 0 0 8px #7c6af755;
+    cursor: pointer;
+    transition: box-shadow 0.2s;
+  }
+
+  input[type="range"]::-webkit-slider-thumb:hover {
+    box-shadow: 0 0 14px #7c6af7aa;
+  }
+
+  /* Output */
+  #output {
+    height: 340px;
+    overflow-y: auto;
+    background: #111118;
+    border: 1px solid #2a2a38;
+    border-radius: 8px;
+    padding: 1rem;
+    font-family: 'Courier New', monospace;
+    font-size: 0.85rem;
+    line-height: 1.7;
+    white-space: pre-wrap;
+    word-break: break-word;
+    color: #c8c8d8;
+  }
+
+  .blank {
+    color: #7c6af7;
+    font-weight: bold;
+  }
+
+  /* Stats bar */
+  .stats {
+    font-size: 0.72rem;
+    color: #555;
+  }
+
+  .stats span { color: #7c6af7; }
+</style>
+</head>
+<body>
+
+<h1>Memo<span>rize</span></h1>
+
+<div class="slider-wrap" style="margin-bottom:1.5rem; max-width:1200px;">
+  <label>Difficulté</label>
+  <input type="range" id="slider" min="0" max="100" value="0" step="1">
+  <div class="difficulty-value" id="diffVal">0.00</div>
+</div>
+
+<div class="layout">
+  <div class="panel">
+    <div class="panel-label">Texte source</div>
+    <label class="file-btn" for="fileInput">Charger un fichier .txt</label>
+    <input type="file" id="fileInput" accept=".txt">
+    <textarea id="input" spellcheck="false" placeholder="Collez ou chargez votre texte ici…"></textarea>
+    <div class="stats" id="statsIn"></div>
+  </div>
+
+  <div class="panel">
+    <div class="panel-label">Résultat</div>
+    <div id="output"></div>
+    <div class="stats" id="statsOut"></div>
+  </div>
+</div>
+
+<script>
+// ── PRNG déterministe (mulberry32) ──────────────────────────────────────────
+function mulberry32(seed) {
+  return () => {
+    seed |= 0;
+    seed = (seed + 0x6D2B79F5) | 0;
+    let t = Math.imul(seed ^ (seed >>> 15), 1 | seed);
+    t = (t + Math.imul(t ^ (t >>> 7), 61 | t)) ^ t;
+    return ((t ^ (t >>> 14)) >>> 0) / 4294967296;
+  };
+}
+
+function hashStr(s) {
+  let h = 2166136261;
+  for (let i = 0; i < s.length; i++) {
+    h ^= s.charCodeAt(i);
+    h = Math.imul(h, 16777619);
+  }
+  return h >>> 0;
+}
+
+function fisherYates(arr, rng) {
+  const a = [...arr];
+  for (let i = a.length - 1; i > 0; i--) {
+    const j = Math.floor(rng() * (i + 1));
+    [a[i], a[j]] = [a[j], a[i]];
+  }
+  return a;
+}
+
+// ── Algorithme ──────────────────────────────────────────────────────────────
+const WORD_RE = /[a-zA-ZÀ-ÿ']+|[^a-zA-ZÀ-ÿ']+/g;
+const LETTER_RE = /[a-zA-ZÀ-ÿ]/;
+
+function wordComplexity(w) {
+  return [...w].filter(c => LETTER_RE.test(c)).length;
+}
+
+function blankWord(word, difficulty, wordSeed) {
+  const chars = [...word];
+  const blankable = chars.map((c, i) => i).filter(i => i > 0 && LETTER_RE.test(chars[i]));
+  if (!blankable.length) return { parts: [{ text: word, blank: false }] };
+
+  const nBlank = Math.min(Math.max(1, Math.round(blankable.length * difficulty)), blankable.length);
+  const rng = mulberry32(wordSeed);
+  const toBlank = new Set(fisherYates(blankable, rng).slice(0, nBlank));
+
+  const parts = [];
+  let cur = '';
+  let curBlank = false;
+  for (let i = 0; i < chars.length; i++) {
+    const isBlank = toBlank.has(i);
+    if (isBlank !== curBlank && cur !== '') {
+      parts.push({ text: cur, blank: curBlank });
+      cur = '';
+    }
+    cur += isBlank ? '_' : chars[i];
+    curBlank = isBlank;
+  }
+  if (cur) parts.push({ text: cur, blank: curBlank });
+  return { parts };
+}
+
+function process(text, difficulty) {
+  if (!text.trim()) return { html: '', blankedCount: 0, totalWords: 0 };
+
+  const tokens = text.match(WORD_RE) || [];
+  const wordTokens = tokens.filter(t => LETTER_RE.test(t[0]));
+
+  if (!wordTokens.length) return { html: escHtml(text), blankedCount: 0, totalWords: 0 };
+
+  const unique = [...new Set(wordTokens.map(w => w.toLowerCase()))];
+  unique.sort((a, b) => wordComplexity(a) - wordComplexity(b));
+
+  const nToBlank = Math.round(unique.length * difficulty);
+  const wordsToBlank = new Set(unique.slice(unique.length - nToBlank));
+
+  const globalSeed = hashStr(text);
+  let html = '';
+  let blankedCount = 0;
+
+  for (const token of tokens) {
+    if (LETTER_RE.test(token[0]) && wordsToBlank.has(token.toLowerCase())) {
+      blankedCount++;
+      const wordSeed = (globalSeed ^ hashStr(token.toLowerCase())) >>> 0;
+      const { parts } = blankWord(token, difficulty, wordSeed);
+      for (const p of parts) {
+        html += p.blank
+          ? `<span class="blank">${p.text}</span>`
+          : escHtml(p.text);
+      }
+    } else {
+      html += escHtml(token);
+    }
+  }
+
+  return { html, blankedCount, totalWords: wordTokens.length };
+}
+
+function escHtml(s) {
+  return s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+}
+
+// ── UI ──────────────────────────────────────────────────────────────────────
+const slider   = document.getElementById('slider');
+const diffVal  = document.getElementById('diffVal');
+const inputEl  = document.getElementById('input');
+const outputEl = document.getElementById('output');
+const statsIn  = document.getElementById('statsIn');
+const statsOut = document.getElementById('statsOut');
+const fileInput = document.getElementById('fileInput');
+
+function updateSliderTrack() {
+  slider.style.setProperty('--pct', slider.value + '%');
+}
+
+function render() {
+  const difficulty = slider.value / 100;
+  diffVal.textContent = difficulty.toFixed(2);
+  updateSliderTrack();
+
+  const text = inputEl.value;
+  const words = (text.match(WORD_RE) || []).filter(t => LETTER_RE.test(t[0]));
+  statsIn.innerHTML = `<span>${words.length}</span> mots`;
+
+  const { html, blankedCount, totalWords } = process(text, difficulty);
+  outputEl.innerHTML = html;
+
+  const pct = totalWords ? Math.round(blankedCount / totalWords * 100) : 0;
+  statsOut.innerHTML = `<span>${blankedCount}</span> mots masqués sur <span>${totalWords}</span> (${pct}%)`;
+}
+
+slider.addEventListener('input', render);
+inputEl.addEventListener('input', render);
+
+fileInput.addEventListener('change', e => {
+  const file = e.target.files[0];
+  if (!file) return;
+  const reader = new FileReader();
+  reader.onload = ev => {
+    inputEl.value = ev.target.result;
+    render();
+  };
+  reader.readAsText(file, 'utf-8');
+});
+
+// Texte de démo au chargement
+inputEl.value = `La robotique moderne repose sur trois piliers fondamentaux : la perception, la planification et l'actuation.
+Les capteurs proprioceptifs mesurent l'état interne du robot, tandis que les capteurs extéroceptifs,
+comme les lidars et les caméras stéréoscopiques, permettent de reconstruire une représentation
+tridimensionnelle de l'environnement.
+
+Les algorithmes de localisation et de cartographie simultanées, connus sous l'acronyme SLAM,
+permettent à un robot autonome de construire une carte de son environnement tout en estimant
+sa propre position à l'intérieur de celle-ci. Ces méthodes reposent généralement sur des filtres
+bayésiens tels que le filtre de Kalman étendu ou les filtres particulaires.
+
+La planification de trajectoire consiste à déterminer une séquence d'états permettant au robot
+de passer d'une configuration initiale à une configuration cible tout en évitant les obstacles.
+Les algorithmes probabilistes comme RRT (Rapidly-exploring Random Trees) et ses variantes
+sont largement utilisés pour résoudre ces problèmes dans des espaces de configuration de haute dimension.`;
+
+render();
+</script>
+</body>
+</html>

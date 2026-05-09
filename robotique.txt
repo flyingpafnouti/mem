@@ -1,0 +1,26 @@
+Fondements de la robotique autonome et des systèmes cyber-physiques
+
+La robotique moderne repose sur trois piliers fondamentaux : la perception, la planification et l'actuation.
+Les capteurs proprioceptifs mesurent l'état interne du robot, tandis que les capteurs extéroceptifs,
+comme les lidars et les caméras stéréoscopiques, permettent de reconstruire une représentation
+tridimensionnelle de l'environnement.
+
+Les algorithmes de localisation et de cartographie simultanées, connus sous l'acronyme SLAM,
+permettent à un robot autonome de construire une carte de son environnement tout en estimant
+sa propre position à l'intérieur de celle-ci. Ces méthodes reposent généralement sur des filtres
+bayésiens tels que le filtre de Kalman étendu ou les filtres particulaires.
+
+La planification de trajectoire consiste à déterminer une séquence d'états permettant au robot
+de passer d'une configuration initiale à une configuration cible tout en évitant les obstacles.
+Les algorithmes probabilistes comme RRT (Rapidly-exploring Random Trees) et ses variantes
+sont largement utilisés pour résoudre ces problèmes dans des espaces de configuration de haute dimension.
+
+Le contrôle en impédance permet de réguler les forces d'interaction entre le robot et son environnement,
+ce qui est essentiel pour les tâches de manipulation délicate et la collaboration homme-robot.
+Les architectures de contrôle hybride position-force exploitent simultanément les deux paradigmes
+pour s'adapter aux contraintes géométriques imposées par le contact.
+
+L'apprentissage par renforcement profond offre une approche prometteuse pour l'acquisition automatique
+de comportements locomoteurs complexes. Des politiques de contrôle peuvent être entraînées
+en simulation puis transférées vers des plateformes physiques grâce aux techniques de domain randomization,
+qui visent à réduire l'écart de distribution entre l'environnement simulé et le monde réel.
