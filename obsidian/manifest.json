@@ -1,0 +1,9 @@
+{
+  "id": "memorizer",
+  "name": "Memorizer",
+  "version": "1.0.0",
+  "minAppVersion": "0.15.0",
+  "description": "Masque des mots dans vos notes pour vous aider à mémoriser.",
+  "author": "gp",
+  "isDesktopOnly": false
+}
