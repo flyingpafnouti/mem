@@ -250,11 +250,32 @@ input[type="range"]::-webkit-slider-thumb {
   background: var(--accent);
   box-shadow: 0 0 8px var(--accent-glow);
   cursor: pointer;
-  transition: box-shadow 0.2s;
+  transition: box-shadow 0.2s, background 0.2s;
 }
 
 input[type="range"]::-webkit-slider-thumb:hover {
   box-shadow: 0 0 14px var(--accent-glow2);
+}
+
+input[type="range"].hardcore {
+  background: linear-gradient(
+    to right,
+    var(--accent)  0%,
+    var(--accent)  50%,
+    #e53 50%,
+    #e53 var(--pct, 50%),
+    var(--border)  var(--pct, 50%),
+    var(--border)  100%
+  );
+}
+
+input[type="range"].hardcore::-webkit-slider-thumb {
+  background: #e53;
+  box-shadow: 0 0 8px #e5333355;
+}
+
+.difficulty-value.hardcore {
+  color: #e53;
 }
 
 /* ── Output ──────────────────────────────────────────────────────────────── */

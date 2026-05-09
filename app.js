@@ -51,12 +51,13 @@ function wordComplexity(w) {
   return [...w].filter(c => LETTER_RE.test(c)).length;
 }
 
-function blankWord(word, difficulty, wordSeed) {
+function blankWord(word, difficulty, wordSeed, hideInitial = false) {
   const chars = [...word];
-  const blankable = chars.map((c, i) => i).filter(i => i > 0 && LETTER_RE.test(chars[i]));
+  const letterDiff = Math.min(difficulty, 1);
+  const blankable = chars.map((c, i) => i).filter(i => (hideInitial ? i >= 0 : i > 0) && LETTER_RE.test(chars[i]));
   if (!blankable.length) return { parts: [{ text: word, blank: false }] };
 
-  const nBlank = Math.min(Math.max(1, Math.round(blankable.length * difficulty)), blankable.length);
+  const nBlank = Math.min(Math.max(1, Math.round(blankable.length * letterDiff)), blankable.length);
   const rng = mulberry32(wordSeed);
   const toBlank = new Set(fisherYates(blankable, rng).slice(0, nBlank));
 
@@ -83,7 +84,7 @@ function htmlToPlainText(html) {
 }
 
 // Applique les blancs sur les nœuds texte d'un arbre DOM (pour le rendu markdown)
-function applyBlankingToNode(node, wordsToBlank, difficulty, globalSeed, counter) {
+function applyBlankingToNode(node, wordsToBlank, hardcoreWords, difficulty, globalSeed, counter) {
   if (node.nodeType === Node.TEXT_NODE) {
     const text = node.textContent;
     const tokens = text.match(WORD_RE);
@@ -92,11 +93,12 @@ function applyBlankingToNode(node, wordsToBlank, difficulty, globalSeed, counter
     let hasBlank = false;
     let result = '';
     for (const token of tokens) {
-      if (LETTER_RE.test(token[0]) && wordsToBlank.has(token.toLowerCase())) {
+      const key = token.toLowerCase();
+      if (LETTER_RE.test(token[0]) && wordsToBlank.has(key)) {
         hasBlank = true;
         counter.count++;
-        const wordSeed = (globalSeed ^ hashStr(token.toLowerCase())) >>> 0;
-        const { parts } = blankWord(token, difficulty, wordSeed);
+        const wordSeed = (globalSeed ^ hashStr(key)) >>> 0;
+        const { parts } = blankWord(token, difficulty, wordSeed, hardcoreWords.has(key));
         for (const p of parts)
           result += p.blank ? `<span class="blank">${p.text}</span>` : escHtml(p.text);
       } else {
@@ -110,7 +112,7 @@ function applyBlankingToNode(node, wordsToBlank, difficulty, globalSeed, counter
     }
   } else if (node.nodeName !== 'SCRIPT' && node.nodeName !== 'STYLE') {
     for (const child of [...node.childNodes])
-      applyBlankingToNode(child, wordsToBlank, difficulty, globalSeed, counter);
+      applyBlankingToNode(child, wordsToBlank, hardcoreWords, difficulty, globalSeed, counter);
   }
 }
 
@@ -119,8 +121,19 @@ function buildWordsToBlank(plainText, difficulty) {
   const wordTokens = tokens.filter(t => LETTER_RE.test(t[0]));
   const unique = [...new Set(wordTokens.map(w => w.toLowerCase()))];
   unique.sort((a, b) => wordComplexity(a) - wordComplexity(b));
-  const nToBlank = Math.round(unique.length * difficulty);
-  return { wordsToBlank: new Set(unique.slice(unique.length - nToBlank)), totalWords: wordTokens.length };
+
+  const clampedDiff  = Math.min(difficulty, 1);
+  const hardcoreFactor = Math.max(0, difficulty - 1); // 0→1 pour d ∈ [1,2]
+
+  const nToBlank = Math.round(unique.length * clampedDiff);
+  const blankedSlice = unique.slice(unique.length - nToBlank);
+  const wordsToBlank = new Set(blankedSlice);
+
+  // Parmi les mots déjà blanqués, les plus complexes perdent aussi leur initiale
+  const nHardcore = Math.round(blankedSlice.length * hardcoreFactor);
+  const hardcoreWords = new Set(blankedSlice.slice(blankedSlice.length - nHardcore));
+
+  return { wordsToBlank, hardcoreWords, totalWords: wordTokens.length };
 }
 
 function process(text, difficulty, isMarkdown) {
@@ -131,27 +144,28 @@ function process(text, difficulty, isMarkdown) {
   if (isMarkdown) {
     const rendered = marked.parse(text);
     const plain = htmlToPlainText(rendered);
-    const { wordsToBlank, totalWords } = buildWordsToBlank(plain, difficulty);
+    const { wordsToBlank, hardcoreWords, totalWords } = buildWordsToBlank(plain, difficulty);
 
     const div = document.createElement('div');
     div.innerHTML = rendered;
     const counter = { count: 0 };
-    applyBlankingToNode(div, wordsToBlank, difficulty, globalSeed, counter);
+    applyBlankingToNode(div, wordsToBlank, hardcoreWords, difficulty, globalSeed, counter);
     return { html: div.innerHTML, blankedCount: counter.count, totalWords };
   }
 
   // Texte brut
-  const { wordsToBlank, totalWords } = buildWordsToBlank(text, difficulty);
+  const { wordsToBlank, hardcoreWords, totalWords } = buildWordsToBlank(text, difficulty);
   if (!totalWords) return { html: escHtml(text), blankedCount: 0, totalWords: 0 };
 
   const tokens = text.match(WORD_RE) || [];
   let html = '', blankedCount = 0;
 
   for (const token of tokens) {
-    if (LETTER_RE.test(token[0]) && wordsToBlank.has(token.toLowerCase())) {
+    const key = token.toLowerCase();
+    if (LETTER_RE.test(token[0]) && wordsToBlank.has(key)) {
       blankedCount++;
-      const wordSeed = (globalSeed ^ hashStr(token.toLowerCase())) >>> 0;
-      const { parts } = blankWord(token, difficulty, wordSeed);
+      const wordSeed = (globalSeed ^ hashStr(key)) >>> 0;
+      const { parts } = blankWord(token, difficulty, wordSeed, hardcoreWords.has(key));
       for (const p of parts)
         html += p.blank ? `<span class="blank">${p.text}</span>` : escHtml(p.text);
     } else {
@@ -188,12 +202,18 @@ hideSourceBtn.addEventListener('click', () => {
 });
 
 function updateSliderTrack() {
-  slider.style.setProperty('--pct', slider.value + '%');
+  // Le slider va de 0 à 200 ; la moitié (100) = difficulté 1
+  const pct = slider.value / 2; // 0–100%
+  slider.style.setProperty('--pct', pct + '%');
+  const hardcore = slider.value > 100;
+  slider.classList.toggle('hardcore', hardcore);
 }
 
 function render() {
   const difficulty = slider.value / 100;
+  const hardcore = difficulty > 1;
   diffVal.textContent = difficulty.toFixed(2);
+  diffVal.classList.toggle('hardcore', hardcore);
   updateSliderTrack();
 
   const text = inputEl.value;
