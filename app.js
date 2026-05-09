@@ -177,6 +177,16 @@ const fileInput = document.getElementById('fileInput');
 
 let isMarkdown = false;
 
+// ── Toggle source ─────────────────────────────────────────────────────────────
+const layout        = document.querySelector('.layout');
+const hideSourceBtn = document.getElementById('hideSourceBtn');
+
+hideSourceBtn.addEventListener('click', () => {
+  const hidden = layout.classList.toggle('source-hidden');
+  hideSourceBtn.textContent = hidden ? 'Afficher source' : 'Masquer source';
+  hideSourceBtn.classList.toggle('active', hidden);
+});
+
 function updateSliderTrack() {
   slider.style.setProperty('--pct', slider.value + '%');
 }

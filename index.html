@@ -27,7 +27,7 @@
 </div>
 
 <div class="layout">
-  <div class="panel">
+  <div class="panel" id="sourcePanel">
     <div class="panel-label">Texte source</div>
     <label class="file-btn" for="fileInput">Charger un fichier .txt / .md</label>
     <input type="file" id="fileInput" accept=".txt,.md">
@@ -36,7 +36,10 @@
   </div>
 
   <div class="panel">
-    <div class="panel-label">Résultat</div>
+    <div class="panel-header">
+      <div class="panel-label">Résultat</div>
+      <button class="hide-btn" id="hideSourceBtn" title="Masquer le texte source">Masquer source</button>
+    </div>
     <div id="output"></div>
     <div class="stats" id="statsOut"></div>
   </div>

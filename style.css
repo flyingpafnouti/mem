@@ -131,11 +131,40 @@ h1 span { color: var(--accent); }
   transition: background 0.25s, border-color 0.25s;
 }
 
+.panel-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
 .panel-label {
   font-size: 0.7rem;
   text-transform: uppercase;
   letter-spacing: 0.1em;
   color: var(--text-muted);
+}
+
+.hide-btn {
+  font-size: 0.7rem;
+  padding: 0.2rem 0.7rem;
+  background: var(--surface2);
+  border: 1px solid var(--border2);
+  border-radius: 5px;
+  color: var(--text-muted);
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+}
+
+.hide-btn:hover { background: var(--border2); color: var(--text); }
+.hide-btn.active { border-color: var(--accent); color: var(--accent); }
+
+/* Quand la source est cachée, le layout passe en colonne unique */
+.layout.source-hidden {
+  grid-template-columns: 1fr;
+}
+
+.layout.source-hidden #sourcePanel {
+  display: none;
 }
 
 textarea {
