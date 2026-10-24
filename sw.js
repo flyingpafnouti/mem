@@ -1,6 +1,6 @@
 // Network-first service worker: always serve fresh files when online,
 // fall back to the last cached copy when offline.
-const CACHE = 'memorize-v1';
+const CACHE = 'memorize-v2';
 const SHELL = [
   './',
   'index.html',
@@ -14,7 +14,9 @@ const SHELL = [
 ];
 
 self.addEventListener('install', event => {
-  event.waitUntil(caches.open(CACHE).then(cache => cache.addAll(SHELL)));
+  event.waitUntil(caches.open(CACHE).then(cache =>
+    cache.addAll(SHELL.map(url => new Request(url, { cache: 'reload' })))
+  ));
   self.skipWaiting();
 });
 
@@ -28,8 +30,11 @@ self.addEventListener('activate', event => {
 
 self.addEventListener('fetch', event => {
   if (event.request.method !== 'GET') return;
+  // Same-origin files bypass the HTTP cache (revalidated with the server), otherwise
+  // a stale style.css / app.js can be served alongside a fresh index.html
+  const sameOrigin = new URL(event.request.url).origin === location.origin;
   event.respondWith(
-    fetch(event.request)
+    fetch(event.request, sameOrigin ? { cache: 'no-cache' } : undefined)
       .then(res => {
         if (res.ok) {
           const copy = res.clone();
