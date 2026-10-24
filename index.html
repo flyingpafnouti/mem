@@ -72,6 +72,9 @@
       typeset: false,
       ready: () => {
         MathJax.startup.defaultReady();
+        // Sans typeset automatique, la feuille de style MathJax n'est jamais injectée :
+        // le MathML d'accessibilité s'affiche alors en double et les blocs ne sont pas centrés
+        document.head.appendChild(MathJax.svgStylesheet());
         MathJax.startup.promise.then(() => render());
       },
     },
