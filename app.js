@@ -136,13 +136,59 @@ function buildWordsToBlank(plainText, difficulty) {
   return { wordsToBlank, hardcoreWords, totalWords: wordTokens.length };
 }
 
+// ── Maths (MathJax) ──────────────────────────────────────────────────────────
+// $$…$$ (bloc) et $…$ (en ligne, sans espace collé aux délimiteurs pour ignorer « 5 $ »)
+const MATH_RE = /\$\$([\s\S]+?)\$\$|\$(?!\s)([^$\n]+?)(?<!\s)\$/g;
+
+// Remplace chaque formule par un span vide avant marked, pour que ni marked
+// ni le masquage ne touchent au LaTeX
+function extractMath(text) {
+  const maths = [];
+  const out = text.replace(MATH_RE, (_, block, inline) => {
+    const display = block !== undefined;
+    maths.push({ tex: (display ? block : inline).trim(), display });
+    return `<span class="math" data-i="${maths.length - 1}"></span>`;
+  });
+  return { text: out, maths };
+}
+
+const mathCache = new Map();
+
+function mathNode(tex, display) {
+  const key = (display ? 'D:' : 'I:') + tex;
+  if (!mathCache.has(key)) {
+    try {
+      mathCache.set(key, MathJax.tex2svg(tex, { display }));
+    } catch {
+      // Extension TeX à charger en asynchrone : on rend à nouveau une fois prête
+      MathJax.tex2svgPromise(tex, { display }).then(node => {
+        mathCache.set(key, node);
+        render();
+      });
+      return null;
+    }
+  }
+  return mathCache.get(key).cloneNode(true);
+}
+
+function typesetMath(root, maths) {
+  const ready = typeof window.MathJax?.tex2svg === 'function';
+  for (const el of root.querySelectorAll('.math')) {
+    const { tex, display } = maths[el.dataset.i];
+    const node = ready ? mathNode(tex, display) : null;
+    if (node) el.replaceChildren(node);
+    else el.textContent = display ? `$$${tex}$$` : `$${tex}$`;
+  }
+}
+
 function process(text, difficulty, isMarkdown) {
   if (!text.trim()) return { html: '', blankedCount: 0, totalWords: 0 };
 
   const globalSeed = hashStr(text);
 
   if (isMarkdown) {
-    const rendered = marked.parse(text);
+    const { text: mdText, maths } = extractMath(text);
+    const rendered = marked.parse(mdText);
     const plain = htmlToPlainText(rendered);
     const { wordsToBlank, hardcoreWords, totalWords } = buildWordsToBlank(plain, difficulty);
 
@@ -150,7 +196,7 @@ function process(text, difficulty, isMarkdown) {
     div.innerHTML = rendered;
     const counter = { count: 0 };
     applyBlankingToNode(div, wordsToBlank, hardcoreWords, difficulty, globalSeed, counter);
-    return { html: div.innerHTML, blankedCount: counter.count, totalWords };
+    return { html: div.innerHTML, blankedCount: counter.count, totalWords, maths };
   }
 
   // Texte brut
@@ -220,8 +266,9 @@ function render() {
   const words = (text.match(WORD_RE) || []).filter(t => LETTER_RE.test(t[0]));
   statsIn.innerHTML = `<span>${words.length}</span> mots`;
 
-  const { html, blankedCount, totalWords } = process(text, difficulty, isMarkdown);
+  const { html, blankedCount, totalWords, maths = [] } = process(text, difficulty, isMarkdown);
   outputEl.innerHTML = html;
+  typesetMath(outputEl, maths);
   outputEl.dataset.mode = isMarkdown ? 'markdown' : 'plain';
 
   const pct = totalWords ? Math.round(blankedCount / totalWords * 100) : 0;
@@ -231,16 +278,46 @@ function render() {
 slider.addEventListener('input', render);
 inputEl.addEventListener('input', render);
 
+function loadText(text, name) {
+  isMarkdown = name.endsWith('.md');
+  inputEl.value = text;
+  render();
+}
+
 fileInput.addEventListener('change', e => {
   const file = e.target.files[0];
   if (!file) return;
-  isMarkdown = file.name.endsWith('.md');
   const reader = new FileReader();
-  reader.onload = ev => { inputEl.value = ev.target.result; render(); };
+  reader.onload = ev => loadText(ev.target.result, file.name);
   reader.readAsText(file, 'utf-8');
+  fileInput.value = '';
 });
 
-inputEl.value = `La robotique moderne repose sur trois piliers fondamentaux : la perception, la planification et l'actuation.
+// ── Exemples ─────────────────────────────────────────────────────────────────
+const exampleSelect = document.getElementById('exampleSelect');
+
+const DEFAULT_EXAMPLE = 'exemples/departements.md';
+
+async function loadExample(path) {
+  const res = await fetch(path);
+  if (!res.ok) throw new Error(res.status);
+  loadText(await res.text(), path);
+}
+
+exampleSelect.addEventListener('change', async () => {
+  const path = exampleSelect.value;
+  exampleSelect.value = '';
+  if (!path) return;
+  try {
+    await loadExample(path);
+  } catch {
+    // fetch échoue en file:// : il faut servir la page via un serveur HTTP
+    statsIn.textContent = `Impossible de charger ${path} (ouvrir la page via un serveur local)`;
+  }
+});
+
+// Texte de secours si l'exemple par défaut ne peut pas être chargé (file://)
+const FALLBACK_TEXT = `La robotique moderne repose sur trois piliers fondamentaux : la perception, la planification et l'actuation.
 Les capteurs proprioceptifs mesurent l'état interne du robot, tandis que les capteurs extéroceptifs,
 comme les lidars et les caméras stéréoscopiques, permettent de reconstruire une représentation
 tridimensionnelle de l'environnement.
@@ -255,4 +332,4 @@ de passer d'une configuration initiale à une configuration cible tout en évita
 Les algorithmes probabilistes comme RRT (Rapidly-exploring Random Trees) et ses variantes
 sont largement utilisés pour résoudre ces problèmes dans des espaces de configuration de haute dimension.`;
 
-render();
+loadExample(DEFAULT_EXAMPLE).catch(() => loadText(FALLBACK_TEXT, ''));

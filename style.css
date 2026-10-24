@@ -201,6 +201,20 @@ textarea:focus { border-color: var(--accent); }
 .file-btn:hover { background: var(--border2); color: var(--file-hover); }
 input[type="file"] { display: none; }
 
+.source-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+select.file-btn {
+  font-family: inherit;
+  outline: none;
+}
+
+select.file-btn:focus { border-color: var(--accent); }
+select.file-btn option { background: var(--surface); color: var(--text); }
+
 /* ── Slider ──────────────────────────────────────────────────────────────── */
 .slider-wrap {
   background: var(--surface);
@@ -352,6 +366,13 @@ input[type="range"].hardcore::-webkit-slider-thumb {
 }
 
 #output[data-mode="markdown"] strong { color: var(--h1); }
+
+/* Formules MathJax : les longues équations défilent au lieu de déborder */
+#output mjx-container[display="true"] {
+  overflow-x: auto;
+  overflow-y: hidden;
+  margin: 0.5rem 0;
+}
 #output[data-mode="markdown"] hr { border: none; border-top: 1px solid var(--border); margin: 0.75rem 0; }
 
 .blank {

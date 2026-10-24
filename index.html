@@ -4,6 +4,11 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Memorize</title>
+<link rel="icon" href="favicon.ico" sizes="16x16 32x32 48x48">
+<link rel="icon" href="icons/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+<link rel="manifest" href="manifest.webmanifest">
+<meta name="theme-color" content="#f4f4f8">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -29,8 +34,22 @@
 <div class="layout">
   <div class="panel" id="sourcePanel">
     <div class="panel-label">Texte source</div>
-    <label class="file-btn" for="fileInput">Charger un fichier .txt / .md</label>
-    <input type="file" id="fileInput" accept=".txt,.md">
+    <div class="source-actions">
+      <label class="file-btn" for="fileInput">Charger un fichier .txt / .md</label>
+      <input type="file" id="fileInput" accept=".txt,.md">
+      <select class="file-btn" id="exampleSelect" title="Charger un exemple">
+        <option value="">Exemples…</option>
+        <option value="exemples/departements.md">Départements français (markdown)</option>
+        <option value="exemples/elements.md">Tableau périodique (markdown)</option>
+        <option value="exemples/constantes.md">Constantes physiques (markdown)</option>
+        <option value="exemples/histoire.md">Histoire mondiale, 100 dates (markdown)</option>
+        <option value="exemples/philosophes.md">Philosophes et concepts (markdown)</option>
+        <option value="exemples/papiers-ia.md">Articles fondateurs de l'IA (markdown)</option>
+        <option value="exemples/architectures-ia.md">Architectures en IA (markdown)</option>
+        <option value="exemples/equations.md">Équations IA et contrôle (markdown)</option>
+        <option value="exemples/robotique.txt">Robotique (texte)</option>
+      </select>
+    </div>
     <textarea id="input" spellcheck="false" placeholder="Collez ou chargez votre texte ici…"></textarea>
     <div class="stats" id="statsIn"></div>
   </div>
@@ -45,7 +64,27 @@
   </div>
 </div>
 
+<script>
+  // MathJax : pas de rendu automatique, app.js appelle tex2svg à chaque rendu
+  window.MathJax = {
+    svg: { fontCache: 'none' },
+    startup: {
+      typeset: false,
+      ready: () => {
+        MathJax.startup.defaultReady();
+        MathJax.startup.promise.then(() => render());
+      },
+    },
+  };
+</script>
 <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
 <script src="app.js"></script>
+<script async src="https://cdn.jsdelivr.net/npm/mathjax@3.2.2/es5/tex-svg.js"></script>
+<script>
+  // Service worker requis pour l'installation PWA (HTTPS ou localhost uniquement)
+  if ('serviceWorker' in navigator && location.protocol !== 'file:') {
+    navigator.serviceWorker.register('sw.js');
+  }
+</script>
 </body>
 </html>
