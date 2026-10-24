@@ -288,7 +288,10 @@ fileInput.addEventListener('change', e => {
   const file = e.target.files[0];
   if (!file) return;
   const reader = new FileReader();
-  reader.onload = ev => loadText(ev.target.result, file.name);
+  reader.onload = ev => {
+    loadText(ev.target.result, file.name);
+    exampleSelect.value = '';
+  };
   reader.readAsText(file, 'utf-8');
   fileInput.value = '';
 });
@@ -298,22 +301,72 @@ const exampleSelect = document.getElementById('exampleSelect');
 
 const DEFAULT_EXAMPLE = 'exemples/departements.md';
 
+// Chemins des exemples, dans l'ordre du menu
+const EXAMPLES = [...exampleSelect.options].map(o => o.value).filter(Boolean);
+let currentExample = EXAMPLES.indexOf(DEFAULT_EXAMPLE);
+
 async function loadExample(path) {
   const res = await fetch(path);
   if (!res.ok) throw new Error(res.status);
   loadText(await res.text(), path);
+  currentExample = EXAMPLES.indexOf(path);
+  // Le menu affiche l'exemple courant, utile pour se repérer en naviguant au clavier ou au doigt
+  exampleSelect.value = path;
 }
 
-exampleSelect.addEventListener('change', async () => {
-  const path = exampleSelect.value;
-  exampleSelect.value = '';
-  if (!path) return;
+async function tryLoadExample(path) {
   try {
     await loadExample(path);
   } catch {
     // fetch échoue en file:// : il faut servir la page via un serveur HTTP
     statsIn.textContent = `Impossible de charger ${path} (ouvrir la page via un serveur local)`;
   }
+}
+
+exampleSelect.addEventListener('change', () => {
+  // Rend le focus à la page pour que les flèches naviguent tout de suite
+  exampleSelect.blur();
+  if (exampleSelect.value) tryLoadExample(exampleSelect.value);
+});
+
+// Exemple suivant (step = 1) ou précédent (step = -1), en bouclant sur la liste
+function stepExample(step) {
+  const n = EXAMPLES.length;
+  const i = currentExample < 0 ? (step > 0 ? 0 : n - 1) : (currentExample + step + n) % n;
+  tryLoadExample(EXAMPLES[i]);
+}
+
+// ── Navigation : flèches gauche/droite sur PC, balayage horizontal sur tablette ─
+document.addEventListener('keydown', e => {
+  if (e.altKey || e.ctrlKey || e.metaKey || e.shiftKey) return;
+  if (e.key !== 'ArrowRight' && e.key !== 'ArrowLeft') return;
+  // Les flèches gardent leur rôle dans le texte source et le menu
+  if (e.target.closest('textarea, select')) return;
+  // Sur le curseur de difficulté, gauche/droite changent de fiche ; haut/bas règlent toujours la difficulté
+  e.preventDefault();
+  stepExample(e.key === 'ArrowRight' ? 1 : -1);
+});
+
+const SWIPE_MIN_PX = 60;
+let touchStart = null;
+
+outputEl.addEventListener('touchstart', e => {
+  // Les formules et blocs de code larges défilent horizontalement : pas de changement de fiche
+  const scrollsX = e.target.closest('mjx-container, pre');
+  touchStart = e.touches.length === 1 && !scrollsX
+    ? { x: e.touches[0].clientX, y: e.touches[0].clientY }
+    : null;
+}, { passive: true });
+
+outputEl.addEventListener('touchend', e => {
+  if (!touchStart) return;
+  const dx = e.changedTouches[0].clientX - touchStart.x;
+  const dy = e.changedTouches[0].clientY - touchStart.y;
+  touchStart = null;
+  // Geste nettement horizontal, pour ne pas confondre avec le défilement vertical
+  if (Math.abs(dx) < SWIPE_MIN_PX || Math.abs(dx) < 2 * Math.abs(dy)) return;
+  // Balayer vers la gauche fait venir la fiche suivante, comme on tourne une page
+  stepExample(dx < 0 ? 1 : -1);
 });
 
 // Texte de secours si l'exemple par défaut ne peut pas être chargé (file://)
