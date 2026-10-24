@@ -11,29 +11,12 @@
 <meta name="theme-color" content="#f4f4f8">
 <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body class="source-hidden">
 
 <div class="header">
   <h1>Memo<span>rize</span></h1>
 
-  <div class="theme-toggle" id="themeToggle" title="Changer de thème">
-    <span class="icon">☀️</span>
-    <div class="toggle-track" id="toggleTrack">
-      <div class="toggle-thumb"></div>
-    </div>
-    <span class="icon">🌙</span>
-  </div>
-</div>
-
-<div class="slider-wrap">
-  <label>Difficulté</label>
-  <input type="range" id="slider" min="0" max="200" value="0" step="1">
-  <div class="difficulty-value" id="diffVal">0.00</div>
-</div>
-
-<div class="layout">
-  <div class="panel" id="sourcePanel">
-    <div class="panel-label">Texte source</div>
+  <div class="toolbar">
     <div class="source-actions">
       <label class="file-btn" for="fileInput">Charger un fichier .txt / .md</label>
       <input type="file" id="fileInput" accept=".txt,.md">
@@ -48,22 +31,46 @@
         <option value="exemples/philosophes.md">Philosophes et concepts (markdown)</option>
         <option value="exemples/papiers-ia.md">Articles fondateurs de l'IA (markdown)</option>
         <option value="exemples/architectures-ia.md">Architectures en IA (markdown)</option>
+        <option value="exemples/maths-ia.md">Bases mathématiques de l'IA (markdown)</option>
         <option value="exemples/equations.md">Équations IA et contrôle (markdown)</option>
-        <option value="exemples/robotique.txt">Robotique (texte)</option>
+        <option value="exemples/equations-physique.md">Équations de la physique (markdown)</option>
+        <option value="exemples/leetcode.md">LeetCode, 100 problèmes (markdown)</option>
       </select>
     </div>
+    <button class="file-btn hide-btn active" id="hideSourceBtn" title="Afficher le texte source">Afficher source</button>
+  </div>
+
+  <div class="theme-toggle" id="themeToggle" title="Changer de thème">
+    <span class="icon">☀️</span>
+    <div class="toggle-track" id="toggleTrack">
+      <div class="toggle-thumb"></div>
+    </div>
+    <span class="icon">🌙</span>
+  </div>
+</div>
+
+<div class="workspace">
+<div class="slider-wrap">
+  <label>Difficulté</label>
+  <div class="slider-track">
+    <input type="range" id="slider" min="0" max="200" value="0" step="1">
+  </div>
+  <div class="difficulty-value" id="diffVal">0.00</div>
+</div>
+
+<div class="layout">
+  <div class="panel" id="sourcePanel">
+    <div class="panel-label">Texte source</div>
     <textarea id="input" spellcheck="false" placeholder="Collez ou chargez votre texte ici…"></textarea>
     <div class="stats" id="statsIn"></div>
   </div>
 
   <div class="panel">
-    <div class="panel-header">
-      <div class="panel-label">Résultat</div>
-      <button class="hide-btn" id="hideSourceBtn" title="Masquer le texte source">Masquer source</button>
-    </div>
+    <div class="panel-label">Résultat</div>
     <div id="output"></div>
     <div class="stats" id="statsOut"></div>
   </div>
+</div>
 </div>
 
 <script>

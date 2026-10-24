@@ -52,6 +52,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  gap: 1.5rem;
   width: 100%;
   max-width: 1200px;
   margin-bottom: 2rem;
@@ -108,6 +109,13 @@ h1 span { color: var(--accent); }
 .toggle-track.on .toggle-thumb { left: 21px; }
 
 /* ── Layout ──────────────────────────────────────────────────────────────── */
+.workspace {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 1200px;
+}
+
 .layout {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -131,12 +139,6 @@ h1 span { color: var(--accent); }
   transition: background 0.25s, border-color 0.25s;
 }
 
-.panel-header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
 .panel-label {
   font-size: 0.7rem;
   text-transform: uppercase;
@@ -144,27 +146,106 @@ h1 span { color: var(--accent); }
   color: var(--text-muted);
 }
 
-.hide-btn {
-  font-size: 0.7rem;
-  padding: 0.2rem 0.7rem;
-  background: var(--surface2);
-  border: 1px solid var(--border2);
-  border-radius: 5px;
-  color: var(--text-muted);
-  cursor: pointer;
-  transition: background 0.2s, color 0.2s;
+/* ── Toolbar (chargement + repli de la source), dans le header ───────────── */
+.toolbar {
+  flex: 1;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
 }
 
-.hide-btn:hover { background: var(--border2); color: var(--text); }
+/* Sur petit écran, la toolbar passe sous le titre et le thème */
+@media (max-width: 768px) {
+  .header { flex-wrap: wrap; gap: 1rem; }
+  .toolbar { order: 1; flex-basis: 100%; }
+}
+
+.hide-btn { font-family: inherit; }
 .hide-btn.active { border-color: var(--accent); color: var(--accent); }
 
 /* Quand la source est cachée, le layout passe en colonne unique */
-.layout.source-hidden {
+body.source-hidden .layout {
   grid-template-columns: 1fr;
 }
 
-.layout.source-hidden #sourcePanel {
+body.source-hidden #sourcePanel {
   display: none;
+}
+
+/* Source cachée : le résultat occupe toute la hauteur restante de l'écran */
+body.source-hidden {
+  height: 100vh;
+  height: 100dvh;
+  padding: 1rem 2rem;
+}
+
+body.source-hidden .header { margin-bottom: 1rem; }
+
+body.source-hidden .workspace {
+  flex: 1;
+  min-height: 0;
+}
+
+body.source-hidden .slider-wrap { margin-bottom: 1rem; }
+
+body.source-hidden .layout {
+  flex: 1;
+  min-width: 0;
+  min-height: 0;
+  grid-template-rows: minmax(0, 1fr);
+}
+
+body.source-hidden .panel {
+  min-height: 0;
+  padding: 0.75rem;
+}
+
+/* Le libellé « Résultat » n'apporte rien quand il n'y a qu'un panneau */
+body.source-hidden .panel .panel-label { display: none; }
+
+body.source-hidden #output {
+  flex: 1;
+  height: auto;
+  min-height: 0;
+}
+
+/* Sur grand écran, source cachée : curseur vertical à gauche du résultat */
+@media (min-width: 769px) {
+  body.source-hidden .workspace {
+    flex-direction: row;
+    gap: 1.5rem;
+  }
+
+  body.source-hidden .slider-wrap {
+    flex-direction: column;
+    width: auto;
+    margin-bottom: 0;
+    padding: 1rem 0.75rem;
+    gap: 1rem;
+  }
+
+  /* Le conteneur de taille permet de donner au curseur pivoté la hauteur de la colonne (100cqh) */
+  body.source-hidden .slider-track {
+    container-type: size;
+    width: 24px;
+    min-height: 0;
+    position: relative;
+  }
+
+  body.source-hidden .slider-track input[type="range"] {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 100cqh;
+    transform: translate(-50%, -50%) rotate(-90deg);
+  }
+
+  body.source-hidden .difficulty-value {
+    min-width: 0;
+    text-align: center;
+  }
 }
 
 textarea {
@@ -238,6 +319,12 @@ select.file-btn option { background: var(--surface); color: var(--text); }
   white-space: nowrap;
 }
 
+.slider-track {
+  flex: 1;
+  display: flex;
+  align-items: center;
+}
+
 .difficulty-value {
   font-size: 1.1rem;
   font-weight: 700;
@@ -247,7 +334,7 @@ select.file-btn option { background: var(--surface); color: var(--text); }
 }
 
 input[type="range"] {
-  flex: 1;
+  width: 100%;
   -webkit-appearance: none;
   height: 4px;
   border-radius: 2px;
