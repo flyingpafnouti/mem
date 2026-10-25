@@ -465,6 +465,9 @@ input[type="range"].hardcore::-webkit-slider-thumb {
   overflow-y: hidden;
   margin: 0.5rem 0;
 }
+
+/* Symbole masqué dans une formule : les glyphes MathJax suivent la couleur du texte */
+#output mjx-container .blank { fill: currentColor; }
 #output[data-mode="markdown"] hr { border: none; border-top: 1px solid var(--border); margin: 0.75rem 0; }
 
 .blank {
@@ -687,6 +690,103 @@ input[type="range"].hardcore::-webkit-slider-thumb {
   stroke: var(--border2);
   stroke-width: 0.5;
 }
+
+/* Planche de feuilles : mêmes couleurs dans les deux thèmes */
+#output[data-mode="svg"] .leaf-blade {
+  fill: #5f9440;
+  stroke: #36602a;
+  stroke-width: 0.7;
+  stroke-linejoin: round;
+}
+
+#output[data-mode="svg"] .leaf-grey   { fill: #8fa77a; stroke: #55704a; }
+#output[data-mode="svg"] .leaf-dark   { fill: #2f6b3a; stroke: #1d4526; }
+#output[data-mode="svg"] .leaf-ginkgo { fill: #9bb83c; stroke: #5f7a22; }
+
+#output[data-mode="svg"] .leaf-vein {
+  fill: none;
+  stroke: #c3dea2;
+  stroke-width: 0.5;
+  stroke-linecap: round;
+  opacity: 0.75;
+}
+
+#output[data-mode="svg"] .leaf-stem,
+#output[data-mode="svg"] .leaf-spine {
+  fill: none;
+  stroke: #6b7f35;
+  stroke-width: 1.4;
+  stroke-linecap: round;
+}
+
+#output[data-mode="svg"] .leaf-twig {
+  fill: none;
+  stroke: #7a5a3a;
+  stroke-width: 2.4;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+#output[data-mode="svg"] .leaf-needle {
+  fill: none;
+  stroke: #2f6b3a;
+  stroke-width: 1.3;
+  stroke-linecap: round;
+}
+
+#output[data-mode="svg"] .leaf-light { stroke: #7fae4a; }
+#output[data-mode="svg"] .leaf-spine { stroke: #8a5a3a; }
+#output[data-mode="svg"] .leaf-gland { fill: #a0522d; }
+#output[data-mode="svg"] .leaf-knob  { fill: #7a5a3a; }
+#output[data-mode="svg"] .leaf-fruit { fill: #d0342c; }
+#output[data-mode="svg"] .leaf-seed  { fill: #3a2a1e; }
+#output[data-mode="svg"] .leaf-olive { fill: #3d3550; stroke: #241f30; stroke-width: 0.6; }
+#output[data-mode="svg"] .leaf-stem-thin { fill: none; stroke: #6b7f35; stroke-width: 0.8; stroke-linecap: round; }
+
+/* Planche de fleurs : pétales (remplis) puis traits (étamines, nervures, épines) */
+#output[data-mode="svg"] [class*="fl-"] { stroke-width: 0.6; stroke-linejoin: round; }
+#output[data-mode="svg"] .fl-red          { fill: #d7302a; stroke: #8e1b17; }
+#output[data-mode="svg"] .fl-rose         { fill: #d23a5a; stroke: #8a1f36; }
+#output[data-mode="svg"] .fl-pink         { fill: #ec8fb6; stroke: #b4517b; }
+#output[data-mode="svg"] .fl-magenta      { fill: #c2357a; stroke: #7e1d4d; }
+#output[data-mode="svg"] .fl-blue         { fill: #4a74d0; stroke: #2b4a94; }
+#output[data-mode="svg"] .fl-gentian      { fill: #2747b8; stroke: #172c75; }
+#output[data-mode="svg"] .fl-sky          { fill: #7fb0ec; stroke: #44719f; }
+#output[data-mode="svg"] .fl-violet       { fill: #8a5cc7; stroke: #57348a; }
+#output[data-mode="svg"] .fl-lavender     { fill: #a98be0; stroke: #6f55a5; }
+#output[data-mode="svg"] .fl-periwinkle   { fill: #7b7fe0; stroke: #4b4fa5; }
+#output[data-mode="svg"] .fl-white        { fill: #f6f4ec; stroke: #a9a596; }
+#output[data-mode="svg"] .fl-pinktip      { stroke: #d97aa0; }
+#output[data-mode="svg"] .fl-wool         { fill: #ecebe2; stroke: #9a988c; }
+#output[data-mode="svg"] .fl-wool-head    { fill: #e2dcae; stroke: #9a925e; }
+#output[data-mode="svg"] .fl-yellow       { fill: #f2c832; stroke: #a8800f; }
+#output[data-mode="svg"] .fl-paleyellow   { fill: #f5e27e; stroke: #b3a043; }
+#output[data-mode="svg"] .fl-orange       { fill: #f08a24; stroke: #a9560c; }
+#output[data-mode="svg"] .fl-deeporange   { fill: #d9661a; stroke: #8f3e08; }
+#output[data-mode="svg"] .fl-brown        { fill: #6b4423; stroke: #3f2614; }
+#output[data-mode="svg"] .fl-dark         { fill: #2b2320; stroke: none; }
+#output[data-mode="svg"] .fl-capsule      { fill: #8a9a6a; stroke: #55603c; }
+#output[data-mode="svg"] .fl-green-center { fill: #b7c95a; stroke: #7a8a2a; }
+#output[data-mode="svg"] .fl-anther       { fill: #b5651d; stroke: none; }
+#output[data-mode="svg"] .fl-anther-yellow { fill: #c99a12; stroke: none; }
+#output[data-mode="svg"] .fl-spot         { fill: #8e2f5a; stroke: none; }
+
+#output[data-mode="svg"] .fl-filament,
+#output[data-mode="svg"] .fl-brush,
+#output[data-mode="svg"] .fl-line-dark,
+#output[data-mode="svg"] .fl-line-red,
+#output[data-mode="svg"] .fl-line-rose,
+#output[data-mode="svg"] .fl-beard,
+#output[data-mode="svg"] .fl-spur,
+#output[data-mode="svg"] .fl-spine { fill: none; stroke-linecap: round; }
+#output[data-mode="svg"] .fl-filament  { stroke: #d8d2a0; stroke-width: 0.9; }
+#output[data-mode="svg"] .fl-brush     { stroke: #a64fb8; stroke-width: 1.6; }
+#output[data-mode="svg"] .fl-line-dark { stroke: #3b2a4a; stroke-width: 0.7; }
+#output[data-mode="svg"] .fl-line-red  { stroke: #9e1f12; stroke-width: 0.8; }
+#output[data-mode="svg"] .fl-line-rose { stroke: #8a1f36; stroke-width: 0.8; }
+#output[data-mode="svg"] .fl-beard     { stroke: #f2c832; stroke-width: 2.4; }
+#output[data-mode="svg"] .fl-spur      { stroke: #d9661a; stroke-width: 2.6; }
+#output[data-mode="svg"] .fl-spine     { stroke: #8a5a3a; stroke-width: 1; }
 
 /* La taille du texte vient de chaque carte (attribut font-size) */
 #output[data-mode="svg"] text { fill: var(--text); }

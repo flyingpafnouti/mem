@@ -30,6 +30,10 @@
         <option value="exemples/carte-suisse.svg">Cantons suisses (carte)</option>
         <option value="exemples/carte-autriche.svg">Länder autrichiens (carte)</option>
         <option value="exemples/carte-espagne.svg">Communautés autonomes espagnoles (carte)</option>
+        <option value="exemples/oiseaux-manche.svg">Oiseaux marins de la Manche (images)</option>
+        <option value="exemples/poissons-manche.svg">Poissons marins de la Manche (images)</option>
+        <option value="exemples/feuilles-arbres.svg">Feuilles des arbres (planche)</option>
+        <option value="exemples/fleurs.svg">Fleurs (planche)</option>
         <option value="exemples/anatomie.svg">Anatomie humaine (planche)</option>
         <option value="exemples/anatomie.3d.json">Anatomie humaine (3D, prototype)</option>
         <option value="exemples/elements.md">Tableau périodique (markdown)</option>
@@ -42,6 +46,7 @@
         <option value="exemples/architectures-ia.md">Architectures en IA (markdown)</option>
         <option value="exemples/maths-ia.md">Bases mathématiques de l'IA (markdown)</option>
         <option value="exemples/equations.md">Équations IA et contrôle (markdown)</option>
+        <option value="exemples/equations-rl.md">Équations du RL et du deep RL (markdown)</option>
         <option value="exemples/equations-physique.md">Équations de la physique (markdown)</option>
         <option value="exemples/leetcode.md">LeetCode, 100 problèmes (markdown)</option>
       </select>
@@ -97,7 +102,7 @@
 </div>
 
 <script>
-  // MathJax : pas de rendu automatique, app.js appelle tex2svg à chaque rendu
+  // MathJax : pas de rendu automatique, app.js convertit TeX → MathML → SVG à chaque rendu
   window.MathJax = {
     svg: { fontCache: 'none' },
     startup: {
@@ -123,7 +128,7 @@
 </script>
 <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
 <script src="app.js"></script>
-<script async src="https://cdn.jsdelivr.net/npm/mathjax@3.2.2/es5/tex-svg.js"></script>
+<script async src="https://cdn.jsdelivr.net/npm/mathjax@3.2.2/es5/tex-mml-svg.js"></script>
 <script>
   // Service worker requis pour l'installation PWA (HTTPS ou localhost uniquement)
   if ('serviceWorker' in navigator && location.protocol !== 'file:') {

@@ -173,33 +173,93 @@ function extractMath(text) {
   return { text: out, maths };
 }
 
-const mathCache = new Map();
+// Une formule passe par le MathML : on y remplace des symboles par des « _ » avant le rendu SVG
+const mmlCache = new Map();
+const svgCache = new Map();
 
-function mathNode(tex, display) {
+function mathMml(tex, display) {
   const key = (display ? 'D:' : 'I:') + tex;
-  if (!mathCache.has(key)) {
+  if (!mmlCache.has(key)) {
     try {
-      mathCache.set(key, MathJax.tex2svg(tex, { display }));
+      mmlCache.set(key, MathJax.tex2mml(tex, { display }));
     } catch {
       // Extension TeX à charger en asynchrone : on rend à nouveau une fois prête
-      MathJax.tex2svgPromise(tex, { display }).then(node => {
-        mathCache.set(key, node);
+      MathJax.tex2mmlPromise(tex, { display }).then(mml => {
+        mmlCache.set(key, mml);
         render();
       });
       return null;
     }
   }
-  return mathCache.get(key).cloneNode(true);
+  return new DOMParser().parseFromString(mmlCache.get(key), 'application/xml').documentElement;
 }
 
-function typesetMath(root, maths) {
-  const ready = typeof window.MathJax?.tex2svg === 'function';
-  for (const el of root.querySelectorAll('.math')) {
-    const { tex, display } = maths[el.dataset.i];
-    const node = ready ? mathNode(tex, display) : null;
-    if (node) el.replaceChildren(node);
-    else el.textContent = display ? `$$${tex}$$` : `$${tex}$`;
+function mathSvg(math) {
+  const mml = new XMLSerializer().serializeToString(math);
+  if (!svgCache.has(mml)) svgCache.set(mml, MathJax.mathml2svg(mml));
+  return svgCache.get(mml).cloneNode(true);
+}
+
+// Les parenthèses, séparateurs et opérateurs invisibles (⁡, ⁢) portent la structure : jamais masqués
+const MATH_KEEP_RE = /^[()[\]{}|‖⟨⟩⌊⌋⌈⌉,;.:!⁡-⁤]*$/;
+
+function mathLeaves(math) {
+  const content = [], ops = [];
+  for (const el of math.getElementsByTagName('*')) {
+    const text = el.textContent.trim();
+    if (!text) continue;
+    if (el.localName === 'mi' || el.localName === 'mn') content.push(el);
+    else if (el.localName === 'mo' && !MATH_KEEP_RE.test(text)) ops.push(el);
   }
+  return { content, ops };
+}
+
+// Ordre de masquage stable par symbole : monter le curseur ne fait qu'ajouter des blancs
+function pickKeys(leaves, fraction, seed) {
+  const keys = [...new Set(leaves.map(el => el.textContent.trim()))];
+  keys.sort((a, b) => ((seed ^ hashStr(a)) >>> 0) - ((seed ^ hashStr(b)) >>> 0));
+  return new Set(keys.slice(0, Math.round(keys.length * fraction)));
+}
+
+function blankLeaf(el) {
+  el.textContent = '_'.repeat([...el.textContent.trim()].length);
+  el.setAttribute('class', 'blank');
+  // L'italique et les alphabets spéciaux (ℝ, 𝒟) n'ont pas de glyphe « _ »
+  if (el.localName === 'mi') el.setAttribute('mathvariant', 'normal');
+  if (el.localName === 'mo') el.setAttribute('stretchy', 'false');
+}
+
+// Variables et nombres partent avec la difficulté ; les opérateurs ensuite, en mode hardcore.
+// Un symbole masqué l'est dans toutes les formules, comme un mot dans le texte.
+function typesetMath(root, maths, difficulty, seed) {
+  const ready = typeof window.MathJax?.tex2mml === 'function';
+  const els = [...root.querySelectorAll('.math')];
+  const trees = els.map(el => {
+    const { tex, display } = maths[el.dataset.i];
+    return ready ? mathMml(tex, display) : null;
+  });
+
+  const all = { content: [], ops: [] };
+  const leaves = trees.map(math => {
+    const l = math ? mathLeaves(math) : { content: [], ops: [] };
+    all.content.push(...l.content);
+    all.ops.push(...l.ops);
+    return l;
+  });
+  const contentKeys = pickKeys(all.content, Math.min(difficulty, 1), seed);
+  const opKeys = pickKeys(all.ops, Math.max(0, difficulty - 1), seed);
+
+  els.forEach((el, i) => {
+    const math = trees[i];
+    if (!math) {
+      const { tex, display } = maths[el.dataset.i];
+      el.textContent = display ? `$$${tex}$$` : `$${tex}$`;
+      return;
+    }
+    for (const leaf of leaves[i].content) if (contentKeys.has(leaf.textContent.trim())) blankLeaf(leaf);
+    for (const leaf of leaves[i].ops) if (opKeys.has(leaf.textContent.trim())) blankLeaf(leaf);
+    el.replaceChildren(mathSvg(math));
+  });
 }
 
 function process(text, difficulty, mode) {
