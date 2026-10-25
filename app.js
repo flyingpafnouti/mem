@@ -296,9 +296,15 @@ function render() {
   statsIn.innerHTML = `<span>${words.length}</span> mots`;
 
   const { html, blankedCount, totalWords, maths = [] } = process(text, difficulty, mode);
+  // Le contenu est remplacé à chaque mouvement du curseur : on garde le zoom et la position
+  const { scrollLeft, scrollTop } = outputEl;
   outputEl.innerHTML = html;
   typesetMath(outputEl, maths);
   outputEl.dataset.mode = mode;
+  zoomControls.hidden = mode !== 'svg';
+  applyZoom();
+  outputEl.scrollLeft = scrollLeft;
+  outputEl.scrollTop = scrollTop;
 
   const pct = totalWords ? Math.round(blankedCount / totalWords * 100) : 0;
   statsOut.innerHTML = `<span>${blankedCount}</span> mots masqués sur <span>${totalWords}</span> (${pct}%)`;
@@ -307,8 +313,61 @@ function render() {
 slider.addEventListener('input', render);
 inputEl.addEventListener('input', render);
 
+// ── Zoom des cartes ──────────────────────────────────────────────────────────
+const zoomControls = document.getElementById('zoomControls');
+const ZOOM_STEP = 1.5;
+const ZOOM_MAX = 8;
+let zoom = 1;
+
+function applyZoom() {
+  const svg = mode === 'svg' && outputEl.querySelector('svg');
+  if (svg) svg.style.width = svg.style.height = `${zoom * 100}%`;
+  outputEl.classList.toggle('zoomed', Boolean(svg) && zoom > 1);
+}
+
+// Change le zoom en gardant fixe le point au centre de la vue
+function setZoom(next) {
+  next = Math.min(Math.max(next, 1), ZOOM_MAX);
+  if (next === zoom) return;
+  const cx = (outputEl.scrollLeft + outputEl.clientWidth / 2) / outputEl.scrollWidth;
+  const cy = (outputEl.scrollTop + outputEl.clientHeight / 2) / outputEl.scrollHeight;
+  zoom = next;
+  applyZoom();
+  outputEl.scrollLeft = cx * outputEl.scrollWidth - outputEl.clientWidth / 2;
+  outputEl.scrollTop = cy * outputEl.scrollHeight - outputEl.clientHeight / 2;
+}
+
+document.getElementById('zoomIn').addEventListener('click', () => setZoom(zoom * ZOOM_STEP));
+document.getElementById('zoomOut').addEventListener('click', () => setZoom(zoom / ZOOM_STEP));
+
+// Carte zoomée : on la déplace en la tirant à la souris (au doigt, le défilement natif suffit)
+let drag = null;
+
+outputEl.addEventListener('pointerdown', e => {
+  if (e.pointerType !== 'mouse' || e.button !== 0 || !outputEl.classList.contains('zoomed')) return;
+  drag = { x: e.clientX, y: e.clientY, left: outputEl.scrollLeft, top: outputEl.scrollTop };
+  outputEl.setPointerCapture(e.pointerId);
+  outputEl.classList.add('dragging');
+  e.preventDefault();
+});
+
+outputEl.addEventListener('pointermove', e => {
+  if (!drag) return;
+  outputEl.scrollLeft = drag.left - (e.clientX - drag.x);
+  outputEl.scrollTop = drag.top - (e.clientY - drag.y);
+});
+
+function endDrag() {
+  drag = null;
+  outputEl.classList.remove('dragging');
+}
+
+outputEl.addEventListener('pointerup', endDrag);
+outputEl.addEventListener('pointercancel', endDrag);
+
 function loadText(text, name) {
   mode = name.endsWith('.md') ? 'markdown' : name.endsWith('.svg') ? 'svg' : 'plain';
+  zoom = 1;
   inputEl.value = text;
   render();
 }
@@ -380,8 +439,8 @@ const SWIPE_MIN_PX = 60;
 let touchStart = null;
 
 outputEl.addEventListener('touchstart', e => {
-  // Les formules et blocs de code larges défilent horizontalement : pas de changement de fiche
-  const scrollsX = e.target.closest('mjx-container, pre');
+  // Les formules, blocs de code larges et cartes zoomées défilent horizontalement : pas de changement de fiche
+  const scrollsX = e.target.closest('mjx-container, pre') || (mode === 'svg' && zoom > 1);
   touchStart = e.touches.length === 1 && !scrollsX
     ? { x: e.touches[0].clientX, y: e.touches[0].clientY }
     : null;

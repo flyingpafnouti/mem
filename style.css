@@ -205,6 +205,11 @@ body.source-hidden .panel {
 /* Le libellé « Résultat » n'apporte rien quand il n'y a qu'un panneau */
 body.source-hidden .panel .panel-label { display: none; }
 
+body.source-hidden .output-box {
+  flex: 1;
+  min-height: 0;
+}
+
 body.source-hidden #output {
   flex: 1;
   height: auto;
@@ -473,10 +478,52 @@ input[type="range"].hardcore::-webkit-slider-thumb {
   white-space: normal;
 }
 
+/* La carte tient entière dans le panneau, quelle que soit sa forme ; le zoom agrandit
+   le SVG au-delà du panneau, qui défile alors dans les deux sens */
 #output[data-mode="svg"] svg {
   display: block;
   width: 100%;
-  height: auto;
+  height: 100%;
+}
+
+/* Boutons de zoom par-dessus le résultat, décalés pour ne pas couvrir la barre de défilement */
+.output-box {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.zoom-controls {
+  position: absolute;
+  top: 0.5rem;
+  right: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.zoom-controls[hidden] { display: none; }
+
+/* Carte zoomée : la main indique qu'on peut la tirer */
+#output.zoomed {
+  cursor: grab;
+  user-select: none;
+}
+
+#output.zoomed.dragging { cursor: grabbing; }
+
+.zoom-controls .file-btn {
+  width: 2rem;
+  height: 2rem;
+  padding: 0;
+  font-family: inherit;
+  font-size: 1.1rem;
+  line-height: 1;
+}
+
+#output[data-mode="svg"] .inset {
+  fill: none;
+  stroke: var(--border);
 }
 
 #output[data-mode="svg"] .state {
@@ -490,10 +537,8 @@ input[type="range"].hardcore::-webkit-slider-thumb {
   stroke-width: 0.5;
 }
 
-#output[data-mode="svg"] text {
-  font-size: 9px;
-  fill: var(--text);
-}
+/* La taille du texte vient de chaque carte (attribut font-size) */
+#output[data-mode="svg"] text { fill: var(--text); }
 
 /* En SVG, la couleur du texte passe par fill */
 #output[data-mode="svg"] .blank { fill: var(--accent); }

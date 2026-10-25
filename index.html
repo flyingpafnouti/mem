@@ -23,13 +23,13 @@
       <select class="file-btn" id="exampleSelect" title="Charger un exemple">
         <option value="">Exemples…</option>
         <option value="exemples/departements.md">Départements français (markdown)</option>
-        <option value="exemples/etats-americains.md">États américains (markdown)</option>
+        <option value="exemples/carte-france.svg">Départements français (carte)</option>
         <option value="exemples/carte-usa.svg">États américains (carte)</option>
-        <option value="exemples/regions-italiennes.md">Régions italiennes (markdown)</option>
-        <option value="exemples/lander-allemands.md">Länder allemands (markdown)</option>
-        <option value="exemples/cantons-suisses.md">Cantons suisses (markdown)</option>
-        <option value="exemples/lander-autrichiens.md">Länder autrichiens (markdown)</option>
-        <option value="exemples/communautes-espagnoles.md">Communautés autonomes espagnoles (markdown)</option>
+        <option value="exemples/carte-italie.svg">Régions italiennes (carte)</option>
+        <option value="exemples/carte-allemagne.svg">Länder allemands (carte)</option>
+        <option value="exemples/carte-suisse.svg">Cantons suisses (carte)</option>
+        <option value="exemples/carte-autriche.svg">Länder autrichiens (carte)</option>
+        <option value="exemples/carte-espagne.svg">Communautés autonomes espagnoles (carte)</option>
         <option value="exemples/elements.md">Tableau périodique (markdown)</option>
         <option value="exemples/constantes.md">Constantes physiques (markdown)</option>
         <option value="exemples/ordres-de-grandeur.md">Ordres de grandeur des longueurs (markdown)</option>
@@ -74,7 +74,13 @@
 
   <div class="panel">
     <div class="panel-label">Résultat</div>
-    <div id="output"></div>
+    <div class="output-box">
+      <div id="output"></div>
+      <div class="zoom-controls" id="zoomControls" hidden>
+        <button class="file-btn" id="zoomIn" title="Zoomer">+</button>
+        <button class="file-btn" id="zoomOut" title="Dézoomer">−</button>
+      </div>
+    </div>
     <div class="stats" id="statsOut"></div>
   </div>
 </div>
