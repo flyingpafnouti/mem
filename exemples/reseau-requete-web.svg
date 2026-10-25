@@ -1,0 +1,283 @@
+<!-- Parcours d'une requête web, de l'ordinateur au serveur. La topologie reste affichée ;
+     le curseur de profondeur fait défiler les étapes (DHCP, ARP, DNS, TCP, TLS, HTTP). -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1240 770" class="map network">
+<defs>
+<marker id="net-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+<path class="net-head" d="M0,0L10,5L0,10Z"/>
+</marker>
+</defs>
+
+<text x="20" y="34" font-size="20" class="net-title">D'une requête web jusqu'au serveur</text>
+
+<g class="drawings">
+<!-- Zones -->
+<rect class="net-zone" x="15" y="250" width="320" height="380" rx="12"/>
+<rect class="net-zone" x="350" y="60" width="200" height="570" rx="12"/>
+<rect class="net-zone" x="570" y="60" width="655" height="150" rx="12"/>
+<rect class="net-zone" x="925" y="250" width="300" height="380" rx="12"/>
+
+<!-- Liens physiques -->
+<path class="net-link" d="M140,420H225"/>
+<path class="net-link" d="M285,420H423"/>
+<path class="net-link" d="M445,398V145"/>
+<path class="net-link" d="M467,420H612"/>
+<path class="net-link" d="M784,420H852"/>
+<path class="net-link" d="M888,420H958"/>
+<path class="net-link" d="M1012,416L1132,362"/>
+<path class="net-link" d="M1012,422L1132,412"/>
+<path class="net-link" d="M1150,430V497"/>
+
+<!-- Ordinateur -->
+<rect class="net-device" x="60" y="385" width="70" height="46" rx="3"/>
+<rect class="net-screen" x="65" y="390" width="60" height="36" rx="1"/>
+<path class="net-device" d="M48,431H142L150,442H40Z"/>
+
+<!-- Box -->
+<path class="net-device-line" d="M237,406L231,388M273,406L279,388"/>
+<rect class="net-device" x="225" y="406" width="60" height="28" rx="4"/>
+<circle class="net-led" cx="238" cy="420" r="2.5"/>
+<circle class="net-led" cx="248" cy="420" r="2.5"/>
+<circle class="net-led" cx="258" cy="420" r="2.5"/>
+
+<!-- Routeur du FAI -->
+<circle class="net-device" cx="445" cy="420" r="22"/>
+<path class="net-device-line" d="M433,412H455M451,408L456,412L451,416M457,428H435M439,424L434,428L439,432"/>
+
+<!-- Serveurs : résolveur, racine, TLD, autorité, CDN, applications -->
+<g class="net-server">
+<rect class="net-device" x="427" y="100" width="36" height="44" rx="3"/>
+<path class="net-device-line" d="M432,114H458M432,128H458"/>
+<rect class="net-device" x="672" y="90" width="36" height="44" rx="3"/>
+<path class="net-device-line" d="M677,104H703M677,118H703"/>
+<rect class="net-device" x="852" y="90" width="36" height="44" rx="3"/>
+<path class="net-device-line" d="M857,104H883M857,118H883"/>
+<rect class="net-device" x="1042" y="90" width="36" height="44" rx="3"/>
+<path class="net-device-line" d="M1047,104H1073M1047,118H1073"/>
+<rect class="net-device" x="852" y="398" width="36" height="44" rx="3"/>
+<path class="net-device-line" d="M857,412H883M857,426H883"/>
+<rect class="net-device" x="1132" y="344" width="36" height="36" rx="3"/>
+<path class="net-device-line" d="M1137,356H1163M1137,368H1163"/>
+<rect class="net-device" x="1132" y="394" width="36" height="36" rx="3"/>
+<path class="net-device-line" d="M1137,406H1163M1137,418H1163"/>
+</g>
+
+<!-- Répartiteur de charge -->
+<rect class="net-device" x="958" y="404" width="54" height="32" rx="4"/>
+<path class="net-device-line" d="M966,420H984M984,420L1004,410M984,420L1004,430M984,420H1004"/>
+
+<!-- Base de données -->
+<path class="net-device" d="M1128,505V535A22,7 0 0 0 1172,535V505"/>
+<ellipse class="net-device" cx="1150" cy="505" rx="22" ry="7"/>
+
+<!-- Internet -->
+<path class="net-cloud" d="M605,480A42,42 0 0 1 615,400A55,55 0 0 1 700,362A50,50 0 0 1 778,398A42,42 0 0 1 790,480A60,30 0 0 1 700,500A60,30 0 0 1 605,480Z"/>
+<path class="net-link" d="M612,420L650,450L700,430L752,452L784,420M650,450L752,452"/>
+<circle class="net-device" cx="650" cy="450" r="9"/>
+<circle class="net-device" cx="700" cy="430" r="9"/>
+<circle class="net-device" cx="752" cy="452" r="9"/>
+</g>
+
+<g class="labels" font-size="11">
+<text x="27" y="622" class="net-zone-label">Réseau local (LAN), 192.168.1.0/24</text>
+<text x="362" y="80" class="net-zone-label">Fournisseur d'accès (FAI)</text>
+<text x="1213" y="80" text-anchor="end" class="net-zone-label">Hiérarchie DNS</text>
+<text x="937" y="270" class="net-zone-label">Centre de données</text>
+
+<text x="180" y="414" text-anchor="middle" font-size="10" class="net-detail">Wi-Fi</text>
+<text x="354" y="414" text-anchor="middle" font-size="10" class="net-detail">Fibre</text>
+
+<g font-size="13" class="net-name" text-anchor="middle">
+<text x="95" y="465">Ordinateur</text>
+<text x="255" y="465">Box (routeur)</text>
+<text x="445" y="465">Routeur du FAI</text>
+<text x="445" y="160">Résolveur DNS</text>
+<text x="690" y="152">Serveur racine</text>
+<text x="870" y="152">Serveur TLD .fr</text>
+<text x="1060" y="152">Serveur faisant autorité</text>
+<text x="700" y="390" font-size="15">Internet</text>
+<text x="870" y="465">CDN</text>
+<text x="985" y="462">Répartiteur</text>
+<text x="985" y="477">de charge</text>
+<text x="1150" y="334">Serveurs d'application</text>
+<text x="1150" y="560">Base de données</text>
+</g>
+
+<g class="net-detail" text-anchor="middle">
+<text x="95" y="483">IP privée 192.168.1.23</text>
+<text x="95" y="499">Masque 255.255.255.0 (/24)</text>
+<text x="95" y="515">MAC 3c:22:fb:9a:41:07</text>
+<text x="255" y="483">Passerelle 192.168.1.1</text>
+<text x="255" y="499">IP publique 82.64.12.7</text>
+<text x="255" y="515">NAT, pare-feu, DHCP</text>
+<text x="445" y="483">Routage IP</text>
+<text x="445" y="176">Récursif, avec cache</text>
+<text x="690" y="168">Point de départ, anycast</text>
+<text x="870" y="168">Géré par l'Afnic</text>
+<text x="1060" y="168">ns1.exemple.fr</text>
+<text x="700" y="478" font-size="10">Systèmes autonomes (AS)</text>
+<text x="700" y="492" font-size="10">reliés par BGP</text>
+<text x="870" y="483">Serveur de bord</text>
+<text x="870" y="499">IP 93.184.215.14</text>
+<text x="985" y="494">Reverse proxy</text>
+</g>
+</g>
+
+<!-- ── Étape 1 : DHCP ── -->
+<g class="layer net-step" data-depth="0" data-layer="DHCP">
+<g class="net-msg" marker-end="url(#net-arrow)">
+<path d="M112,308H240"/>
+<path d="M240,333H112"/>
+<path d="M112,358H240"/>
+<path d="M240,383H112"/>
+</g>
+<g class="net-msg-label" font-size="10.5" text-anchor="middle">
+<text x="176" y="303">1. DISCOVER (diffusion)</text>
+<text x="176" y="328">2. OFFER 192.168.1.23</text>
+<text x="176" y="353">3. REQUEST</text>
+<text x="176" y="378">4. ACK, bail de 24 h</text>
+</g>
+<rect class="net-panel" x="15" y="645" width="1210" height="115" rx="8"/>
+<g font-size="12.5">
+<text x="30" y="670" class="net-step-title">Étape 1, DHCP : obtenir une configuration réseau</text>
+<text x="30" y="692">En arrivant sur le réseau, l'ordinateur n'a pas d'adresse. Il diffuse un DISCOVER à tout le LAN, et le serveur DHCP de la box répond par une offre.</text>
+<text x="30" y="712">Le bail lui attribue une IP privée, un masque de sous-réseau, une passerelle par défaut et l'adresse du résolveur DNS, pour une durée limitée.</text>
+<text x="30" y="732">Les IP privées (10.0.0.0/8, 172.16.0.0/12, 192.168.0.0/16) ne sont pas routées sur Internet : seule la box possède une IP publique.</text>
+<text x="30" y="752">DHCP est un protocole applicatif transporté par UDP, ports 67 côté serveur et 68 côté client.</text>
+</g>
+</g>
+
+<!-- ── Étape 2 : ARP ── -->
+<g class="layer net-step" data-depth="1" data-layer="ARP">
+<g class="net-msg" marker-end="url(#net-arrow)">
+<path d="M112,333H240"/>
+<path d="M240,373H112"/>
+</g>
+<g class="net-msg-label" font-size="10.5" text-anchor="middle">
+<text x="176" y="308" font-size="9.5">vers ff:ff:ff:ff:ff:ff (diffusion)</text>
+<text x="176" y="328">Qui a 192.168.1.1 ?</text>
+<text x="176" y="368">C'est moi : a4:3e:51:0c:77:d2</text>
+</g>
+<rect class="net-panel" x="15" y="645" width="1210" height="115" rx="8"/>
+<g font-size="12.5">
+<text x="30" y="670" class="net-step-title">Étape 2, ARP : trouver l'adresse MAC de la passerelle</text>
+<text x="30" y="692">Pour savoir si une destination est locale, l'ordinateur compare (IP ET masque) à l'adresse du réseau 192.168.1.0. Le serveur visé est hors du sous-réseau.</text>
+<text x="30" y="712">Le paquet doit donc passer par la passerelle par défaut. Pour lui envoyer une trame Ethernet ou Wi-Fi, il faut son adresse MAC : l'ordinateur la demande en diffusion.</text>
+<text x="30" y="732">La réponse est gardée dans le cache ARP. Une adresse MAC ne sert qu'à l'intérieur du réseau local (couche 2) ; l'adresse IP sert de bout en bout (couche 3).</text>
+<text x="30" y="752">En IPv6, ARP est remplacé par la découverte de voisins (NDP).</text>
+</g>
+</g>
+
+<!-- ── Étape 3 : DNS ── -->
+<g class="layer net-step" data-depth="2" data-layer="DNS">
+<g class="net-msg" marker-start="url(#net-arrow)" marker-end="url(#net-arrow)">
+<path d="M130,386C200,300 330,160 423,132"/>
+<path d="M465,128Q568,50 670,98"/>
+<path d="M465,117Q660,10 850,96"/>
+<path d="M465,106Q750,-25 1040,96"/>
+</g>
+<circle class="net-badge" cx="567" cy="77" r="9"/>
+<circle class="net-badge" cx="658" cy="56" r="9"/>
+<circle class="net-badge" cx="751" cy="37" r="9"/>
+<g font-size="11" text-anchor="middle" class="net-badge-text">
+<text x="567" y="81">2</text>
+<text x="658" y="60">3</text>
+<text x="751" y="41">4</text>
+</g>
+<g class="net-msg-label" font-size="11">
+<text x="330" y="112" text-anchor="end">1. exemple.fr, type A ?</text>
+<text x="330" y="128" text-anchor="end">5. réponse 93.184.215.14</text>
+<text x="690" y="194" text-anchor="middle">Voir les serveurs de .fr</text>
+<text x="870" y="194" text-anchor="middle">Voir ns1.exemple.fr</text>
+<text x="1060" y="194" text-anchor="middle">A 93.184.215.14, TTL 3600 s</text>
+</g>
+<rect class="net-panel" x="15" y="645" width="1210" height="115" rx="8"/>
+<g font-size="12.5">
+<text x="30" y="670" class="net-step-title">Étape 3, DNS : traduire le nom de domaine en adresse IP</text>
+<text x="30" y="692">L'ordinateur demande l'IP de exemple.fr à son résolveur, en UDP sur le port 53. Si la réponse est en cache, elle revient aussitôt.</text>
+<text x="30" y="712">Sinon, le résolveur interroge la hiérarchie : la racine renvoie vers les serveurs du TLD .fr, qui renvoient vers le serveur faisant autorité pour exemple.fr.</text>
+<text x="30" y="732">Enregistrements : A pour une IPv4, AAAA pour une IPv6, CNAME pour un alias, MX pour le courrier, NS pour les serveurs de nom. Le TTL fixe la durée en cache.</text>
+<text x="30" y="752">Ici, l'IP renvoyée est celle d'un serveur de bord du CDN, choisi proche de l'utilisateur.</text>
+</g>
+</g>
+
+<!-- ── Étape 4 : TCP ── -->
+<g class="layer net-step" data-depth="3" data-layer="TCP">
+<path class="net-lifeline" d="M95,522V615M870,506V615"/>
+<g class="net-msg" marker-end="url(#net-arrow)">
+<path d="M95,552H870"/>
+<path d="M870,580H95"/>
+<path d="M95,608H870"/>
+</g>
+<g class="net-msg-label" font-size="11" text-anchor="middle">
+<text x="480" y="547">SYN, seq = 1000</text>
+<text x="480" y="575">SYN-ACK, seq = 5000, ack = 1001</text>
+<text x="480" y="603">ACK, ack = 5001</text>
+<text x="255" y="305">Traduction NAT</text>
+<text x="255" y="322">192.168.1.23 : 51034</text>
+<text x="255" y="339">devient</text>
+<text x="255" y="356">82.64.12.7 : 40112</text>
+<text x="700" y="345">TTL 64, 63, 62… un de moins par saut</text>
+<text x="870" y="383">Port 443</text>
+</g>
+<rect class="net-panel" x="15" y="645" width="1210" height="115" rx="8"/>
+<g font-size="12.5">
+<text x="30" y="670" class="net-step-title">Étape 4, TCP : ouvrir une connexion</text>
+<text x="30" y="692">Avant d'échanger des données, l'ordinateur ouvre une connexion avec le serveur, port 443, par la poignée de main en trois temps : SYN, SYN-ACK, ACK.</text>
+<text x="30" y="712">En sortant, la box remplace l'IP privée et le port source par son IP publique et un port libre : c'est la traduction d'adresses (NAT).</text>
+<text x="30" y="732">Chaque routeur lit l'IP de destination, consulte sa table de routage et choisit le saut suivant ; le TTL baisse de 1 à chaque saut pour éliminer les boucles.</text>
+<text x="30" y="752">TCP (couche 4) numérote les octets, retransmet les pertes et régule le débit. HTTP/3 remplace TCP par QUIC, sur UDP.</text>
+</g>
+</g>
+
+<!-- ── Étape 5 : TLS ── -->
+<g class="layer net-step" data-depth="4" data-layer="TLS">
+<path class="net-lifeline" d="M95,522V615M870,506V615"/>
+<g class="net-msg" marker-end="url(#net-arrow)">
+<path d="M95,552H870"/>
+<path d="M870,580H95"/>
+<path d="M95,608H870"/>
+</g>
+<g class="net-msg-label" font-size="11" text-anchor="middle">
+<text x="480" y="547">ClientHello : SNI exemple.fr, suites de chiffrement, clé ECDHE</text>
+<text x="480" y="575">ServerHello : clé ECDHE, certificat, Finished</text>
+<text x="480" y="603">Finished, puis données chiffrées</text>
+<text x="830" y="315">Certificat X.509 pour exemple.fr</text>
+<text x="830" y="331">signé par une autorité de certification</text>
+</g>
+<rect class="net-panel" x="15" y="645" width="1210" height="115" rx="8"/>
+<g font-size="12.5">
+<text x="30" y="670" class="net-step-title">Étape 5, TLS : chiffrer et authentifier</text>
+<text x="30" y="692">Le client annonce le nom du site (SNI) et les algorithmes qu'il accepte ; le serveur répond avec son certificat, signé par une autorité reconnue par le navigateur.</text>
+<text x="30" y="712">Un échange de clés Diffie-Hellman sur courbe elliptique (ECDHE) produit une clé de session partagée sans jamais la transmettre.</text>
+<text x="30" y="732">La suite est chiffrée en symétrique, AES-GCM ou ChaCha20. Avec TLS 1.3, la poignée de main ne coûte qu'un aller-retour.</text>
+<text x="30" y="752">Le certificat prouve l'identité du serveur ; le chiffrement protège contre l'écoute et la modification, mais l'IP et le nom de domaine restent visibles.</text>
+</g>
+</g>
+
+<!-- ── Étape 6 : HTTP ── -->
+<g class="layer net-step" data-depth="5" data-layer="HTTP">
+<path class="net-lifeline" d="M95,522V615M870,506V615"/>
+<g class="net-msg" marker-end="url(#net-arrow)">
+<path d="M95,560H870"/>
+<path d="M870,600H95"/>
+<path d="M890,410H956"/>
+<path d="M1012,410L1130,357"/>
+<path d="M1160,432V495"/>
+</g>
+<g class="net-msg-label" font-size="11">
+<text x="480" y="555" text-anchor="middle">GET /index.html, Host: exemple.fr, Cookie: session=…</text>
+<text x="480" y="595" text-anchor="middle">200 OK, Content-Type: text/html, Cache-Control: max-age=600</text>
+<text x="922" y="393" text-anchor="middle" font-size="10">Cache manqué</text>
+<text x="1060" y="365" text-anchor="middle" font-size="10">Requête</text>
+<text x="1168" y="468" font-size="10">SQL</text>
+</g>
+<rect class="net-panel" x="15" y="645" width="1210" height="115" rx="8"/>
+<g font-size="12.5">
+<text x="30" y="670" class="net-step-title">Étape 6, HTTP : demander la page</text>
+<text x="30" y="692">Dans le tunnel chiffré, le navigateur envoie GET /index.html avec l'en-tête Host, ses cookies et ses préférences. Le CDN répond depuis son cache s'il en a une copie fraîche.</text>
+<text x="30" y="712">Sinon il relaie la requête à l'origine : le répartiteur de charge choisit un serveur d'application, qui interroge la base de données et construit la page.</text>
+<text x="30" y="732">La réponse 200 OK porte le HTML ; le navigateur demande ensuite CSS, scripts et images, souvent sur la même connexion.</text>
+<text x="30" y="752">Codes courants : 301 redirection permanente, 304 non modifié, 403 interdit, 404 introuvable, 500 erreur serveur, 503 service indisponible.</text>
+</g>
+</g>
+</svg>

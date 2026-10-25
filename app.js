@@ -85,7 +85,7 @@ function htmlToPlainText(html) {
 
 // Extrait le texte d'une carte SVG : un nœud texte par étiquette, séparés par des espaces
 // (textContent collerait « Caroline » et « du Sud », écrits sur deux tspan)
-// Mémorisé : une planche anatomique pèse près de 1 Mo et le curseur redemande le texte à chaque pas
+// Mémorisé : une grande carte pèse plusieurs centaines de ko et le curseur redemande le texte à chaque pas
 let plainCache = { svg: null, text: '' };
 
 function svgToPlainText(svgHtml) {
@@ -267,20 +267,6 @@ function process(text, difficulty, mode) {
 
   const globalSeed = hashStr(text);
 
-  // Fiche 3D : chaque étiquette est masquée à part, la scène n'est pas reconstruite
-  if (mode === '3d') {
-    const names = parse3d(text).labels.map(l => l.name);
-    const { wordsToBlank, hardcoreWords, totalWords } = buildWordsToBlank(names.join('\n'), difficulty);
-    const counter = { count: 0 };
-    const labelsHtml = names.map(name => {
-      const div = document.createElement('div');
-      div.textContent = name;
-      applyBlankingToNode(div, wordsToBlank, hardcoreWords, difficulty, globalSeed, counter);
-      return div.innerHTML;
-    });
-    return { labelsHtml, blankedCount: counter.count, totalWords };
-  }
-
   // Carte SVG : seuls les textes des étiquettes sont masqués, les tracés restent intacts
   if (mode === 'svg') {
     const { wordsToBlank, hardcoreWords, totalWords } = buildWordsToBlank(svgToPlainText(text), difficulty);
@@ -369,41 +355,22 @@ function render() {
   updateSliderTrack();
 
   const text = inputEl.value;
-  if (mode === '3d') {
-    try {
-      parse3d(text);
-    } catch (err) {
-      // Source modifiée à la main et devenue invalide : on le signale sans casser la vue
-      statsIn.textContent = `Fiche 3D illisible : ${err.message}`;
-      return;
-    }
-  }
-  // Pour une carte ou une fiche 3D, on ne compte que les étiquettes
-  const counted = mode === 'svg' ? svgToPlainText(text)
-    : mode === '3d' ? parse3d(text).labels.map(l => l.name).join('\n')
-    : text;
+  // Pour une carte, on ne compte que les étiquettes
+  const counted = mode === 'svg' ? svgToPlainText(text) : text;
   const words = (counted.match(WORD_RE) || []).filter(t => LETTER_RE.test(t[0]));
   statsIn.innerHTML = `<span>${words.length}</span> mots`;
 
-  const { html, labelsHtml, blankedCount, totalWords, maths = [] } = process(text, difficulty, mode);
+  const { html, blankedCount, totalWords, maths = [] } = process(text, difficulty, mode);
   outputEl.dataset.mode = mode;
-  zoomControls.hidden = mode !== 'svg' && mode !== '3d';
-  if (mode === '3d') {
-    // La main de déplacement des cartes zoomées ne doit pas intercepter la rotation
-    outputEl.classList.remove('zoomed');
-    applyDepth();
-    show3d(text, labelsHtml);
-  } else {
-    close3d();
-    // Le contenu est remplacé à chaque mouvement du curseur : on garde le zoom et la position
-    const { scrollLeft, scrollTop } = outputEl;
-    outputEl.innerHTML = html;
-    typesetMath(outputEl, maths, difficulty, hashStr(text));
-    applyZoom();
-    applyDepth();
-    outputEl.scrollLeft = scrollLeft;
-    outputEl.scrollTop = scrollTop;
-  }
+  zoomControls.hidden = mode !== 'svg';
+  // Le contenu est remplacé à chaque mouvement du curseur : on garde le zoom et la position
+  const { scrollLeft, scrollTop } = outputEl;
+  outputEl.innerHTML = html;
+  typesetMath(outputEl, maths, difficulty, hashStr(text));
+  applyZoom();
+  applyDepth();
+  outputEl.scrollLeft = scrollLeft;
+  outputEl.scrollTop = scrollTop;
 
   const pct = totalWords ? Math.round(blankedCount / totalWords * 100) : 0;
   statsOut.innerHTML = `<span>${blankedCount}</span> mots masqués sur <span>${totalWords}</span> (${pct}%)`;
@@ -436,11 +403,8 @@ function setZoom(next) {
   outputEl.scrollTop = cy * outputEl.scrollHeight - outputEl.clientHeight / 2;
 }
 
-// En 3D, les boutons rapprochent ou éloignent la caméra
-document.getElementById('zoomIn').addEventListener('click', () =>
-  mode === '3d' ? viewer3d?.zoom(ZOOM_STEP) : setZoom(zoom * ZOOM_STEP));
-document.getElementById('zoomOut').addEventListener('click', () =>
-  mode === '3d' ? viewer3d?.zoom(1 / ZOOM_STEP) : setZoom(zoom / ZOOM_STEP));
+document.getElementById('zoomIn').addEventListener('click', () => setZoom(zoom * ZOOM_STEP));
+document.getElementById('zoomOut').addEventListener('click', () => setZoom(zoom / ZOOM_STEP));
 
 // Carte zoomée : on la déplace en la tirant à la souris (au doigt, le défilement natif suffit)
 let drag = null;
@@ -467,27 +431,16 @@ function endDrag() {
 outputEl.addEventListener('pointerup', endDrag);
 outputEl.addEventListener('pointercancel', endDrag);
 
-// ── Profondeur des planches à calques (organes → os) ─────────────────────────
+// ── Profondeur des planches à calques ────────────────────────────────────────
 // Un SVG dont les groupes portent data-depth (0, 1, 2…) se parcourt comme une radio :
 // chaque calque est net à sa profondeur et se fond dans ses voisins entre deux crans.
-// Les groupes sans data-depth (la silhouette) restent toujours affichés.
+// Les groupes sans data-depth (le fond commun) restent toujours affichés.
 const depthControls = document.getElementById('depthControls');
 const depthSlider   = document.getElementById('depthSlider');
 const depthLabel    = document.getElementById('depthLabel');
 const depthTicks    = document.getElementById('depthTicks');
 
 function applyDepth() {
-  // Fiche 3D : les couches sont des maillages, le visualiseur gère leur fondu
-  if (mode === '3d') {
-    const names = viewer3d?.layerNames ?? [];
-    depthControls.hidden = names.length < 2;
-    if (!viewer3d) return;
-    depthSlider.max = (names.length - 1) * 100;
-    const t = depthSlider.value / 100;
-    viewer3d.setDepth(t);
-    showDepthTicks(names, t);
-    return;
-  }
   const layers = mode === 'svg' ? [...outputEl.querySelectorAll('svg [data-depth]')] : [];
   depthControls.hidden = !layers.length;
   if (!layers.length) return;
@@ -547,56 +500,8 @@ depthSlider.addEventListener('keydown', e => {
   snapDepth(Math.max(0, Math.min(last, Math.round(depthSlider.value / 100) + dir)));
 });
 
-// ── Fiches 3D (anatomie) ─────────────────────────────────────────────────────
-// La source est un manifeste JSON (maillage, étiquettes) ; Three.js n'est chargé qu'à
-// l'ouverture d'une telle fiche. Le curseur ne change que le texte des étiquettes.
-let parsed3d = { text: null, data: null };
-let viewer3d = null;
-let viewer3dSource = null;   // texte du manifeste affiché (ou en cours de chargement)
-let pendingLabels = [];
-let sourceName = '';
-
-function parse3d(text) {
-  if (parsed3d.text !== text) {
-    const data = JSON.parse(text);
-    if (!Array.isArray(data.labels)) throw new Error('liste « labels » absente');
-    parsed3d = { text, data };
-  }
-  return parsed3d.data;
-}
-
-function close3d() {
-  viewer3d?.dispose();
-  viewer3d = null;
-  viewer3dSource = null;
-}
-
-async function show3d(text, labelsHtml) {
-  pendingLabels = labelsHtml;
-  if (viewer3dSource === text) {
-    viewer3d?.setLabels(labelsHtml);
-    return;
-  }
-  close3d();
-  viewer3dSource = text;
-  outputEl.textContent = 'Chargement du modèle 3D…';
-  try {
-    const { createViewer } = await import('./viewer3d.js');
-    const viewer = await createViewer(outputEl, parse3d(text), new URL(sourceName, location.href));
-    // Une autre fiche a pu être ouverte pendant le chargement
-    if (viewer3dSource !== text) { viewer.dispose(); return; }
-    viewer3d = viewer;
-    viewer3d.setLabels(pendingLabels);
-    applyDepth();
-  } catch (err) {
-    if (viewer3dSource === text) outputEl.textContent = `Impossible d'afficher le modèle 3D : ${err.message}`;
-  }
-}
-
 function loadText(text, name) {
-  mode = name.endsWith('.md') ? 'markdown' : name.endsWith('.svg') ? 'svg'
-    : name.endsWith('.3d.json') ? '3d' : 'plain';
-  sourceName = name;
+  mode = name.endsWith('.md') ? 'markdown' : name.endsWith('.svg') ? 'svg' : 'plain';
   zoom = 1;
   depthSlider.value = 0;
   inputEl.value = text;
@@ -666,12 +571,11 @@ document.addEventListener('keydown', e => {
   stepExample(e.key === 'ArrowRight' ? 1 : -1);
 });
 
-// Haut/bas règlent la difficulté depuis n'importe où, sauf en 3D
+// Haut/bas règlent la difficulté depuis n'importe où
 const ARROW_DIFFICULTY_STEP = 5;
 document.addEventListener('keydown', e => {
   if (e.altKey || e.ctrlKey || e.metaKey || e.shiftKey) return;
   if (e.key !== 'ArrowUp' && e.key !== 'ArrowDown') return;
-  if (mode === '3d') return;
   // Le curseur de difficulté gère déjà ses flèches ; texte, menu et profondeur gardent les leurs
   if (e.target.closest('textarea, select, input[type="range"]')) return;
   e.preventDefault();
@@ -685,8 +589,7 @@ let touchStart = null;
 
 outputEl.addEventListener('touchstart', e => {
   // Les formules, blocs de code larges et cartes zoomées défilent horizontalement : pas de changement de fiche
-  // En 3D, glisser fait tourner le corps
-  const scrollsX = e.target.closest('mjx-container, pre') || (mode === 'svg' && zoom > 1) || mode === '3d';
+  const scrollsX = e.target.closest('mjx-container, pre') || (mode === 'svg' && zoom > 1);
   touchStart = e.touches.length === 1 && !scrollsX
     ? { x: e.touches[0].clientX, y: e.touches[0].clientY }
     : null;

@@ -577,87 +577,6 @@ input[type="range"].hardcore::-webkit-slider-thumb {
 
 #output[data-mode="svg"] .anchor { fill: var(--text-muted); }
 
-/* ── Fiche 3D ────────────────────────────────────────────────────────────── */
-#output[data-mode="3d"] {
-  padding: 0;
-  overflow: hidden;
-  font-family: 'Segoe UI', system-ui, sans-serif;
-  white-space: normal;
-}
-
-.viewer3d {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-  touch-action: none;
-}
-
-.viewer3d canvas {
-  display: block;
-  width: 100%;
-  height: 100%;
-  cursor: grab;
-}
-
-.viewer3d canvas:active { cursor: grabbing; }
-
-/* Les étiquettes suivent la scène sans capter la souris */
-.labels3d {
-  position: absolute;
-  inset: 0;
-  pointer-events: none;
-}
-
-.label3d {
-  position: absolute;
-  left: 0;
-  top: 0;
-  font-size: 0.75rem;
-  color: var(--text);
-  white-space: nowrap;
-  text-shadow: 0 0 3px var(--bg), 0 0 3px var(--bg);
-  transition: opacity 0.15s;
-}
-
-/* Point sur l'os, nom décalé vers l'extérieur du corps */
-.label3d::before {
-  content: '';
-  position: absolute;
-  left: -3px;
-  top: -3px;
-  width: 6px;
-  height: 6px;
-  border-radius: 50%;
-  background: var(--accent);
-}
-
-.label3d span {
-  position: absolute;
-  left: 8px;
-  top: -0.6em;
-}
-
-.viewer3d-restore {
-  position: absolute;
-  top: 0.5rem;
-  left: 0.5rem;
-}
-
-.viewer3d-restore[hidden] { display: none; }
-
-/* Structure cliquée */
-.label3d.selected {
-  z-index: 1;
-  font-weight: 600;
-  font-size: 0.85rem;
-}
-
-.label3d.left span {
-  left: auto;
-  right: 8px;
-}
-
 /* Carte zoomée : la main indique qu'on peut la tirer */
 #output.zoomed {
   cursor: grab;
@@ -787,6 +706,54 @@ input[type="range"].hardcore::-webkit-slider-thumb {
 #output[data-mode="svg"] .fl-beard     { stroke: #f2c832; stroke-width: 2.4; }
 #output[data-mode="svg"] .fl-spur      { stroke: #d9661a; stroke-width: 2.6; }
 #output[data-mode="svg"] .fl-spine     { stroke: #8a5a3a; stroke-width: 1; }
+
+/* Planche réseau : couleurs tirées du thème */
+#output[data-mode="svg"] .net-zone {
+  fill: none;
+  stroke: var(--border2);
+  stroke-width: 1.2;
+  stroke-dasharray: 6 4;
+}
+#output[data-mode="svg"] .net-link        { fill: none; stroke: var(--border2); stroke-width: 2; }
+#output[data-mode="svg"] .net-device      { fill: var(--surface); stroke: var(--text-muted); stroke-width: 1.5; }
+#output[data-mode="svg"] .net-device-line { fill: none; stroke: var(--text-muted); stroke-width: 1.5; stroke-linecap: round; }
+#output[data-mode="svg"] .net-screen      { fill: var(--accent-glow); }
+#output[data-mode="svg"] .net-led         { fill: #3fbf6f; }
+#output[data-mode="svg"] .net-cloud       { fill: var(--surface); stroke: var(--border2); stroke-width: 1.5; }
+#output[data-mode="svg"] .net-panel       { fill: var(--surface); stroke: var(--border2); }
+#output[data-mode="svg"] .net-lifeline    { fill: none; stroke: var(--border2); stroke-dasharray: 3 3; }
+#output[data-mode="svg"] .net-msg         { fill: none; stroke: var(--accent); stroke-width: 2; }
+#output[data-mode="svg"] .net-head,
+#output[data-mode="svg"] .net-badge       { fill: var(--accent); }
+#output[data-mode="svg"] .net-badge-text  { fill: var(--surface); }
+#output[data-mode="svg"] .net-zone-label,
+#output[data-mode="svg"] .net-detail      { fill: var(--text-mono); font-weight: normal; }
+#output[data-mode="svg"] .net-step-title  { fill: var(--accent); }
+/* Halo du fond sous les messages, pour qu'ils restent lisibles en travers des tracés */
+#output[data-mode="svg"] .net-msg-label {
+  fill: var(--accent);
+  paint-order: stroke;
+  stroke: var(--surface2);
+  stroke-width: 4px;
+  stroke-linejoin: round;
+}
+
+/* Tableau périodique : une teinte par famille, translucide pour garder le texte lisible dans les deux thèmes */
+#output[data-mode="svg"] .pt-cell rect      { fill-opacity: 0.32; stroke-width: 1.2; }
+#output[data-mode="svg"] .pt-legend rect    { fill-opacity: 0.55; stroke-width: 1.2; }
+#output[data-mode="svg"] .pt-alkali     rect, #output[data-mode="svg"] rect.pt-alkali     { fill: #e5534b; stroke: #e5534b; }
+#output[data-mode="svg"] .pt-alkaline   rect, #output[data-mode="svg"] rect.pt-alkaline   { fill: #f08a24; stroke: #f08a24; }
+#output[data-mode="svg"] .pt-transition rect, #output[data-mode="svg"] rect.pt-transition { fill: #d9b310; stroke: #d9b310; }
+#output[data-mode="svg"] .pt-post       rect, #output[data-mode="svg"] rect.pt-post       { fill: #8a9aa8; stroke: #8a9aa8; }
+#output[data-mode="svg"] .pt-metalloid  rect, #output[data-mode="svg"] rect.pt-metalloid  { fill: #3fae8f; stroke: #3fae8f; }
+#output[data-mode="svg"] .pt-nonmetal   rect, #output[data-mode="svg"] rect.pt-nonmetal   { fill: #4fbf4f; stroke: #4fbf4f; }
+#output[data-mode="svg"] .pt-halogen    rect, #output[data-mode="svg"] rect.pt-halogen    { fill: #2fb5d6; stroke: #2fb5d6; }
+#output[data-mode="svg"] .pt-noble      rect, #output[data-mode="svg"] rect.pt-noble      { fill: #5a7fe0; stroke: #5a7fe0; }
+#output[data-mode="svg"] .pt-lanthanide rect, #output[data-mode="svg"] rect.pt-lanthanide { fill: #c25bc9; stroke: #c25bc9; }
+#output[data-mode="svg"] .pt-actinide   rect, #output[data-mode="svg"] rect.pt-actinide   { fill: #e0609a; stroke: #e0609a; }
+#output[data-mode="svg"] .pt-sym                 { font-weight: bold; }
+#output[data-mode="svg"] .pt-num,
+#output[data-mode="svg"] .pt-axis text           { fill: var(--text-mono); opacity: 0.75; }
 
 /* La taille du texte vient de chaque carte (attribut font-size) */
 #output[data-mode="svg"] text { fill: var(--text); }

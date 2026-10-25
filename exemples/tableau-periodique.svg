@@ -1,0 +1,769 @@
+<!-- Tableau périodique : le numéro atomique reste affiché, le curseur masque le nom puis le symbole.
+     Les couleurs donnent la famille chimique (légende au centre). -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1208 700" class="map periodic">
+<g class="pt-axis">
+<text x="72" y="24" font-size="12" text-anchor="middle">1</text>
+<text x="136" y="24" font-size="12" text-anchor="middle">2</text>
+<text x="200" y="24" font-size="12" text-anchor="middle">3</text>
+<text x="264" y="24" font-size="12" text-anchor="middle">4</text>
+<text x="328" y="24" font-size="12" text-anchor="middle">5</text>
+<text x="392" y="24" font-size="12" text-anchor="middle">6</text>
+<text x="456" y="24" font-size="12" text-anchor="middle">7</text>
+<text x="520" y="24" font-size="12" text-anchor="middle">8</text>
+<text x="584" y="24" font-size="12" text-anchor="middle">9</text>
+<text x="648" y="24" font-size="12" text-anchor="middle">10</text>
+<text x="712" y="24" font-size="12" text-anchor="middle">11</text>
+<text x="776" y="24" font-size="12" text-anchor="middle">12</text>
+<text x="840" y="24" font-size="12" text-anchor="middle">13</text>
+<text x="904" y="24" font-size="12" text-anchor="middle">14</text>
+<text x="968" y="24" font-size="12" text-anchor="middle">15</text>
+<text x="1032" y="24" font-size="12" text-anchor="middle">16</text>
+<text x="1096" y="24" font-size="12" text-anchor="middle">17</text>
+<text x="1160" y="24" font-size="12" text-anchor="middle">18</text>
+<text x="28" y="73" font-size="12" text-anchor="middle">1</text>
+<text x="28" y="143" font-size="12" text-anchor="middle">2</text>
+<text x="28" y="213" font-size="12" text-anchor="middle">3</text>
+<text x="28" y="283" font-size="12" text-anchor="middle">4</text>
+<text x="28" y="353" font-size="12" text-anchor="middle">5</text>
+<text x="28" y="423" font-size="12" text-anchor="middle">6</text>
+<text x="28" y="493" font-size="12" text-anchor="middle">7</text>
+</g>
+<g class="pt-legend">
+<rect class="pt-alkali" x="182" y="48" width="18" height="18" rx="3"/>
+<text x="208" y="62" font-size="14">Métaux alcalins</text>
+<rect class="pt-alkaline" x="182" y="74" width="18" height="18" rx="3"/>
+<text x="208" y="88" font-size="14">Métaux alcalino-terreux</text>
+<rect class="pt-transition" x="182" y="100" width="18" height="18" rx="3"/>
+<text x="208" y="114" font-size="14">Métaux de transition</text>
+<rect class="pt-post" x="182" y="126" width="18" height="18" rx="3"/>
+<text x="208" y="140" font-size="14">Métaux pauvres</text>
+<rect class="pt-metalloid" x="182" y="152" width="18" height="18" rx="3"/>
+<text x="208" y="166" font-size="14">Métalloïdes</text>
+<rect class="pt-nonmetal" x="482" y="48" width="18" height="18" rx="3"/>
+<text x="508" y="62" font-size="14">Non-métaux</text>
+<rect class="pt-halogen" x="482" y="74" width="18" height="18" rx="3"/>
+<text x="508" y="88" font-size="14">Halogènes</text>
+<rect class="pt-noble" x="482" y="100" width="18" height="18" rx="3"/>
+<text x="508" y="114" font-size="14">Gaz nobles</text>
+<rect class="pt-lanthanide" x="482" y="126" width="18" height="18" rx="3"/>
+<text x="508" y="140" font-size="14">Lanthanides</text>
+<rect class="pt-actinide" x="482" y="152" width="18" height="18" rx="3"/>
+<text x="508" y="166" font-size="14">Actinides</text>
+</g>
+<g class="pt-cell pt-lanthanide">
+<rect x="169.5" y="385.5" width="61" height="67" rx="4"/>
+<text class="pt-num" x="200" y="423" font-size="11" text-anchor="middle">57–71</text>
+</g>
+<g class="pt-cell pt-actinide">
+<rect x="169.5" y="455.5" width="61" height="67" rx="4"/>
+<text class="pt-num" x="200" y="493" font-size="11" text-anchor="middle">89–103</text>
+</g>
+<g class="pt-cell pt-nonmetal">
+<rect x="41.5" y="35.5" width="61" height="67" rx="4"/>
+<text class="pt-num" x="46" y="49" font-size="10">1</text>
+<text class="pt-sym" x="72" y="78" font-size="22" text-anchor="middle">H</text>
+<text class="pt-name" x="72" y="94" font-size="8.5" text-anchor="middle">Hydrogène</text>
+</g>
+<g class="pt-cell pt-noble">
+<rect x="1129.5" y="35.5" width="61" height="67" rx="4"/>
+<text class="pt-num" x="1134" y="49" font-size="10">2</text>
+<text class="pt-sym" x="1160" y="78" font-size="22" text-anchor="middle">He</text>
+<text class="pt-name" x="1160" y="94" font-size="8.5" text-anchor="middle">Hélium</text>
+</g>
+<g class="pt-cell pt-alkali">
+<rect x="41.5" y="105.5" width="61" height="67" rx="4"/>
+<text class="pt-num" x="46" y="119" font-size="10">3</text>
+<text class="pt-sym" x="72" y="148" font-size="22" text-anchor="middle">Li</text>
+<text class="pt-name" x="72" y="164" font-size="8.5" text-anchor="middle">Lithium</text>
+</g>
+<g class="pt-cell pt-alkaline">
+<rect x="105.5" y="105.5" width="61" height="67" rx="4"/>
+<text class="pt-num" x="110" y="119" font-size="10">4</text>
+<text class="pt-sym" x="136" y="148" font-size="22" text-anchor="middle">Be</text>
+<text class="pt-name" x="136" y="164" font-size="8.5" text-anchor="middle">Béryllium</text>
+</g>
+<g class="pt-cell pt-metalloid">
+<rect x="809.5" y="105.5" width="61" height="67" rx="4"/>
+<text class="pt-num" x="814" y="119" font-size="10">5</text>
+<text class="pt-sym" x="840" y="148" font-size="22" text-anchor="middle">B</text>
+<text class="pt-name" x="840" y="164" font-size="8.5" text-anchor="middle">Bore</text>
+</g>
+<g class="pt-cell pt-nonmetal">
+<rect x="873.5" y="105.5" width="61" height="67" rx="4"/>
+<text class="pt-num" x="878" y="119" font-size="10">6</text>
+<text class="pt-sym" x="904" y="148" font-size="22" text-anchor="middle">C</text>
+<text class="pt-name" x="904" y="164" font-size="8.5" text-anchor="middle">Carbone</text>
+</g>
+<g class="pt-cell pt-nonmetal">
+<rect x="937.5" y="105.5" width="61" height="67" rx="4"/>
+<text class="pt-num" x="942" y="119" font-size="10">7</text>
+<text class="pt-sym" x="968" y="148" font-size="22" text-anchor="middle">N</text>
+<text class="pt-name" x="968" y="164" font-size="8.5" text-anchor="middle">Azote</text>
+</g>
+<g class="pt-cell pt-nonmetal">
+<rect x="1001.5" y="105.5" width="61" height="67" rx="4"/>
+<text class="pt-num" x="1006" y="119" font-size="10">8</text>
+<text class="pt-sym" x="1032" y="148" font-size="22" text-anchor="middle">O</text>
+<text class="pt-name" x="1032" y="164" font-size="8.5" text-anchor="middle">Oxygène</text>
+</g>
+<g class="pt-cell pt-halogen">
+<rect x="1065.5" y="105.5" width="61" height="67" rx="4"/>
+<text class="pt-num" x="1070" y="119" font-size="10">9</text>
+<text class="pt-sym" x="1096" y="148" font-size="22" text-anchor="middle">F</text>
+<text class="pt-name" x="1096" y="164" font-size="8.5" text-anchor="middle">Fluor</text>
+</g>
+<g class="pt-cell pt-noble">
+<rect x="1129.5" y="105.5" width="61" height="67" rx="4"/>
+<text class="pt-num" x="1134" y="119" font-size="10">10</text>
+<text class="pt-sym" x="1160" y="148" font-size="22" text-anchor="middle">Ne</text>
+<text class="pt-name" x="1160" y="164" font-size="8.5" text-anchor="middle">Néon</text>
+</g>
+<g class="pt-cell pt-alkali">
+<rect x="41.5" y="175.5" width="61" height="67" rx="4"/>
+<text class="pt-num" x="46" y="189" font-size="10">11</text>
+<text class="pt-sym" x="72" y="218" font-size="22" text-anchor="middle">Na</text>
+<text class="pt-name" x="72" y="234" font-size="8.5" text-anchor="middle">Sodium</text>
+</g>
+<g class="pt-cell pt-alkaline">
+<rect x="105.5" y="175.5" width="61" height="67" rx="4"/>
+<text class="pt-num" x="110" y="189" font-size="10">12</text>
+<text class="pt-sym" x="136" y="218" font-size="22" text-anchor="middle">Mg</text>
+<text class="pt-name" x="136" y="234" font-size="8.5" text-anchor="middle">Magnésium</text>
+</g>
+<g class="pt-cell pt-post">
+<rect x="809.5" y="175.5" width="61" height="67" rx="4"/>
+<text class="pt-num" x="814" y="189" font-size="10">13</text>
+<text class="pt-sym" x="840" y="218" font-size="22" text-anchor="middle">Al</text>
+<text class="pt-name" x="840" y="234" font-size="8.5" text-anchor="middle">Aluminium</text>
+</g>
+<g class="pt-cell pt-metalloid">
+<rect x="873.5" y="175.5" width="61" height="67" rx="4"/>
+<text class="pt-num" x="878" y="189" font-size="10">14</text>
+<text class="pt-sym" x="904" y="218" font-size="22" text-anchor="middle">Si</text>
+<text class="pt-name" x="904" y="234" font-size="8.5" text-anchor="middle">Silicium</text>
+</g>
+<g class="pt-cell pt-nonmetal">
+<rect x="937.5" y="175.5" width="61" height="67" rx="4"/>
+<text class="pt-num" x="942" y="189" font-size="10">15</text>
+<text class="pt-sym" x="968" y="218" font-size="22" text-anchor="middle">P</text>
+<text class="pt-name" x="968" y="234" font-size="8.5" text-anchor="middle">Phosphore</text>
+</g>
+<g class="pt-cell pt-nonmetal">
+<rect x="1001.5" y="175.5" width="61" height="67" rx="4"/>
+<text class="pt-num" x="1006" y="189" font-size="10">16</text>
+<text class="pt-sym" x="1032" y="218" font-size="22" text-anchor="middle">S</text>
+<text class="pt-name" x="1032" y="234" font-size="8.5" text-anchor="middle">Soufre</text>
+</g>
+<g class="pt-cell pt-halogen">
+<rect x="1065.5" y="175.5" width="61" height="67" rx="4"/>
+<text class="pt-num" x="1070" y="189" font-size="10">17</text>
+<text class="pt-sym" x="1096" y="218" font-size="22" text-anchor="middle">Cl</text>
+<text class="pt-name" x="1096" y="234" font-size="8.5" text-anchor="middle">Chlore</text>
+</g>
+<g class="pt-cell pt-noble">
+<rect x="1129.5" y="175.5" width="61" height="67" rx="4"/>
+<text class="pt-num" x="1134" y="189" font-size="10">18</text>
+<text class="pt-sym" x="1160" y="218" font-size="22" text-anchor="middle">Ar</text>
+<text class="pt-name" x="1160" y="234" font-size="8.5" text-anchor="middle">Argon</text>
+</g>
+<g class="pt-cell pt-alkali">
+<rect x="41.5" y="245.5" width="61" height="67" rx="4"/>
+<text class="pt-num" x="46" y="259" font-size="10">19</text>
+<text class="pt-sym" x="72" y="288" font-size="22" text-anchor="middle">K</text>
+<text class="pt-name" x="72" y="304" font-size="8.5" text-anchor="middle">Potassium</text>
+</g>
+<g class="pt-cell pt-alkaline">
+<rect x="105.5" y="245.5" width="61" height="67" rx="4"/>
+<text class="pt-num" x="110" y="259" font-size="10">20</text>
+<text class="pt-sym" x="136" y="288" font-size="22" text-anchor="middle">Ca</text>
+<text class="pt-name" x="136" y="304" font-size="8.5" text-anchor="middle">Calcium</text>
+</g>
+<g class="pt-cell pt-transition">
+<rect x="169.5" y="245.5" width="61" height="67" rx="4"/>
+<text class="pt-num" x="174" y="259" font-size="10">21</text>
+<text class="pt-sym" x="200" y="288" font-size="22" text-anchor="middle">Sc</text>
+<text class="pt-name" x="200" y="304" font-size="8.5" text-anchor="middle">Scandium</text>
+</g>
+<g class="pt-cell pt-transition">
+<rect x="233.5" y="245.5" width="61" height="67" rx="4"/>
+<text class="pt-num" x="238" y="259" font-size="10">22</text>
+<text class="pt-sym" x="264" y="288" font-size="22" text-anchor="middle">Ti</text>
+<text class="pt-name" x="264" y="304" font-size="8.5" text-anchor="middle">Titane</text>
+</g>
+<g class="pt-cell pt-transition">
+<rect x="297.5" y="245.5" width="61" height="67" rx="4"/>
+<text class="pt-num" x="302" y="259" font-size="10">23</text>
+<text class="pt-sym" x="328" y="288" font-size="22" text-anchor="middle">V</text>
+<text class="pt-name" x="328" y="304" font-size="8.5" text-anchor="middle">Vanadium</text>
+</g>
+<g class="pt-cell pt-transition">
+<rect x="361.5" y="245.5" width="61" height="67" rx="4"/>
+<text class="pt-num" x="366" y="259" font-size="10">24</text>
+<text class="pt-sym" x="392" y="288" font-size="22" text-anchor="middle">Cr</text>
+<text class="pt-name" x="392" y="304" font-size="8.5" text-anchor="middle">Chrome</text>
+</g>
+<g class="pt-cell pt-transition">
+<rect x="425.5" y="245.5" width="61" height="67" rx="4"/>
+<text class="pt-num" x="430" y="259" font-size="10">25</text>
+<text class="pt-sym" x="456" y="288" font-size="22" text-anchor="middle">Mn</text>
+<text class="pt-name" x="456" y="304" font-size="8.5" text-anchor="middle">Manganèse</text>
+</g>
+<g class="pt-cell pt-transition">
+<rect x="489.5" y="245.5" width="61" height="67" rx="4"/>
+<text class="pt-num" x="494" y="259" font-size="10">26</text>
+<text class="pt-sym" x="520" y="288" font-size="22" text-anchor="middle">Fe</text>
+<text class="pt-name" x="520" y="304" font-size="8.5" text-anchor="middle">Fer</text>
+</g>
+<g class="pt-cell pt-transition">
+<rect x="553.5" y="245.5" width="61" height="67" rx="4"/>
+<text class="pt-num" x="558" y="259" font-size="10">27</text>
+<text class="pt-sym" x="584" y="288" font-size="22" text-anchor="middle">Co</text>
+<text class="pt-name" x="584" y="304" font-size="8.5" text-anchor="middle">Cobalt</text>
+</g>
+<g class="pt-cell pt-transition">
+<rect x="617.5" y="245.5" width="61" height="67" rx="4"/>
+<text class="pt-num" x="622" y="259" font-size="10">28</text>
+<text class="pt-sym" x="648" y="288" font-size="22" text-anchor="middle">Ni</text>
+<text class="pt-name" x="648" y="304" font-size="8.5" text-anchor="middle">Nickel</text>
+</g>
+<g class="pt-cell pt-transition">
+<rect x="681.5" y="245.5" width="61" height="67" rx="4"/>
+<text class="pt-num" x="686" y="259" font-size="10">29</text>
+<text class="pt-sym" x="712" y="288" font-size="22" text-anchor="middle">Cu</text>
+<text class="pt-name" x="712" y="304" font-size="8.5" text-anchor="middle">Cuivre</text>
+</g>
+<g class="pt-cell pt-transition">
+<rect x="745.5" y="245.5" width="61" height="67" rx="4"/>
+<text class="pt-num" x="750" y="259" font-size="10">30</text>
+<text class="pt-sym" x="776" y="288" font-size="22" text-anchor="middle">Zn</text>
+<text class="pt-name" x="776" y="304" font-size="8.5" text-anchor="middle">Zinc</text>
+</g>
+<g class="pt-cell pt-post">
+<rect x="809.5" y="245.5" width="61" height="67" rx="4"/>
+<text class="pt-num" x="814" y="259" font-size="10">31</text>
+<text class="pt-sym" x="840" y="288" font-size="22" text-anchor="middle">Ga</text>
+<text class="pt-name" x="840" y="304" font-size="8.5" text-anchor="middle">Gallium</text>
+</g>
+<g class="pt-cell pt-metalloid">
+<rect x="873.5" y="245.5" width="61" height="67" rx="4"/>
+<text class="pt-num" x="878" y="259" font-size="10">32</text>
+<text class="pt-sym" x="904" y="288" font-size="22" text-anchor="middle">Ge</text>
+<text class="pt-name" x="904" y="304" font-size="8.5" text-anchor="middle">Germanium</text>
+</g>
+<g class="pt-cell pt-metalloid">
+<rect x="937.5" y="245.5" width="61" height="67" rx="4"/>
+<text class="pt-num" x="942" y="259" font-size="10">33</text>
+<text class="pt-sym" x="968" y="288" font-size="22" text-anchor="middle">As</text>
+<text class="pt-name" x="968" y="304" font-size="8.5" text-anchor="middle">Arsenic</text>
+</g>
+<g class="pt-cell pt-nonmetal">
+<rect x="1001.5" y="245.5" width="61" height="67" rx="4"/>
+<text class="pt-num" x="1006" y="259" font-size="10">34</text>
+<text class="pt-sym" x="1032" y="288" font-size="22" text-anchor="middle">Se</text>
+<text class="pt-name" x="1032" y="304" font-size="8.5" text-anchor="middle">Sélénium</text>
+</g>
+<g class="pt-cell pt-halogen">
+<rect x="1065.5" y="245.5" width="61" height="67" rx="4"/>
+<text class="pt-num" x="1070" y="259" font-size="10">35</text>
+<text class="pt-sym" x="1096" y="288" font-size="22" text-anchor="middle">Br</text>
+<text class="pt-name" x="1096" y="304" font-size="8.5" text-anchor="middle">Brome</text>
+</g>
+<g class="pt-cell pt-noble">
+<rect x="1129.5" y="245.5" width="61" height="67" rx="4"/>
+<text class="pt-num" x="1134" y="259" font-size="10">36</text>
+<text class="pt-sym" x="1160" y="288" font-size="22" text-anchor="middle">Kr</text>
+<text class="pt-name" x="1160" y="304" font-size="8.5" text-anchor="middle">Krypton</text>
+</g>
+<g class="pt-cell pt-alkali">
+<rect x="41.5" y="315.5" width="61" height="67" rx="4"/>
+<text class="pt-num" x="46" y="329" font-size="10">37</text>
+<text class="pt-sym" x="72" y="358" font-size="22" text-anchor="middle">Rb</text>
+<text class="pt-name" x="72" y="374" font-size="8.5" text-anchor="middle">Rubidium</text>
+</g>
+<g class="pt-cell pt-alkaline">
+<rect x="105.5" y="315.5" width="61" height="67" rx="4"/>
+<text class="pt-num" x="110" y="329" font-size="10">38</text>
+<text class="pt-sym" x="136" y="358" font-size="22" text-anchor="middle">Sr</text>
+<text class="pt-name" x="136" y="374" font-size="8.5" text-anchor="middle">Strontium</text>
+</g>
+<g class="pt-cell pt-transition">
+<rect x="169.5" y="315.5" width="61" height="67" rx="4"/>
+<text class="pt-num" x="174" y="329" font-size="10">39</text>
+<text class="pt-sym" x="200" y="358" font-size="22" text-anchor="middle">Y</text>
+<text class="pt-name" x="200" y="374" font-size="8.5" text-anchor="middle">Yttrium</text>
+</g>
+<g class="pt-cell pt-transition">
+<rect x="233.5" y="315.5" width="61" height="67" rx="4"/>
+<text class="pt-num" x="238" y="329" font-size="10">40</text>
+<text class="pt-sym" x="264" y="358" font-size="22" text-anchor="middle">Zr</text>
+<text class="pt-name" x="264" y="374" font-size="8.5" text-anchor="middle">Zirconium</text>
+</g>
+<g class="pt-cell pt-transition">
+<rect x="297.5" y="315.5" width="61" height="67" rx="4"/>
+<text class="pt-num" x="302" y="329" font-size="10">41</text>
+<text class="pt-sym" x="328" y="358" font-size="22" text-anchor="middle">Nb</text>
+<text class="pt-name" x="328" y="374" font-size="8.5" text-anchor="middle">Niobium</text>
+</g>
+<g class="pt-cell pt-transition">
+<rect x="361.5" y="315.5" width="61" height="67" rx="4"/>
+<text class="pt-num" x="366" y="329" font-size="10">42</text>
+<text class="pt-sym" x="392" y="358" font-size="22" text-anchor="middle">Mo</text>
+<text class="pt-name" x="392" y="374" font-size="8.5" text-anchor="middle">Molybdène</text>
+</g>
+<g class="pt-cell pt-transition">
+<rect x="425.5" y="315.5" width="61" height="67" rx="4"/>
+<text class="pt-num" x="430" y="329" font-size="10">43</text>
+<text class="pt-sym" x="456" y="358" font-size="22" text-anchor="middle">Tc</text>
+<text class="pt-name" x="456" y="374" font-size="8.5" text-anchor="middle">Technétium</text>
+</g>
+<g class="pt-cell pt-transition">
+<rect x="489.5" y="315.5" width="61" height="67" rx="4"/>
+<text class="pt-num" x="494" y="329" font-size="10">44</text>
+<text class="pt-sym" x="520" y="358" font-size="22" text-anchor="middle">Ru</text>
+<text class="pt-name" x="520" y="374" font-size="8.5" text-anchor="middle">Ruthénium</text>
+</g>
+<g class="pt-cell pt-transition">
+<rect x="553.5" y="315.5" width="61" height="67" rx="4"/>
+<text class="pt-num" x="558" y="329" font-size="10">45</text>
+<text class="pt-sym" x="584" y="358" font-size="22" text-anchor="middle">Rh</text>
+<text class="pt-name" x="584" y="374" font-size="8.5" text-anchor="middle">Rhodium</text>
+</g>
+<g class="pt-cell pt-transition">
+<rect x="617.5" y="315.5" width="61" height="67" rx="4"/>
+<text class="pt-num" x="622" y="329" font-size="10">46</text>
+<text class="pt-sym" x="648" y="358" font-size="22" text-anchor="middle">Pd</text>
+<text class="pt-name" x="648" y="374" font-size="8.5" text-anchor="middle">Palladium</text>
+</g>
+<g class="pt-cell pt-transition">
+<rect x="681.5" y="315.5" width="61" height="67" rx="4"/>
+<text class="pt-num" x="686" y="329" font-size="10">47</text>
+<text class="pt-sym" x="712" y="358" font-size="22" text-anchor="middle">Ag</text>
+<text class="pt-name" x="712" y="374" font-size="8.5" text-anchor="middle">Argent</text>
+</g>
+<g class="pt-cell pt-transition">
+<rect x="745.5" y="315.5" width="61" height="67" rx="4"/>
+<text class="pt-num" x="750" y="329" font-size="10">48</text>
+<text class="pt-sym" x="776" y="358" font-size="22" text-anchor="middle">Cd</text>
+<text class="pt-name" x="776" y="374" font-size="8.5" text-anchor="middle">Cadmium</text>
+</g>
+<g class="pt-cell pt-post">
+<rect x="809.5" y="315.5" width="61" height="67" rx="4"/>
+<text class="pt-num" x="814" y="329" font-size="10">49</text>
+<text class="pt-sym" x="840" y="358" font-size="22" text-anchor="middle">In</text>
+<text class="pt-name" x="840" y="374" font-size="8.5" text-anchor="middle">Indium</text>
+</g>
+<g class="pt-cell pt-post">
+<rect x="873.5" y="315.5" width="61" height="67" rx="4"/>
+<text class="pt-num" x="878" y="329" font-size="10">50</text>
+<text class="pt-sym" x="904" y="358" font-size="22" text-anchor="middle">Sn</text>
+<text class="pt-name" x="904" y="374" font-size="8.5" text-anchor="middle">Étain</text>
+</g>
+<g class="pt-cell pt-metalloid">
+<rect x="937.5" y="315.5" width="61" height="67" rx="4"/>
+<text class="pt-num" x="942" y="329" font-size="10">51</text>
+<text class="pt-sym" x="968" y="358" font-size="22" text-anchor="middle">Sb</text>
+<text class="pt-name" x="968" y="374" font-size="8.5" text-anchor="middle">Antimoine</text>
+</g>
+<g class="pt-cell pt-metalloid">
+<rect x="1001.5" y="315.5" width="61" height="67" rx="4"/>
+<text class="pt-num" x="1006" y="329" font-size="10">52</text>
+<text class="pt-sym" x="1032" y="358" font-size="22" text-anchor="middle">Te</text>
+<text class="pt-name" x="1032" y="374" font-size="8.5" text-anchor="middle">Tellure</text>
+</g>
+<g class="pt-cell pt-halogen">
+<rect x="1065.5" y="315.5" width="61" height="67" rx="4"/>
+<text class="pt-num" x="1070" y="329" font-size="10">53</text>
+<text class="pt-sym" x="1096" y="358" font-size="22" text-anchor="middle">I</text>
+<text class="pt-name" x="1096" y="374" font-size="8.5" text-anchor="middle">Iode</text>
+</g>
+<g class="pt-cell pt-noble">
+<rect x="1129.5" y="315.5" width="61" height="67" rx="4"/>
+<text class="pt-num" x="1134" y="329" font-size="10">54</text>
+<text class="pt-sym" x="1160" y="358" font-size="22" text-anchor="middle">Xe</text>
+<text class="pt-name" x="1160" y="374" font-size="8.5" text-anchor="middle">Xénon</text>
+</g>
+<g class="pt-cell pt-alkali">
+<rect x="41.5" y="385.5" width="61" height="67" rx="4"/>
+<text class="pt-num" x="46" y="399" font-size="10">55</text>
+<text class="pt-sym" x="72" y="428" font-size="22" text-anchor="middle">Cs</text>
+<text class="pt-name" x="72" y="444" font-size="8.5" text-anchor="middle">Césium</text>
+</g>
+<g class="pt-cell pt-alkaline">
+<rect x="105.5" y="385.5" width="61" height="67" rx="4"/>
+<text class="pt-num" x="110" y="399" font-size="10">56</text>
+<text class="pt-sym" x="136" y="428" font-size="22" text-anchor="middle">Ba</text>
+<text class="pt-name" x="136" y="444" font-size="8.5" text-anchor="middle">Baryum</text>
+</g>
+<g class="pt-cell pt-lanthanide">
+<rect x="169.5" y="547.5" width="61" height="67" rx="4"/>
+<text class="pt-num" x="174" y="561" font-size="10">57</text>
+<text class="pt-sym" x="200" y="590" font-size="22" text-anchor="middle">La</text>
+<text class="pt-name" x="200" y="606" font-size="8.5" text-anchor="middle">Lanthane</text>
+</g>
+<g class="pt-cell pt-lanthanide">
+<rect x="233.5" y="547.5" width="61" height="67" rx="4"/>
+<text class="pt-num" x="238" y="561" font-size="10">58</text>
+<text class="pt-sym" x="264" y="590" font-size="22" text-anchor="middle">Ce</text>
+<text class="pt-name" x="264" y="606" font-size="8.5" text-anchor="middle">Cérium</text>
+</g>
+<g class="pt-cell pt-lanthanide">
+<rect x="297.5" y="547.5" width="61" height="67" rx="4"/>
+<text class="pt-num" x="302" y="561" font-size="10">59</text>
+<text class="pt-sym" x="328" y="590" font-size="22" text-anchor="middle">Pr</text>
+<text class="pt-name" x="328" y="606" font-size="8.5" text-anchor="middle">Praséodyme</text>
+</g>
+<g class="pt-cell pt-lanthanide">
+<rect x="361.5" y="547.5" width="61" height="67" rx="4"/>
+<text class="pt-num" x="366" y="561" font-size="10">60</text>
+<text class="pt-sym" x="392" y="590" font-size="22" text-anchor="middle">Nd</text>
+<text class="pt-name" x="392" y="606" font-size="8.5" text-anchor="middle">Néodyme</text>
+</g>
+<g class="pt-cell pt-lanthanide">
+<rect x="425.5" y="547.5" width="61" height="67" rx="4"/>
+<text class="pt-num" x="430" y="561" font-size="10">61</text>
+<text class="pt-sym" x="456" y="590" font-size="22" text-anchor="middle">Pm</text>
+<text class="pt-name" x="456" y="606" font-size="8.5" text-anchor="middle">Prométhium</text>
+</g>
+<g class="pt-cell pt-lanthanide">
+<rect x="489.5" y="547.5" width="61" height="67" rx="4"/>
+<text class="pt-num" x="494" y="561" font-size="10">62</text>
+<text class="pt-sym" x="520" y="590" font-size="22" text-anchor="middle">Sm</text>
+<text class="pt-name" x="520" y="606" font-size="8.5" text-anchor="middle">Samarium</text>
+</g>
+<g class="pt-cell pt-lanthanide">
+<rect x="553.5" y="547.5" width="61" height="67" rx="4"/>
+<text class="pt-num" x="558" y="561" font-size="10">63</text>
+<text class="pt-sym" x="584" y="590" font-size="22" text-anchor="middle">Eu</text>
+<text class="pt-name" x="584" y="606" font-size="8.5" text-anchor="middle">Europium</text>
+</g>
+<g class="pt-cell pt-lanthanide">
+<rect x="617.5" y="547.5" width="61" height="67" rx="4"/>
+<text class="pt-num" x="622" y="561" font-size="10">64</text>
+<text class="pt-sym" x="648" y="590" font-size="22" text-anchor="middle">Gd</text>
+<text class="pt-name" x="648" y="606" font-size="8.5" text-anchor="middle">Gadolinium</text>
+</g>
+<g class="pt-cell pt-lanthanide">
+<rect x="681.5" y="547.5" width="61" height="67" rx="4"/>
+<text class="pt-num" x="686" y="561" font-size="10">65</text>
+<text class="pt-sym" x="712" y="590" font-size="22" text-anchor="middle">Tb</text>
+<text class="pt-name" x="712" y="606" font-size="8.5" text-anchor="middle">Terbium</text>
+</g>
+<g class="pt-cell pt-lanthanide">
+<rect x="745.5" y="547.5" width="61" height="67" rx="4"/>
+<text class="pt-num" x="750" y="561" font-size="10">66</text>
+<text class="pt-sym" x="776" y="590" font-size="22" text-anchor="middle">Dy</text>
+<text class="pt-name" x="776" y="606" font-size="8.5" text-anchor="middle">Dysprosium</text>
+</g>
+<g class="pt-cell pt-lanthanide">
+<rect x="809.5" y="547.5" width="61" height="67" rx="4"/>
+<text class="pt-num" x="814" y="561" font-size="10">67</text>
+<text class="pt-sym" x="840" y="590" font-size="22" text-anchor="middle">Ho</text>
+<text class="pt-name" x="840" y="606" font-size="8.5" text-anchor="middle">Holmium</text>
+</g>
+<g class="pt-cell pt-lanthanide">
+<rect x="873.5" y="547.5" width="61" height="67" rx="4"/>
+<text class="pt-num" x="878" y="561" font-size="10">68</text>
+<text class="pt-sym" x="904" y="590" font-size="22" text-anchor="middle">Er</text>
+<text class="pt-name" x="904" y="606" font-size="8.5" text-anchor="middle">Erbium</text>
+</g>
+<g class="pt-cell pt-lanthanide">
+<rect x="937.5" y="547.5" width="61" height="67" rx="4"/>
+<text class="pt-num" x="942" y="561" font-size="10">69</text>
+<text class="pt-sym" x="968" y="590" font-size="22" text-anchor="middle">Tm</text>
+<text class="pt-name" x="968" y="606" font-size="8.5" text-anchor="middle">Thulium</text>
+</g>
+<g class="pt-cell pt-lanthanide">
+<rect x="1001.5" y="547.5" width="61" height="67" rx="4"/>
+<text class="pt-num" x="1006" y="561" font-size="10">70</text>
+<text class="pt-sym" x="1032" y="590" font-size="22" text-anchor="middle">Yb</text>
+<text class="pt-name" x="1032" y="606" font-size="8.5" text-anchor="middle">Ytterbium</text>
+</g>
+<g class="pt-cell pt-lanthanide">
+<rect x="1065.5" y="547.5" width="61" height="67" rx="4"/>
+<text class="pt-num" x="1070" y="561" font-size="10">71</text>
+<text class="pt-sym" x="1096" y="590" font-size="22" text-anchor="middle">Lu</text>
+<text class="pt-name" x="1096" y="606" font-size="8.5" text-anchor="middle">Lutécium</text>
+</g>
+<g class="pt-cell pt-transition">
+<rect x="233.5" y="385.5" width="61" height="67" rx="4"/>
+<text class="pt-num" x="238" y="399" font-size="10">72</text>
+<text class="pt-sym" x="264" y="428" font-size="22" text-anchor="middle">Hf</text>
+<text class="pt-name" x="264" y="444" font-size="8.5" text-anchor="middle">Hafnium</text>
+</g>
+<g class="pt-cell pt-transition">
+<rect x="297.5" y="385.5" width="61" height="67" rx="4"/>
+<text class="pt-num" x="302" y="399" font-size="10">73</text>
+<text class="pt-sym" x="328" y="428" font-size="22" text-anchor="middle">Ta</text>
+<text class="pt-name" x="328" y="444" font-size="8.5" text-anchor="middle">Tantale</text>
+</g>
+<g class="pt-cell pt-transition">
+<rect x="361.5" y="385.5" width="61" height="67" rx="4"/>
+<text class="pt-num" x="366" y="399" font-size="10">74</text>
+<text class="pt-sym" x="392" y="428" font-size="22" text-anchor="middle">W</text>
+<text class="pt-name" x="392" y="444" font-size="8.5" text-anchor="middle">Tungstène</text>
+</g>
+<g class="pt-cell pt-transition">
+<rect x="425.5" y="385.5" width="61" height="67" rx="4"/>
+<text class="pt-num" x="430" y="399" font-size="10">75</text>
+<text class="pt-sym" x="456" y="428" font-size="22" text-anchor="middle">Re</text>
+<text class="pt-name" x="456" y="444" font-size="8.5" text-anchor="middle">Rhénium</text>
+</g>
+<g class="pt-cell pt-transition">
+<rect x="489.5" y="385.5" width="61" height="67" rx="4"/>
+<text class="pt-num" x="494" y="399" font-size="10">76</text>
+<text class="pt-sym" x="520" y="428" font-size="22" text-anchor="middle">Os</text>
+<text class="pt-name" x="520" y="444" font-size="8.5" text-anchor="middle">Osmium</text>
+</g>
+<g class="pt-cell pt-transition">
+<rect x="553.5" y="385.5" width="61" height="67" rx="4"/>
+<text class="pt-num" x="558" y="399" font-size="10">77</text>
+<text class="pt-sym" x="584" y="428" font-size="22" text-anchor="middle">Ir</text>
+<text class="pt-name" x="584" y="444" font-size="8.5" text-anchor="middle">Iridium</text>
+</g>
+<g class="pt-cell pt-transition">
+<rect x="617.5" y="385.5" width="61" height="67" rx="4"/>
+<text class="pt-num" x="622" y="399" font-size="10">78</text>
+<text class="pt-sym" x="648" y="428" font-size="22" text-anchor="middle">Pt</text>
+<text class="pt-name" x="648" y="444" font-size="8.5" text-anchor="middle">Platine</text>
+</g>
+<g class="pt-cell pt-transition">
+<rect x="681.5" y="385.5" width="61" height="67" rx="4"/>
+<text class="pt-num" x="686" y="399" font-size="10">79</text>
+<text class="pt-sym" x="712" y="428" font-size="22" text-anchor="middle">Au</text>
+<text class="pt-name" x="712" y="444" font-size="8.5" text-anchor="middle">Or</text>
+</g>
+<g class="pt-cell pt-transition">
+<rect x="745.5" y="385.5" width="61" height="67" rx="4"/>
+<text class="pt-num" x="750" y="399" font-size="10">80</text>
+<text class="pt-sym" x="776" y="428" font-size="22" text-anchor="middle">Hg</text>
+<text class="pt-name" x="776" y="444" font-size="8.5" text-anchor="middle">Mercure</text>
+</g>
+<g class="pt-cell pt-post">
+<rect x="809.5" y="385.5" width="61" height="67" rx="4"/>
+<text class="pt-num" x="814" y="399" font-size="10">81</text>
+<text class="pt-sym" x="840" y="428" font-size="22" text-anchor="middle">Tl</text>
+<text class="pt-name" x="840" y="444" font-size="8.5" text-anchor="middle">Thallium</text>
+</g>
+<g class="pt-cell pt-post">
+<rect x="873.5" y="385.5" width="61" height="67" rx="4"/>
+<text class="pt-num" x="878" y="399" font-size="10">82</text>
+<text class="pt-sym" x="904" y="428" font-size="22" text-anchor="middle">Pb</text>
+<text class="pt-name" x="904" y="444" font-size="8.5" text-anchor="middle">Plomb</text>
+</g>
+<g class="pt-cell pt-post">
+<rect x="937.5" y="385.5" width="61" height="67" rx="4"/>
+<text class="pt-num" x="942" y="399" font-size="10">83</text>
+<text class="pt-sym" x="968" y="428" font-size="22" text-anchor="middle">Bi</text>
+<text class="pt-name" x="968" y="444" font-size="8.5" text-anchor="middle">Bismuth</text>
+</g>
+<g class="pt-cell pt-post">
+<rect x="1001.5" y="385.5" width="61" height="67" rx="4"/>
+<text class="pt-num" x="1006" y="399" font-size="10">84</text>
+<text class="pt-sym" x="1032" y="428" font-size="22" text-anchor="middle">Po</text>
+<text class="pt-name" x="1032" y="444" font-size="8.5" text-anchor="middle">Polonium</text>
+</g>
+<g class="pt-cell pt-halogen">
+<rect x="1065.5" y="385.5" width="61" height="67" rx="4"/>
+<text class="pt-num" x="1070" y="399" font-size="10">85</text>
+<text class="pt-sym" x="1096" y="428" font-size="22" text-anchor="middle">At</text>
+<text class="pt-name" x="1096" y="444" font-size="8.5" text-anchor="middle">Astate</text>
+</g>
+<g class="pt-cell pt-noble">
+<rect x="1129.5" y="385.5" width="61" height="67" rx="4"/>
+<text class="pt-num" x="1134" y="399" font-size="10">86</text>
+<text class="pt-sym" x="1160" y="428" font-size="22" text-anchor="middle">Rn</text>
+<text class="pt-name" x="1160" y="444" font-size="8.5" text-anchor="middle">Radon</text>
+</g>
+<g class="pt-cell pt-alkali">
+<rect x="41.5" y="455.5" width="61" height="67" rx="4"/>
+<text class="pt-num" x="46" y="469" font-size="10">87</text>
+<text class="pt-sym" x="72" y="498" font-size="22" text-anchor="middle">Fr</text>
+<text class="pt-name" x="72" y="514" font-size="8.5" text-anchor="middle">Francium</text>
+</g>
+<g class="pt-cell pt-alkaline">
+<rect x="105.5" y="455.5" width="61" height="67" rx="4"/>
+<text class="pt-num" x="110" y="469" font-size="10">88</text>
+<text class="pt-sym" x="136" y="498" font-size="22" text-anchor="middle">Ra</text>
+<text class="pt-name" x="136" y="514" font-size="8.5" text-anchor="middle">Radium</text>
+</g>
+<g class="pt-cell pt-actinide">
+<rect x="169.5" y="617.5" width="61" height="67" rx="4"/>
+<text class="pt-num" x="174" y="631" font-size="10">89</text>
+<text class="pt-sym" x="200" y="660" font-size="22" text-anchor="middle">Ac</text>
+<text class="pt-name" x="200" y="676" font-size="8.5" text-anchor="middle">Actinium</text>
+</g>
+<g class="pt-cell pt-actinide">
+<rect x="233.5" y="617.5" width="61" height="67" rx="4"/>
+<text class="pt-num" x="238" y="631" font-size="10">90</text>
+<text class="pt-sym" x="264" y="660" font-size="22" text-anchor="middle">Th</text>
+<text class="pt-name" x="264" y="676" font-size="8.5" text-anchor="middle">Thorium</text>
+</g>
+<g class="pt-cell pt-actinide">
+<rect x="297.5" y="617.5" width="61" height="67" rx="4"/>
+<text class="pt-num" x="302" y="631" font-size="10">91</text>
+<text class="pt-sym" x="328" y="660" font-size="22" text-anchor="middle">Pa</text>
+<text class="pt-name" x="328" y="676" font-size="7.5" text-anchor="middle">Protactinium</text>
+</g>
+<g class="pt-cell pt-actinide">
+<rect x="361.5" y="617.5" width="61" height="67" rx="4"/>
+<text class="pt-num" x="366" y="631" font-size="10">92</text>
+<text class="pt-sym" x="392" y="660" font-size="22" text-anchor="middle">U</text>
+<text class="pt-name" x="392" y="676" font-size="8.5" text-anchor="middle">Uranium</text>
+</g>
+<g class="pt-cell pt-actinide">
+<rect x="425.5" y="617.5" width="61" height="67" rx="4"/>
+<text class="pt-num" x="430" y="631" font-size="10">93</text>
+<text class="pt-sym" x="456" y="660" font-size="22" text-anchor="middle">Np</text>
+<text class="pt-name" x="456" y="676" font-size="8.5" text-anchor="middle">Neptunium</text>
+</g>
+<g class="pt-cell pt-actinide">
+<rect x="489.5" y="617.5" width="61" height="67" rx="4"/>
+<text class="pt-num" x="494" y="631" font-size="10">94</text>
+<text class="pt-sym" x="520" y="660" font-size="22" text-anchor="middle">Pu</text>
+<text class="pt-name" x="520" y="676" font-size="8.5" text-anchor="middle">Plutonium</text>
+</g>
+<g class="pt-cell pt-actinide">
+<rect x="553.5" y="617.5" width="61" height="67" rx="4"/>
+<text class="pt-num" x="558" y="631" font-size="10">95</text>
+<text class="pt-sym" x="584" y="660" font-size="22" text-anchor="middle">Am</text>
+<text class="pt-name" x="584" y="676" font-size="8.5" text-anchor="middle">Américium</text>
+</g>
+<g class="pt-cell pt-actinide">
+<rect x="617.5" y="617.5" width="61" height="67" rx="4"/>
+<text class="pt-num" x="622" y="631" font-size="10">96</text>
+<text class="pt-sym" x="648" y="660" font-size="22" text-anchor="middle">Cm</text>
+<text class="pt-name" x="648" y="676" font-size="8.5" text-anchor="middle">Curium</text>
+</g>
+<g class="pt-cell pt-actinide">
+<rect x="681.5" y="617.5" width="61" height="67" rx="4"/>
+<text class="pt-num" x="686" y="631" font-size="10">97</text>
+<text class="pt-sym" x="712" y="660" font-size="22" text-anchor="middle">Bk</text>
+<text class="pt-name" x="712" y="676" font-size="8.5" text-anchor="middle">Berkélium</text>
+</g>
+<g class="pt-cell pt-actinide">
+<rect x="745.5" y="617.5" width="61" height="67" rx="4"/>
+<text class="pt-num" x="750" y="631" font-size="10">98</text>
+<text class="pt-sym" x="776" y="660" font-size="22" text-anchor="middle">Cf</text>
+<text class="pt-name" x="776" y="676" font-size="7.5" text-anchor="middle">Californium</text>
+</g>
+<g class="pt-cell pt-actinide">
+<rect x="809.5" y="617.5" width="61" height="67" rx="4"/>
+<text class="pt-num" x="814" y="631" font-size="10">99</text>
+<text class="pt-sym" x="840" y="660" font-size="22" text-anchor="middle">Es</text>
+<text class="pt-name" x="840" y="676" font-size="7.5" text-anchor="middle">Einsteinium</text>
+</g>
+<g class="pt-cell pt-actinide">
+<rect x="873.5" y="617.5" width="61" height="67" rx="4"/>
+<text class="pt-num" x="878" y="631" font-size="10">100</text>
+<text class="pt-sym" x="904" y="660" font-size="22" text-anchor="middle">Fm</text>
+<text class="pt-name" x="904" y="676" font-size="8.5" text-anchor="middle">Fermium</text>
+</g>
+<g class="pt-cell pt-actinide">
+<rect x="937.5" y="617.5" width="61" height="67" rx="4"/>
+<text class="pt-num" x="942" y="631" font-size="10">101</text>
+<text class="pt-sym" x="968" y="660" font-size="22" text-anchor="middle">Md</text>
+<text class="pt-name" x="968" y="676" font-size="7.5" text-anchor="middle">Mendélévium</text>
+</g>
+<g class="pt-cell pt-actinide">
+<rect x="1001.5" y="617.5" width="61" height="67" rx="4"/>
+<text class="pt-num" x="1006" y="631" font-size="10">102</text>
+<text class="pt-sym" x="1032" y="660" font-size="22" text-anchor="middle">No</text>
+<text class="pt-name" x="1032" y="676" font-size="8.5" text-anchor="middle">Nobélium</text>
+</g>
+<g class="pt-cell pt-actinide">
+<rect x="1065.5" y="617.5" width="61" height="67" rx="4"/>
+<text class="pt-num" x="1070" y="631" font-size="10">103</text>
+<text class="pt-sym" x="1096" y="660" font-size="22" text-anchor="middle">Lr</text>
+<text class="pt-name" x="1096" y="676" font-size="8.5" text-anchor="middle">Lawrencium</text>
+</g>
+<g class="pt-cell pt-transition">
+<rect x="233.5" y="455.5" width="61" height="67" rx="4"/>
+<text class="pt-num" x="238" y="469" font-size="10">104</text>
+<text class="pt-sym" x="264" y="498" font-size="22" text-anchor="middle">Rf</text>
+<text class="pt-name" x="264" y="514" font-size="7.5" text-anchor="middle">Rutherfordium</text>
+</g>
+<g class="pt-cell pt-transition">
+<rect x="297.5" y="455.5" width="61" height="67" rx="4"/>
+<text class="pt-num" x="302" y="469" font-size="10">105</text>
+<text class="pt-sym" x="328" y="498" font-size="22" text-anchor="middle">Db</text>
+<text class="pt-name" x="328" y="514" font-size="8.5" text-anchor="middle">Dubnium</text>
+</g>
+<g class="pt-cell pt-transition">
+<rect x="361.5" y="455.5" width="61" height="67" rx="4"/>
+<text class="pt-num" x="366" y="469" font-size="10">106</text>
+<text class="pt-sym" x="392" y="498" font-size="22" text-anchor="middle">Sg</text>
+<text class="pt-name" x="392" y="514" font-size="8.5" text-anchor="middle">Seaborgium</text>
+</g>
+<g class="pt-cell pt-transition">
+<rect x="425.5" y="455.5" width="61" height="67" rx="4"/>
+<text class="pt-num" x="430" y="469" font-size="10">107</text>
+<text class="pt-sym" x="456" y="498" font-size="22" text-anchor="middle">Bh</text>
+<text class="pt-name" x="456" y="514" font-size="8.5" text-anchor="middle">Bohrium</text>
+</g>
+<g class="pt-cell pt-transition">
+<rect x="489.5" y="455.5" width="61" height="67" rx="4"/>
+<text class="pt-num" x="494" y="469" font-size="10">108</text>
+<text class="pt-sym" x="520" y="498" font-size="22" text-anchor="middle">Hs</text>
+<text class="pt-name" x="520" y="514" font-size="8.5" text-anchor="middle">Hassium</text>
+</g>
+<g class="pt-cell pt-transition">
+<rect x="553.5" y="455.5" width="61" height="67" rx="4"/>
+<text class="pt-num" x="558" y="469" font-size="10">109</text>
+<text class="pt-sym" x="584" y="498" font-size="22" text-anchor="middle">Mt</text>
+<text class="pt-name" x="584" y="514" font-size="8.5" text-anchor="middle">Meitnérium</text>
+</g>
+<g class="pt-cell pt-transition">
+<rect x="617.5" y="455.5" width="61" height="67" rx="4"/>
+<text class="pt-num" x="622" y="469" font-size="10">110</text>
+<text class="pt-sym" x="648" y="498" font-size="22" text-anchor="middle">Ds</text>
+<text class="pt-name" x="648" y="514" font-size="7.5" text-anchor="middle">Darmstadtium</text>
+</g>
+<g class="pt-cell pt-transition">
+<rect x="681.5" y="455.5" width="61" height="67" rx="4"/>
+<text class="pt-num" x="686" y="469" font-size="10">111</text>
+<text class="pt-sym" x="712" y="498" font-size="22" text-anchor="middle">Rg</text>
+<text class="pt-name" x="712" y="514" font-size="7.5" text-anchor="middle">Roentgenium</text>
+</g>
+<g class="pt-cell pt-transition">
+<rect x="745.5" y="455.5" width="61" height="67" rx="4"/>
+<text class="pt-num" x="750" y="469" font-size="10">112</text>
+<text class="pt-sym" x="776" y="498" font-size="22" text-anchor="middle">Cn</text>
+<text class="pt-name" x="776" y="514" font-size="7.5" text-anchor="middle">Copernicium</text>
+</g>
+<g class="pt-cell pt-post">
+<rect x="809.5" y="455.5" width="61" height="67" rx="4"/>
+<text class="pt-num" x="814" y="469" font-size="10">113</text>
+<text class="pt-sym" x="840" y="498" font-size="22" text-anchor="middle">Nh</text>
+<text class="pt-name" x="840" y="514" font-size="8.5" text-anchor="middle">Nihonium</text>
+</g>
+<g class="pt-cell pt-post">
+<rect x="873.5" y="455.5" width="61" height="67" rx="4"/>
+<text class="pt-num" x="878" y="469" font-size="10">114</text>
+<text class="pt-sym" x="904" y="498" font-size="22" text-anchor="middle">Fl</text>
+<text class="pt-name" x="904" y="514" font-size="8.5" text-anchor="middle">Flérovium</text>
+</g>
+<g class="pt-cell pt-post">
+<rect x="937.5" y="455.5" width="61" height="67" rx="4"/>
+<text class="pt-num" x="942" y="469" font-size="10">115</text>
+<text class="pt-sym" x="968" y="498" font-size="22" text-anchor="middle">Mc</text>
+<text class="pt-name" x="968" y="514" font-size="8.5" text-anchor="middle">Moscovium</text>
+</g>
+<g class="pt-cell pt-post">
+<rect x="1001.5" y="455.5" width="61" height="67" rx="4"/>
+<text class="pt-num" x="1006" y="469" font-size="10">116</text>
+<text class="pt-sym" x="1032" y="498" font-size="22" text-anchor="middle">Lv</text>
+<text class="pt-name" x="1032" y="514" font-size="7.5" text-anchor="middle">Livermorium</text>
+</g>
+<g class="pt-cell pt-halogen">
+<rect x="1065.5" y="455.5" width="61" height="67" rx="4"/>
+<text class="pt-num" x="1070" y="469" font-size="10">117</text>
+<text class="pt-sym" x="1096" y="498" font-size="22" text-anchor="middle">Ts</text>
+<text class="pt-name" x="1096" y="514" font-size="8.5" text-anchor="middle">Tennesse</text>
+</g>
+<g class="pt-cell pt-noble">
+<rect x="1129.5" y="455.5" width="61" height="67" rx="4"/>
+<text class="pt-num" x="1134" y="469" font-size="10">118</text>
+<text class="pt-sym" x="1160" y="498" font-size="22" text-anchor="middle">Og</text>
+<text class="pt-name" x="1160" y="514" font-size="8.5" text-anchor="middle">Oganesson</text>
+</g>
+</svg>

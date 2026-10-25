@@ -19,7 +19,7 @@
   <div class="toolbar">
     <div class="source-actions">
       <label class="file-btn" for="fileInput">Charger un fichier .txt / .md / .svg</label>
-      <input type="file" id="fileInput" accept=".txt,.md,.svg,.json">
+      <input type="file" id="fileInput" accept=".txt,.md,.svg">
       <select class="file-btn" id="exampleSelect" title="Charger un exemple">
         <option value="">Exemples…</option>
         <option value="exemples/departements.md">Départements français (markdown)</option>
@@ -34,8 +34,8 @@
         <option value="exemples/poissons-manche.svg">Poissons marins de la Manche (images)</option>
         <option value="exemples/feuilles-arbres.svg">Feuilles des arbres (planche)</option>
         <option value="exemples/fleurs.svg">Fleurs (planche)</option>
-        <option value="exemples/anatomie.svg">Anatomie humaine (planche)</option>
-        <option value="exemples/anatomie.3d.json">Anatomie humaine (3D, prototype)</option>
+        <option value="exemples/reseau-requete-web.svg">Requête web, du PC au serveur (planche)</option>
+        <option value="exemples/tableau-periodique.svg">Tableau périodique (planche)</option>
         <option value="exemples/elements.md">Tableau périodique (markdown)</option>
         <option value="exemples/constantes.md">Constantes physiques (markdown)</option>
         <option value="exemples/ordres-de-grandeur.md">Ordres de grandeur des longueurs (markdown)</option>
@@ -116,15 +116,6 @@
       },
     },
   };
-</script>
-<!-- Three.js, chargé à la demande par viewer3d.js pour les fiches 3D -->
-<script type="importmap">
-  {
-    "imports": {
-      "three": "https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js",
-      "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/"
-    }
-  }
 </script>
 <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
 <script src="app.js"></script>

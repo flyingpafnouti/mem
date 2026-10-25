@@ -1,6 +1,6 @@
 // Network-first service worker: always serve fresh files when online,
 // fall back to the last cached copy when offline.
-const CACHE = 'memorize-v2';
+const CACHE = 'memorize-v3';
 const SHELL = [
   './',
   'index.html',
