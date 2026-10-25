@@ -19,7 +19,7 @@
   <div class="toolbar">
     <div class="source-actions">
       <label class="file-btn" for="fileInput">Charger un fichier .txt / .md / .svg</label>
-      <input type="file" id="fileInput" accept=".txt,.md,.svg">
+      <input type="file" id="fileInput" accept=".txt,.md,.svg,.json">
       <select class="file-btn" id="exampleSelect" title="Charger un exemple">
         <option value="">Exemples…</option>
         <option value="exemples/departements.md">Départements français (markdown)</option>
@@ -30,6 +30,8 @@
         <option value="exemples/carte-suisse.svg">Cantons suisses (carte)</option>
         <option value="exemples/carte-autriche.svg">Länder autrichiens (carte)</option>
         <option value="exemples/carte-espagne.svg">Communautés autonomes espagnoles (carte)</option>
+        <option value="exemples/anatomie.svg">Anatomie humaine (planche)</option>
+        <option value="exemples/anatomie.3d.json">Anatomie humaine (3D, prototype)</option>
         <option value="exemples/elements.md">Tableau périodique (markdown)</option>
         <option value="exemples/constantes.md">Constantes physiques (markdown)</option>
         <option value="exemples/ordres-de-grandeur.md">Ordres de grandeur des longueurs (markdown)</option>
@@ -80,6 +82,14 @@
         <button class="file-btn" id="zoomIn" title="Zoomer">+</button>
         <button class="file-btn" id="zoomOut" title="Dézoomer">−</button>
       </div>
+      <div class="depth-controls" id="depthControls" hidden>
+        <label for="depthSlider">Profondeur</label>
+        <div class="depth-track">
+          <input type="range" id="depthSlider" min="0" max="100" value="0" step="1">
+          <div class="depth-ticks" id="depthTicks"></div>
+        </div>
+        <span id="depthLabel"></span>
+      </div>
     </div>
     <div class="stats" id="statsOut"></div>
   </div>
@@ -101,6 +111,15 @@
       },
     },
   };
+</script>
+<!-- Three.js, chargé à la demande par viewer3d.js pour les fiches 3D -->
+<script type="importmap">
+  {
+    "imports": {
+      "three": "https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js",
+      "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/"
+    }
+  }
 </script>
 <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
 <script src="app.js"></script>
