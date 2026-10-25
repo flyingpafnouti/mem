@@ -83,13 +83,29 @@ function htmlToPlainText(html) {
   return tmp.textContent;
 }
 
-// Applique les blancs sur les nœuds texte d'un arbre DOM (pour le rendu markdown)
+// Extrait le texte d'une carte SVG : un nœud texte par étiquette, séparés par des espaces
+// (textContent collerait « Caroline » et « du Sud », écrits sur deux tspan)
+function svgToPlainText(svgHtml) {
+  const tmp = document.createElement('div');
+  tmp.innerHTML = svgHtml;
+  const walker = document.createTreeWalker(tmp, NodeFilter.SHOW_TEXT);
+  const parts = [];
+  while (walker.nextNode()) parts.push(walker.currentNode.textContent);
+  return parts.join(' ');
+}
+
+const SVG_NS = 'http://www.w3.org/2000/svg';
+
+// Applique les blancs sur les nœuds texte d'un arbre DOM (rendu markdown ou carte SVG)
 function applyBlankingToNode(node, wordsToBlank, hardcoreWords, difficulty, globalSeed, counter) {
   if (node.nodeType === Node.TEXT_NODE) {
     const text = node.textContent;
     const tokens = text.match(WORD_RE);
     if (!tokens) return;
 
+    // Dans un SVG, un span HTML ne s'affiche pas : il faut un tspan
+    const inSvg = node.parentNode.namespaceURI === SVG_NS;
+    const tag = inSvg ? 'tspan' : 'span';
     let hasBlank = false;
     let result = '';
     for (const token of tokens) {
@@ -100,13 +116,13 @@ function applyBlankingToNode(node, wordsToBlank, hardcoreWords, difficulty, glob
         const wordSeed = (globalSeed ^ hashStr(key)) >>> 0;
         const { parts } = blankWord(token, difficulty, wordSeed, hardcoreWords.has(key));
         for (const p of parts)
-          result += p.blank ? `<span class="blank">${p.text}</span>` : escHtml(p.text);
+          result += p.blank ? `<${tag} class="blank">${p.text}</${tag}>` : escHtml(p.text);
       } else {
         result += escHtml(token);
       }
     }
     if (hasBlank) {
-      const span = document.createElement('span');
+      const span = inSvg ? document.createElementNS(SVG_NS, 'tspan') : document.createElement('span');
       span.innerHTML = result;
       node.parentNode.replaceChild(span, node);
     }
@@ -181,12 +197,22 @@ function typesetMath(root, maths) {
   }
 }
 
-function process(text, difficulty, isMarkdown) {
+function process(text, difficulty, mode) {
   if (!text.trim()) return { html: '', blankedCount: 0, totalWords: 0 };
 
   const globalSeed = hashStr(text);
 
-  if (isMarkdown) {
+  // Carte SVG : seuls les textes des étiquettes sont masqués, les tracés restent intacts
+  if (mode === 'svg') {
+    const { wordsToBlank, hardcoreWords, totalWords } = buildWordsToBlank(svgToPlainText(text), difficulty);
+    const div = document.createElement('div');
+    div.innerHTML = text;
+    const counter = { count: 0 };
+    applyBlankingToNode(div, wordsToBlank, hardcoreWords, difficulty, globalSeed, counter);
+    return { html: div.innerHTML, blankedCount: counter.count, totalWords };
+  }
+
+  if (mode === 'markdown') {
     const { text: mdText, maths } = extractMath(text);
     const rendered = marked.parse(mdText);
     const plain = htmlToPlainText(rendered);
@@ -235,7 +261,8 @@ const statsIn   = document.getElementById('statsIn');
 const statsOut  = document.getElementById('statsOut');
 const fileInput = document.getElementById('fileInput');
 
-let isMarkdown = false;
+// 'plain', 'markdown' ou 'svg', d'après l'extension du fichier chargé
+let mode = 'plain';
 
 // ── Toggle source ─────────────────────────────────────────────────────────────
 const hideSourceBtn = document.getElementById('hideSourceBtn');
@@ -263,13 +290,15 @@ function render() {
   updateSliderTrack();
 
   const text = inputEl.value;
-  const words = (text.match(WORD_RE) || []).filter(t => LETTER_RE.test(t[0]));
+  // Pour une carte, on ne compte pas les commandes des tracés (M, L, Z…)
+  const counted = mode === 'svg' ? svgToPlainText(text) : text;
+  const words = (counted.match(WORD_RE) || []).filter(t => LETTER_RE.test(t[0]));
   statsIn.innerHTML = `<span>${words.length}</span> mots`;
 
-  const { html, blankedCount, totalWords, maths = [] } = process(text, difficulty, isMarkdown);
+  const { html, blankedCount, totalWords, maths = [] } = process(text, difficulty, mode);
   outputEl.innerHTML = html;
   typesetMath(outputEl, maths);
-  outputEl.dataset.mode = isMarkdown ? 'markdown' : 'plain';
+  outputEl.dataset.mode = mode;
 
   const pct = totalWords ? Math.round(blankedCount / totalWords * 100) : 0;
   statsOut.innerHTML = `<span>${blankedCount}</span> mots masqués sur <span>${totalWords}</span> (${pct}%)`;
@@ -279,7 +308,7 @@ slider.addEventListener('input', render);
 inputEl.addEventListener('input', render);
 
 function loadText(text, name) {
-  isMarkdown = name.endsWith('.md');
+  mode = name.endsWith('.md') ? 'markdown' : name.endsWith('.svg') ? 'svg' : 'plain';
   inputEl.value = text;
   render();
 }

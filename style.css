@@ -467,6 +467,37 @@ input[type="range"].hardcore::-webkit-slider-thumb {
   font-weight: bold;
 }
 
+/* ── Carte SVG ───────────────────────────────────────────────────────────── */
+#output[data-mode="svg"] {
+  font-family: 'Segoe UI', system-ui, sans-serif;
+  white-space: normal;
+}
+
+#output[data-mode="svg"] svg {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+#output[data-mode="svg"] .state {
+  fill: var(--surface);
+  stroke: var(--border2);
+  stroke-width: 0.6;
+}
+
+#output[data-mode="svg"] .leader {
+  stroke: var(--border2);
+  stroke-width: 0.5;
+}
+
+#output[data-mode="svg"] text {
+  font-size: 9px;
+  fill: var(--text);
+}
+
+/* En SVG, la couleur du texte passe par fill */
+#output[data-mode="svg"] .blank { fill: var(--accent); }
+
 .stats {
   font-size: 0.72rem;
   color: var(--text-muted2);
