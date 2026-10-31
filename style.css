@@ -767,3 +767,42 @@ input[type="range"].hardcore::-webkit-slider-thumb {
 }
 
 .stats span { color: var(--accent); }
+
+/* Boutons de vue des fiches en colonnes, sur la ligne des statistiques */
+.stats-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+}
+
+.view-controls {
+  display: flex;
+  gap: 0.15rem;
+}
+
+.view-controls[hidden] { display: none; }
+
+.view-btn {
+  display: flex;
+  padding: 0.25rem;
+  background: none;
+  border: none;
+  border-radius: 4px;
+  color: var(--text-muted);
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+.view-btn:hover { color: var(--file-hover); }
+.view-btn.active { color: var(--accent); }
+
+.view-btn svg {
+  width: 16px;
+  height: 16px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.4;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}

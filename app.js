@@ -47,14 +47,19 @@ function fisherYates(arr, rng) {
 const WORD_RE   = /[a-zA-ZÀ-ÿ']+|[^a-zA-ZÀ-ÿ']+/g;
 const LETTER_RE = /[a-zA-ZÀ-ÿ]/;
 
-function wordComplexity(w) {
-  return [...w].filter(c => LETTER_RE.test(c)).length;
+// Découpage du texte courant : seules les lettres sont masquables
+const TEXT_TOKENS = { word: WORD_RE, char: LETTER_RE };
+// Colonne clé d'une fiche permutée : les chiffres se masquent aussi (« 01 », « 2A », « 1789 »)
+const KEY_TOKENS = { word: /[a-zA-ZÀ-ÿ0-9']+|[^a-zA-ZÀ-ÿ0-9']+/g, char: /[a-zA-ZÀ-ÿ0-9]/ };
+
+function wordComplexity(w, charRe) {
+  return [...w].filter(c => charRe.test(c)).length;
 }
 
-function blankWord(word, difficulty, wordSeed, hideInitial = false) {
+function blankWord(word, difficulty, wordSeed, hideInitial = false, charRe = LETTER_RE) {
   const chars = [...word];
   const letterDiff = Math.min(difficulty, 1);
-  const blankable = chars.map((c, i) => i).filter(i => (hideInitial ? i >= 0 : i > 0) && LETTER_RE.test(chars[i]));
+  const blankable = chars.map((c, i) => i).filter(i => (hideInitial ? i >= 0 : i > 0) && charRe.test(chars[i]));
   if (!blankable.length) return { parts: [{ text: word, blank: false }] };
 
   const nBlank = Math.min(Math.max(1, Math.round(blankable.length * letterDiff)), blankable.length);
@@ -102,10 +107,10 @@ function svgToPlainText(svgHtml) {
 const SVG_NS = 'http://www.w3.org/2000/svg';
 
 // Applique les blancs sur les nœuds texte d'un arbre DOM (rendu markdown ou carte SVG)
-function applyBlankingToNode(node, wordsToBlank, hardcoreWords, difficulty, globalSeed, counter) {
+function applyBlankingToNode(node, wordsToBlank, hardcoreWords, difficulty, globalSeed, counter, tok = TEXT_TOKENS) {
   if (node.nodeType === Node.TEXT_NODE) {
     const text = node.textContent;
-    const tokens = text.match(WORD_RE);
+    const tokens = text.match(tok.word);
     if (!tokens) return;
 
     // Dans un SVG, un span HTML ne s'affiche pas : il faut un tspan
@@ -115,11 +120,13 @@ function applyBlankingToNode(node, wordsToBlank, hardcoreWords, difficulty, glob
     let result = '';
     for (const token of tokens) {
       const key = token.toLowerCase();
-      if (LETTER_RE.test(token[0]) && wordsToBlank.has(key)) {
+      if (tok.char.test(token[0]) && wordsToBlank.has(key)) {
         hasBlank = true;
         counter.count++;
         const wordSeed = (globalSeed ^ hashStr(key)) >>> 0;
-        const { parts } = blankWord(token, difficulty, wordSeed, hardcoreWords.has(key));
+        // Un nombre n'a pas d'initiale à laisser en indice
+        const hideInitial = hardcoreWords.has(key) || /^[0-9]/.test(token);
+        const { parts } = blankWord(token, difficulty, wordSeed, hideInitial, tok.char);
         for (const p of parts)
           result += p.blank ? `<${tag} class="blank">${p.text}</${tag}>` : escHtml(p.text);
       } else {
@@ -133,15 +140,15 @@ function applyBlankingToNode(node, wordsToBlank, hardcoreWords, difficulty, glob
     }
   } else if (node.nodeName !== 'SCRIPT' && node.nodeName !== 'STYLE') {
     for (const child of [...node.childNodes])
-      applyBlankingToNode(child, wordsToBlank, hardcoreWords, difficulty, globalSeed, counter);
+      applyBlankingToNode(child, wordsToBlank, hardcoreWords, difficulty, globalSeed, counter, tok);
   }
 }
 
-function buildWordsToBlank(plainText, difficulty) {
-  const tokens = plainText.match(WORD_RE) || [];
-  const wordTokens = tokens.filter(t => LETTER_RE.test(t[0]));
+function buildWordsToBlank(plainText, difficulty, tok = TEXT_TOKENS) {
+  const tokens = plainText.match(tok.word) || [];
+  const wordTokens = tokens.filter(t => tok.char.test(t[0]));
   const unique = [...new Set(wordTokens.map(w => w.toLowerCase()))];
-  unique.sort((a, b) => wordComplexity(a) - wordComplexity(b));
+  unique.sort((a, b) => wordComplexity(a, tok.char) - wordComplexity(b, tok.char));
 
   const clampedDiff  = Math.min(difficulty, 1);
   const hardcoreFactor = Math.max(0, difficulty - 1); // 0→1 pour d ∈ [1,2]
@@ -231,7 +238,8 @@ function blankLeaf(el) {
 
 // Variables et nombres partent avec la difficulté ; les opérateurs ensuite, en mode hardcore.
 // Un symbole masqué l'est dans toutes les formules, comme un mot dans le texte.
-function typesetMath(root, maths, difficulty, seed) {
+// En fiche permutée (keysOnly), seules les formules de la colonne clé sont masquées.
+function typesetMath(root, maths, difficulty, seed, keysOnly = false) {
   const ready = typeof window.MathJax?.tex2mml === 'function';
   const els = [...root.querySelectorAll('.math')];
   const trees = els.map(el => {
@@ -240,8 +248,9 @@ function typesetMath(root, maths, difficulty, seed) {
   });
 
   const all = { content: [], ops: [] };
-  const leaves = trees.map(math => {
-    const l = math ? mathLeaves(math) : { content: [], ops: [] };
+  const leaves = trees.map((math, i) => {
+    const blankable = math && (!keysOnly || els[i].closest('.col-key'));
+    const l = blankable ? mathLeaves(math) : { content: [], ops: [] };
     all.content.push(...l.content);
     all.ops.push(...l.ops);
     return l;
@@ -260,6 +269,48 @@ function typesetMath(root, maths, difficulty, seed) {
     for (const leaf of leaves[i].ops) if (opKeys.has(leaf.textContent.trim())) blankLeaf(leaf);
     el.replaceChildren(mathSvg(math));
   });
+}
+
+// ── Fiches en colonnes ───────────────────────────────────────────────────────
+// Une fiche à colonnes est une liste de lignes « clé — reste » ou « clé : reste »
+const COLUMN_SEP_RE = / — | : /;
+const COLUMN_MIN_RATIO = 0.8;
+
+function hasColumns(root) {
+  const items = [...root.querySelectorAll('li')];
+  const split = items.filter(li => COLUMN_SEP_RE.test(li.textContent));
+  return items.length > 0 && split.length >= items.length * COLUMN_MIN_RATIO;
+}
+
+// Enveloppe la première colonne de la ligne dans un .col-key
+function wrapKeyColumn(li) {
+  const walker = document.createTreeWalker(li, NodeFilter.SHOW_TEXT);
+  while (walker.nextNode()) {
+    const node = walker.currentNode;
+    const at = node.textContent.search(COLUMN_SEP_RE);
+    if (at < 0) continue;
+    const range = document.createRange();
+    range.setStart(li, 0);
+    range.setEnd(node, at);
+    const key = document.createElement('span');
+    key.className = 'col-key';
+    key.append(range.extractContents());
+    li.prepend(key);
+    return key;
+  }
+  return null;
+}
+
+// Regroupe toutes les lignes dans une seule liste mélangée. Les intertitres disparaissent :
+// « 01–10 » n'a plus de sens une fois l'ordre perdu, et il trahirait le numéro.
+function shuffleItems(root, seed) {
+  const items = [...root.querySelectorAll('li')];
+  const list = document.createElement('ul');
+  list.append(...fisherYates(items, mulberry32(seed)));
+  const children = [...root.children];
+  const first = children.findIndex((el, i) => i > 0 && /^(H[1-6]|UL|OL)$/.test(el.tagName));
+  children.slice(first).forEach(el => el.remove());
+  root.append(list);
 }
 
 function process(text, difficulty, mode) {
@@ -281,13 +332,26 @@ function process(text, difficulty, mode) {
     const { text: mdText, maths } = extractMath(text);
     const rendered = marked.parse(mdText);
     const plain = htmlToPlainText(rendered);
-    const { wordsToBlank, hardcoreWords, totalWords } = buildWordsToBlank(plain, difficulty);
-
     const div = document.createElement('div');
     div.innerHTML = rendered;
+    const columns = hasColumns(div);
     const counter = { count: 0 };
+
+    if (columns && shuffled) shuffleItems(div, (globalSeed ^ shuffleSeed) >>> 0);
+
+    if (columns && swapped) {
+      const keys = [...div.querySelectorAll('li')].map(wrapKeyColumn).filter(Boolean);
+      // Mélangées ici pour que le curseur masque les clés au hasard, pas de la dernière à la première
+      const keyText = fisherYates(keys.map(k => k.textContent), mulberry32(globalSeed)).join(' ');
+      const { wordsToBlank, hardcoreWords, totalWords } = buildWordsToBlank(keyText, difficulty, KEY_TOKENS);
+      for (const key of keys)
+        applyBlankingToNode(key, wordsToBlank, hardcoreWords, difficulty, globalSeed, counter, KEY_TOKENS);
+      return { html: div.innerHTML, blankedCount: counter.count, totalWords, maths, columns };
+    }
+
+    const { wordsToBlank, hardcoreWords, totalWords } = buildWordsToBlank(plain, difficulty);
     applyBlankingToNode(div, wordsToBlank, hardcoreWords, difficulty, globalSeed, counter);
-    return { html: div.innerHTML, blankedCount: counter.count, totalWords, maths };
+    return { html: div.innerHTML, blankedCount: counter.count, totalWords, maths, columns };
   }
 
   // Texte brut
@@ -329,6 +393,11 @@ const fileInput = document.getElementById('fileInput');
 // 'plain', 'markdown' ou 'svg', d'après l'extension du fichier chargé
 let mode = 'plain';
 
+// Vue des fiches en colonnes ; conservée d'une fiche à l'autre
+let swapped = false;
+let shuffled = false;
+let shuffleSeed = 0;
+
 // ── Toggle source ─────────────────────────────────────────────────────────────
 const hideSourceBtn = document.getElementById('hideSourceBtn');
 
@@ -360,13 +429,14 @@ function render() {
   const words = (counted.match(WORD_RE) || []).filter(t => LETTER_RE.test(t[0]));
   statsIn.innerHTML = `<span>${words.length}</span> mots`;
 
-  const { html, blankedCount, totalWords, maths = [] } = process(text, difficulty, mode);
+  const { html, blankedCount, totalWords, maths = [], columns = false } = process(text, difficulty, mode);
+  viewControls.hidden = !columns;
   outputEl.dataset.mode = mode;
   zoomControls.hidden = mode !== 'svg';
   // Le contenu est remplacé à chaque mouvement du curseur : on garde le zoom et la position
   const { scrollLeft, scrollTop } = outputEl;
   outputEl.innerHTML = html;
-  typesetMath(outputEl, maths, difficulty, hashStr(text));
+  typesetMath(outputEl, maths, difficulty, hashStr(text), columns && swapped);
   applyZoom();
   applyDepth();
   outputEl.scrollLeft = scrollLeft;
@@ -378,6 +448,31 @@ function render() {
 
 slider.addEventListener('input', render);
 inputEl.addEventListener('input', render);
+
+// ── Permutation et mélange des fiches en colonnes ────────────────────────────
+const viewControls = document.getElementById('viewControls');
+const swapBtn      = document.getElementById('swapBtn');
+const shuffleBtn   = document.getElementById('shuffleBtn');
+
+function setPressed(btn, on) {
+  btn.classList.toggle('active', on);
+  btn.setAttribute('aria-pressed', on);
+}
+
+swapBtn.addEventListener('click', () => {
+  swapped = !swapped;
+  setPressed(swapBtn, swapped);
+  render();
+});
+
+// Chaque activation produit un nouvel ordre ; le curseur, lui, ne le change pas
+shuffleBtn.addEventListener('click', () => {
+  shuffled = !shuffled;
+  shuffleSeed = Math.floor(Math.random() * 2 ** 32);
+  setPressed(shuffleBtn, shuffled);
+  render();
+  outputEl.scrollTop = 0;
+});
 
 // ── Zoom des cartes ──────────────────────────────────────────────────────────
 const zoomControls = document.getElementById('zoomControls');

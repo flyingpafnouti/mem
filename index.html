@@ -96,7 +96,17 @@
         <span id="depthLabel"></span>
       </div>
     </div>
-    <div class="stats" id="statsOut"></div>
+    <div class="stats-row">
+      <div class="stats" id="statsOut"></div>
+      <div class="view-controls" id="viewControls" hidden>
+        <button class="view-btn" id="swapBtn" aria-pressed="false" aria-label="Permuter" title="Permuter : masquer la première colonne, laisser le reste visible">
+          <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M2 5h11M10 2l3 3-3 3M14 11H3M6 8l-3 3 3 3"/></svg>
+        </button>
+        <button class="view-btn" id="shuffleBtn" aria-pressed="false" aria-label="Mélanger" title="Mélanger les lignes">
+          <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M1 4h3l7 8h4M1 12h3l2-2.3M9 6.3 11 4h4M13 2l2 2-2 2M13 10l2 2-2 2"/></svg>
+        </button>
+      </div>
+    </div>
   </div>
 </div>
 </div>
