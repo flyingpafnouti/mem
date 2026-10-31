@@ -797,6 +797,22 @@ input[type="range"].hardcore::-webkit-slider-thumb {
 .view-btn:hover { color: var(--file-hover); }
 .view-btn.active { color: var(--accent); }
 
+.level-controls {
+  display: flex;
+  gap: 0.15rem;
+  margin-right: 0.35rem;
+}
+
+.level-controls[hidden] { display: none; }
+
+.level-btn {
+  justify-content: center;
+  min-width: 1.4rem;
+  font: inherit;
+  font-size: 0.75rem;
+  line-height: 1rem;
+}
+
 .view-btn svg {
   width: 16px;
   height: 16px;

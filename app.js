@@ -238,8 +238,8 @@ function blankLeaf(el) {
 
 // Variables et nombres partent avec la difficulté ; les opérateurs ensuite, en mode hardcore.
 // Un symbole masqué l'est dans toutes les formules, comme un mot dans le texte.
-// En fiche permutée (keysOnly), seules les formules de la colonne clé sont masquées.
-function typesetMath(root, maths, difficulty, seed, keysOnly = false) {
+// Si la fiche masque une seule colonne (blankIn, son sélecteur), seules ses formules sont masquées.
+function typesetMath(root, maths, difficulty, seed, blankIn = null) {
   const ready = typeof window.MathJax?.tex2mml === 'function';
   const els = [...root.querySelectorAll('.math')];
   const trees = els.map(el => {
@@ -249,7 +249,7 @@ function typesetMath(root, maths, difficulty, seed, keysOnly = false) {
 
   const all = { content: [], ops: [] };
   const leaves = trees.map((math, i) => {
-    const blankable = math && (!keysOnly || els[i].closest('.col-key'));
+    const blankable = math && (!blankIn || els[i].closest(blankIn));
     const l = blankable ? mathLeaves(math) : { content: [], ops: [] };
     all.content.push(...l.content);
     all.ops.push(...l.ops);
@@ -275,6 +275,8 @@ function typesetMath(root, maths, difficulty, seed, keysOnly = false) {
 // Une fiche à colonnes est une liste de lignes « clé — reste » ou « clé : reste »
 const COLUMN_SEP_RE = / — | : /;
 const COLUMN_MIN_RATIO = 0.8;
+// Fiche de paires (langues) : ce marqueur en tête du fichier impose de ne masquer qu'une colonne à la fois
+const PAIRS_RE = /^\s*<!--\s*paires\s*-->/;
 
 function hasColumns(root) {
   const items = [...root.querySelectorAll('li')];
@@ -289,16 +291,70 @@ function wrapKeyColumn(li) {
     const node = walker.currentNode;
     const at = node.textContent.search(COLUMN_SEP_RE);
     if (at < 0) continue;
-    const range = document.createRange();
-    range.setStart(li, 0);
-    range.setEnd(node, at);
     const key = document.createElement('span');
     key.className = 'col-key';
-    key.append(range.extractContents());
+    if (node.parentNode === li) {
+      // Cas courant, sans Range : le navigateur met à jour chaque Range vivant à chaque mutation
+      // du DOM, et une fiche de 1000 lignes en crée 1000 à chaque cran du curseur
+      const rest = node.splitText(at);
+      while (li.firstChild !== rest) key.append(li.firstChild);
+    } else {
+      const range = document.createRange();
+      range.setStart(li, 0);
+      range.setEnd(node, at);
+      key.append(range.extractContents());
+    }
     li.prepend(key);
     return key;
   }
   return null;
+}
+
+// Paliers d'une fiche de paires : un titre « ## Palier N » ouvre chaque palier
+const LEVEL_RE = /^Palier\s+(\d+)/;
+
+// Paliers retenus pour la fiche courante ; lus à la première demande, propres à chaque fiche
+function levelsKey() {
+  return `memorize-levels:${sheetName}`;
+}
+
+function resolveActiveLevels(all) {
+  if (activeLevels) return;
+  let saved = [];
+  try {
+    saved = JSON.parse(localStorage.getItem(levelsKey())) || [];
+  } catch { /* stockage indisponible : on repart du premier palier */ }
+  const valid = saved.filter(n => all.includes(n));
+  activeLevels = new Set(valid.length ? valid : all.slice(0, 1));
+}
+
+// Retire les paliers non retenus avant tout masquage, et décrit ceux de la fiche pour les boutons
+function filterLevels(root) {
+  const heads = [...root.querySelectorAll('h2')].filter(h => LEVEL_RE.test(h.textContent));
+  if (!heads.length) return [];
+  const number = h => Number(h.textContent.match(LEVEL_RE)[1]);
+  resolveActiveLevels(heads.map(number));
+
+  const levels = heads.map(h => ({ n: number(h), title: h.textContent, count: 0 }));
+  let current = null;
+  for (const el of [...root.children]) {
+    const at = heads.indexOf(el);
+    if (at >= 0) current = levels[at];
+    if (!current) continue;
+    current.count += el.querySelectorAll('li').length;
+    if (!activeLevels.has(current.n)) el.remove();
+  }
+  return levels;
+}
+
+// Enveloppe le reste de la ligne dans un .col-val ; le séparateur n'a pas de lettre à masquer
+function wrapValueColumn(key) {
+  const val = document.createElement('span');
+  val.className = 'col-val';
+  const li = key.parentNode;
+  val.append(...[...li.childNodes].filter(n => n !== key));
+  li.append(val);
+  return val;
 }
 
 // Regroupe toutes les lignes dans une seule liste mélangée. Les intertitres disparaissent :
@@ -335,18 +391,23 @@ function process(text, difficulty, mode) {
     const div = document.createElement('div');
     div.innerHTML = rendered;
     const columns = hasColumns(div);
+    const pairs = columns && PAIRS_RE.test(text);
+    const levels = pairs ? filterLevels(div) : [];
     const counter = { count: 0 };
 
     if (columns && shuffled) shuffleItems(div, (globalSeed ^ shuffleSeed) >>> 0);
 
-    if (columns && swapped) {
+    // Une seule colonne masquée : la clé en fiche permutée, sinon la valeur pour une fiche de paires
+    if (columns && (swapped || pairs)) {
       const keys = [...div.querySelectorAll('li')].map(wrapKeyColumn).filter(Boolean);
-      // Mélangées ici pour que le curseur masque les clés au hasard, pas de la dernière à la première
-      const keyText = fisherYates(keys.map(k => k.textContent), mulberry32(globalSeed)).join(' ');
-      const { wordsToBlank, hardcoreWords, totalWords } = buildWordsToBlank(keyText, difficulty, KEY_TOKENS);
-      for (const key of keys)
-        applyBlankingToNode(key, wordsToBlank, hardcoreWords, difficulty, globalSeed, counter, KEY_TOKENS);
-      return { html: div.innerHTML, blankedCount: counter.count, totalWords, maths, columns };
+      const cells = swapped ? keys : keys.map(wrapValueColumn);
+      // Mélangées ici pour que le curseur masque les cases au hasard, pas de la dernière à la première
+      const cellText = fisherYates(cells.map(c => c.textContent), mulberry32(globalSeed)).join(' ');
+      const { wordsToBlank, hardcoreWords, totalWords } = buildWordsToBlank(cellText, difficulty, KEY_TOKENS);
+      for (const cell of cells)
+        applyBlankingToNode(cell, wordsToBlank, hardcoreWords, difficulty, globalSeed, counter, KEY_TOKENS);
+      const blankIn = swapped ? '.col-key' : '.col-val';
+      return { html: div.innerHTML, blankedCount: counter.count, totalWords, maths, columns, pairs, levels, blankIn };
     }
 
     const { wordsToBlank, hardcoreWords, totalWords } = buildWordsToBlank(plain, difficulty);
@@ -398,6 +459,10 @@ let swapped = false;
 let shuffled = false;
 let shuffleSeed = 0;
 
+// Fichier affiché, et paliers retenus pour lui (null tant qu'ils n'ont pas été lus)
+let sheetName = '';
+let activeLevels = null;
+
 // ── Toggle source ─────────────────────────────────────────────────────────────
 const hideSourceBtn = document.getElementById('hideSourceBtn');
 
@@ -429,14 +494,18 @@ function render() {
   const words = (counted.match(WORD_RE) || []).filter(t => LETTER_RE.test(t[0]));
   statsIn.innerHTML = `<span>${words.length}</span> mots`;
 
-  const { html, blankedCount, totalWords, maths = [], columns = false } = process(text, difficulty, mode);
+  const { html, blankedCount, totalWords, maths = [], columns = false, pairs = false, levels = [], blankIn = null } = process(text, difficulty, mode);
   viewControls.hidden = !columns;
+  showLevels(levels);
+  swapBtn.title = pairs
+    ? 'Permuter : masquer l\'autre colonne'
+    : 'Permuter : masquer la première colonne, laisser le reste visible';
   outputEl.dataset.mode = mode;
   zoomControls.hidden = mode !== 'svg';
   // Le contenu est remplacé à chaque mouvement du curseur : on garde le zoom et la position
   const { scrollLeft, scrollTop } = outputEl;
   outputEl.innerHTML = html;
-  typesetMath(outputEl, maths, difficulty, hashStr(text), columns && swapped);
+  typesetMath(outputEl, maths, difficulty, hashStr(text), blankIn);
   applyZoom();
   applyDepth();
   outputEl.scrollLeft = scrollLeft;
@@ -473,6 +542,37 @@ shuffleBtn.addEventListener('click', () => {
   render();
   outputEl.scrollTop = 0;
 });
+
+// Boutons de paliers : plusieurs peuvent être actifs, jamais aucun
+const levelControls = document.getElementById('levelControls');
+
+function showLevels(levels) {
+  levelControls.hidden = !levels.length;
+  const key = levels.map(l => `${l.n}|${l.title}|${l.count}`).join('/');
+  if (levelControls.dataset.key !== key) {
+    levelControls.dataset.key = key;
+    levelControls.replaceChildren(...levels.map(({ n, title, count }) => {
+      const btn = document.createElement('button');
+      btn.className = 'view-btn level-btn';
+      btn.textContent = n;
+      btn.dataset.level = n;
+      btn.title = `${title} (${count} mots)`;
+      btn.addEventListener('click', () => toggleLevel(n));
+      return btn;
+    }));
+  }
+  for (const btn of levelControls.children) setPressed(btn, activeLevels.has(Number(btn.dataset.level)));
+}
+
+function toggleLevel(n) {
+  if (activeLevels.has(n) && activeLevels.size === 1) return;
+  if (!activeLevels.delete(n)) activeLevels.add(n);
+  try {
+    localStorage.setItem(levelsKey(), JSON.stringify([...activeLevels]));
+  } catch { /* la sélection vaut alors pour cette session */ }
+  render();
+  outputEl.scrollTop = 0;
+}
 
 // ── Zoom des cartes ──────────────────────────────────────────────────────────
 const zoomControls = document.getElementById('zoomControls');
@@ -599,6 +699,8 @@ function loadText(text, name) {
   mode = name.endsWith('.md') ? 'markdown' : name.endsWith('.svg') ? 'svg' : 'plain';
   zoom = 1;
   depthSlider.value = 0;
+  sheetName = name;
+  activeLevels = null;
   inputEl.value = text;
   render();
 }

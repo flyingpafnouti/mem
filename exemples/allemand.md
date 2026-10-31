@@ -1,0 +1,2779 @@
+<!-- paires -->
+
+# Allemand, de A1 aux films
+
+## Palier 1 : A1, l'essentiel
+
+### Pronoms et déterminants
+
+- ich : je
+- du : tu
+- er : il
+- sie : elle, ils, elles
+- es : il (neutre), ça
+- wir : nous
+- ihr : vous (tutoiement pluriel)
+- Sie : vous (politesse)
+- man : on
+- mich : me, moi (accusatif)
+- mir : me, à moi (datif)
+- dich : te, toi (accusatif)
+- dir : te, à toi (datif)
+- ihn : le (accusatif)
+- ihm : lui (datif masculin)
+- uns : nous (complément)
+- euch : vous (complément)
+- ihnen : leur, à eux
+- sich : se, soi
+- mein : mon
+- dein : ton
+- sein Buch : son livre (à lui)
+- ihr Buch : son livre (à elle), leur livre
+- unser : notre
+- euer : votre
+- der : le (masculin)
+- die : la, les
+- das : le (neutre)
+- ein : un
+- eine : une
+- kein : pas de, aucun
+- dieser : ce, celui-ci
+- jeder : chaque
+- alle : tous
+- alles : tout
+- viele : beaucoup de
+- einige : quelques
+- wenige : peu de
+- beide : les deux
+- etwas : quelque chose
+- nichts : rien
+- jemand : quelqu'un
+- niemand : personne
+- andere : autres
+
+### Questions
+
+- wer : qui
+- was : quoi, que
+- wo : où
+- wohin : où (avec mouvement)
+- woher : d'où
+- wann : quand
+- warum : pourquoi
+- wie : comment
+- wie viel : combien
+- welcher : quel
+
+### Prépositions
+
+- in : dans
+- mit : avec
+- von : de
+
+### Conjonctions
+
+- und : et
+- oder : ou
+- aber : mais
+
+### Adverbes
+
+- ja : oui
+- nein : non
+- nicht : ne pas
+- auch : aussi
+- sehr : très
+- hier : ici
+- dort : là-bas
+
+### Politesse et expressions
+
+- Hallo : salut
+- Guten Tag : bonjour
+- Guten Morgen : bonjour (le matin)
+- Guten Abend : bonsoir
+- Gute Nacht : bonne nuit
+- Auf Wiedersehen : au revoir
+- Tschüss : salut (au revoir)
+- Bis bald : à bientôt
+- Bis morgen : à demain
+- Danke : merci
+- Vielen Dank : merci beaucoup
+- Bitte : s'il vous plaît, de rien
+- Entschuldigung : excusez-moi, pardon
+- Es tut mir leid : je suis désolé
+- Wie geht's : comment ça va
+- Willkommen : bienvenue
+- Herzlichen Glückwunsch : félicitations
+- Gute Reise : bon voyage
+- Viel Glück : bonne chance
+- Keine Ahnung : aucune idée
+- Kein Problem : pas de problème
+- Ich verstehe nicht : je ne comprends pas
+- Ich heiße : je m'appelle
+- Einen Moment : un instant
+
+### Nombres et quantités
+
+- null : zéro
+- eins : un
+- zwei : deux
+- drei : trois
+- vier : quatre
+- fünf : cinq
+- sechs : six
+- sieben : sept
+- acht : huit
+- neun : neuf
+- zehn : dix
+- elf : onze
+- zwölf : douze
+- dreizehn : treize
+- vierzehn : quatorze
+- fünfzehn : quinze
+- sechzehn : seize
+- siebzehn : dix-sept
+- achtzehn : dix-huit
+- neunzehn : dix-neuf
+- zwanzig : vingt
+- dreißig : trente
+- vierzig : quarante
+- fünfzig : cinquante
+- sechzig : soixante
+- siebzig : soixante-dix
+- achtzig : quatre-vingts
+- neunzig : quatre-vingt-dix
+- hundert : cent
+- tausend : mille
+- die Million : le million
+- die Hälfte : la moitié
+- das Viertel : le quart
+- das Paar : la paire, le couple
+- die Zahl : le nombre
+- erste : premier
+- zweite : deuxième
+- dritte : troisième
+- letzte : dernier
+- einmal : une fois
+- zweimal : deux fois
+
+### Le temps
+
+- die Zeit : le temps
+- die Sekunde : la seconde
+- die Minute : la minute
+- die Stunde : l'heure
+- die Uhr : l'heure, la montre
+- der Tag : le jour
+- die Woche : la semaine
+- der Monat : le mois
+- das Jahr : l'année
+- das Jahrhundert : le siècle
+- der Morgen : le matin
+- der Vormittag : la matinée
+- der Mittag : le midi
+- der Nachmittag : l'après-midi
+- der Abend : le soir
+- die Nacht : la nuit
+- heute : aujourd'hui
+- gestern : hier
+- morgen : demain
+- jetzt : maintenant
+- gleich : tout de suite, pareil
+- bald : bientôt
+- später : plus tard
+- früher : autrefois, plus tôt
+- damals : à l'époque
+- früh : tôt
+- spät : tard
+- der Montag : lundi
+- der Dienstag : mardi
+- der Mittwoch : mercredi
+- der Donnerstag : jeudi
+- der Freitag : vendredi
+- der Samstag : samedi
+- der Sonntag : dimanche
+- das Wochenende : le week-end
+- der Januar : janvier
+- der Februar : février
+- der März : mars
+- der April : avril
+- der Mai : mai
+- der Juni : juin
+- der Juli : juillet
+- der August : août
+- der September : septembre
+- der Oktober : octobre
+- der November : novembre
+- der Dezember : décembre
+- der Frühling : le printemps
+- der Sommer : l'été
+- der Herbst : l'automne
+- der Winter : l'hiver
+- das Datum : la date
+- der Kalender : le calendrier
+- der Geburtstag : l'anniversaire
+- der Feiertag : le jour férié
+- die Ferien : les vacances
+- der Urlaub : le congé
+- Weihnachten : Noël
+- Ostern : Pâques
+
+### Verbes essentiels
+
+- sein : être
+- haben : avoir
+- werden : devenir
+- können : pouvoir, savoir faire
+- müssen : devoir, être obligé de
+- wollen : vouloir
+- mögen : aimer bien
+- möchten : voudrais (forme polie de mögen)
+- machen : faire
+- gehen : aller, marcher
+- kommen : venir
+- fahren : aller (en véhicule), conduire
+- sagen : dire
+- sprechen : parler
+- fragen : demander, questionner
+- antworten : répondre
+- sehen : voir
+- hören : entendre, écouter
+- wissen : savoir
+- kennen : connaître
+- verstehen : comprendre
+- lernen : apprendre
+- lesen : lire
+- schreiben : écrire
+- essen : manger
+- trinken : boire
+- schlafen : dormir
+- wohnen : habiter
+- arbeiten : travailler
+- kaufen : acheter
+- geben : donner
+- nehmen : prendre
+- heißen : s'appeler
+
+### Adjectifs
+
+- gut : bon, bien
+- schlecht : mauvais, mal
+- groß : grand
+- klein : petit
+- neu : nouveau, neuf
+- alt : vieux
+- jung : jeune
+- schön : beau
+- warm : chaud
+- kalt : froid
+
+### Couleurs
+
+- die Farbe : la couleur
+- rot : rouge
+- blau : bleu
+- grün : vert
+- gelb : jaune
+- schwarz : noir
+- weiß : blanc
+- grau : gris
+- braun : marron
+- rosa : rose
+- orange : orange
+- lila : violet
+- blond : blond
+
+### Personnes et famille
+
+- der Mensch : l'être humain
+- die Leute : les gens
+- der Mann : l'homme, le mari
+- die Frau : la femme, madame
+- das Kind : l'enfant
+- das Baby : le bébé
+- der Junge : le garçon
+- das Mädchen : la fille
+- der Herr : le monsieur
+- die Familie : la famille
+- die Eltern : les parents
+- der Vater : le père
+- die Mutter : la mère
+- der Sohn : le fils
+- die Tochter : la fille (de quelqu'un)
+- der Bruder : le frère
+- die Schwester : la sœur
+- die Geschwister : les frères et sœurs
+- der Großvater : le grand-père
+- die Großmutter : la grand-mère
+- die Großeltern : les grands-parents
+- der Onkel : l'oncle
+- die Tante : la tante
+- der Freund : l'ami, le petit ami
+- die Freundin : l'amie, la petite amie
+- der Nachbar : le voisin
+- der Gast : l'invité
+- der Name : le nom
+- der Vorname : le prénom
+- das Alter : l'âge
+- die Hochzeit : le mariage
+- die Liebe : l'amour
+- der Tod : la mort
+- das Leben : la vie
+
+### Le corps et la santé
+
+- der Kopf : la tête
+- das Auge : l'œil
+- die Hand : la main
+
+### La maison
+
+- das Haus : la maison
+- die Tür : la porte
+- der Tisch : la table
+- der Stuhl : la chaise
+- das Bett : le lit
+
+### Nourriture et boissons
+
+- das Brot : le pain
+- das Wasser : l'eau
+- der Kaffee : le café
+
+### La ville et les lieux
+
+- die Stadt : la ville
+- die Straße : la rue
+
+### Transports et voyages
+
+- das Auto : la voiture
+- der Bus : le bus
+
+### Travail et école
+
+- die Arbeit : le travail
+- das Geld : l'argent
+- die Schule : l'école
+- das Wort : le mot
+- das Buch : le livre
+
+### Nature et météo
+
+- die Sonne : le soleil
+- der Hund : le chien
+- die Katze : le chat
+
+## Palier 2 : A1+, le quotidien
+
+### Prépositions
+
+- an : à, contre
+- auf : sur
+- unter : sous
+- über : au-dessus de, à propos de
+- vor : devant, avant
+- hinter : derrière
+- neben : à côté de
+- zwischen : entre
+- bei : chez, près de
+- ohne : sans
+- für : pour
+- gegen : contre
+- um : autour de, à (heure)
+- durch : à travers
+- nach : après, vers
+- zu : à, chez, trop
+- aus : de, hors de
+- seit : depuis
+- bis : jusqu'à
+- ab : à partir de
+
+### Conjonctions
+
+- denn : car
+- weil : parce que
+- dass : que
+- wenn : si, quand
+- ob : si (interrogation indirecte)
+- als : quand (passé), que (comparaison)
+- bevor : avant que
+- also : donc
+
+### Adverbes
+
+- doch : si (après une négation)
+- nur : seulement
+- noch : encore
+- schon : déjà
+- immer : toujours
+- nie : jamais
+- oft : souvent
+- manchmal : parfois
+- selten : rarement
+- ganz : tout à fait
+- fast : presque
+- genug : assez, suffisamment
+- mehr : plus
+- weniger : moins
+- wieder : de nouveau
+- zusammen : ensemble
+- allein : seul
+- vielleicht : peut-être
+- natürlich : bien sûr
+- wirklich : vraiment
+- sicher : certainement, sûr
+- leider : malheureusement
+- gern : volontiers
+- lieber : plutôt, de préférence
+- da : là
+- oben : en haut
+- unten : en bas
+- links : à gauche
+- rechts : à droite
+- geradeaus : tout droit
+- draußen : dehors
+- überall : partout
+- so : ainsi
+- zum Beispiel : par exemple
+- genau : exactement
+- schnell : vite, rapide
+- langsam : lentement, lent
+- zuerst : d'abord
+- dann : ensuite
+- danach : après cela
+- endlich : enfin
+
+### Verbes essentiels
+
+- sollen : devoir (conseil, ordre)
+- dürfen : avoir le droit de
+- tun : faire, agir
+- fliegen : voler, aller en avion
+- laufen : courir, marcher
+- bleiben : rester
+- stehen : être debout
+- sitzen : être assis
+- liegen : être couché, se trouver
+- rufen : appeler, crier
+- anrufen : téléphoner
+- schauen : regarder
+- fühlen : sentir, ressentir
+- denken : penser
+- glauben : croire
+- meinen : penser, vouloir dire
+- singen : chanter
+- tanzen : danser
+- spielen : jouer
+- lachen : rire
+- weinen : pleurer
+- kochen : cuisiner
+- aufstehen : se lever
+- leben : vivre
+- verkaufen : vendre
+- bezahlen : payer
+- kosten : coûter
+- bringen : apporter
+- holen : aller chercher
+- bekommen : recevoir
+- finden : trouver
+- suchen : chercher
+- verlieren : perdre
+- brauchen : avoir besoin de
+- helfen : aider
+- zeigen : montrer
+- öffnen : ouvrir
+- schließen : fermer
+- anfangen : commencer
+- beginnen : commencer
+- warten : attendre
+- treffen : rencontrer
+- besuchen : rendre visite
+- reisen : voyager
+- ankommen : arriver
+- schwimmen : nager
+- waschen : laver
+- lieben : aimer
+- vergessen : oublier
+- versuchen : essayer
+
+### Adjectifs
+
+- lang : long
+- kurz : court
+- hoch : haut
+- dick : gros, épais
+- dünn : mince
+- schwer : lourd, difficile
+- leicht : léger, facile
+- einfach : simple
+- heiß : brûlant, très chaud
+- voll : plein
+- leer : vide
+- billig : bon marché
+- teuer : cher
+- krank : malade
+- gesund : en bonne santé
+- müde : fatigué
+- glücklich : heureux
+- traurig : triste
+- nett : gentil
+- lustig : drôle
+- richtig : juste, correct
+- falsch : faux
+
+### Le corps et la santé
+
+- der Körper : le corps
+- das Haar : le cheveu
+- das Gesicht : le visage
+- das Ohr : l'oreille
+- die Nase : le nez
+- der Mund : la bouche
+- der Zahn : la dent
+- der Hals : le cou, la gorge
+- die Schulter : l'épaule
+- der Arm : le bras
+- der Finger : le doigt
+- die Brust : la poitrine
+- der Bauch : le ventre
+- der Rücken : le dos
+- das Bein : la jambe
+- das Knie : le genou
+- der Fuß : le pied
+- das Herz : le cœur
+- das Blut : le sang
+- die Haut : la peau
+- die Gesundheit : la santé
+- die Krankheit : la maladie
+- der Schmerz : la douleur
+- das Fieber : la fièvre
+- die Erkältung : le rhume
+- der Husten : la toux
+- der Arzt : le médecin
+- der Zahnarzt : le dentiste
+- das Krankenhaus : l'hôpital
+- die Apotheke : la pharmacie
+- das Medikament : le médicament
+- die Tablette : le comprimé
+- der Unfall : l'accident
+- die Hilfe : l'aide
+
+### La maison
+
+- die Wohnung : l'appartement
+- das Zimmer : la pièce, la chambre
+- das Wohnzimmer : le salon
+- das Schlafzimmer : la chambre à coucher
+- die Küche : la cuisine
+- das Bad : la salle de bain
+- die Toilette : les toilettes
+- der Keller : la cave
+- der Garten : le jardin
+- der Balkon : le balcon
+- das Dach : le toit
+- die Treppe : l'escalier
+- der Aufzug : l'ascenseur
+- das Fenster : la fenêtre
+- die Wand : le mur
+- der Boden : le sol
+- die Decke : le plafond, la couverture
+- das Sofa : le canapé
+- der Schrank : l'armoire
+- das Regal : l'étagère
+- die Lampe : la lampe
+- das Licht : la lumière
+- der Spiegel : le miroir
+- die Dusche : la douche
+- die Seife : le savon
+- das Handtuch : la serviette de toilette
+- die Zahnbürste : la brosse à dents
+- der Kühlschrank : le réfrigérateur
+- der Herd : la cuisinière
+- der Ofen : le four
+- die Waschmaschine : le lave-linge
+- die Heizung : le chauffage
+- der Schlüssel : la clé
+- die Miete : le loyer
+- der Müll : les ordures
+- die Tasse : la tasse
+- das Glas : le verre
+- der Teller : l'assiette
+- die Gabel : la fourchette
+- das Messer : le couteau
+- der Löffel : la cuillère
+- die Flasche : la bouteille
+
+### Nourriture et boissons
+
+- das Essen : le repas, la nourriture
+- das Frühstück : le petit-déjeuner
+- das Mittagessen : le déjeuner
+- das Abendessen : le dîner
+- das Brötchen : le petit pain
+- die Butter : le beurre
+- der Käse : le fromage
+- das Ei : l'œuf
+- die Milch : le lait
+- der Joghurt : le yaourt
+- das Fleisch : la viande
+- die Wurst : la saucisse
+- das Hähnchen : le poulet
+- der Fisch : le poisson
+- das Gemüse : les légumes
+- die Kartoffel : la pomme de terre
+- die Tomate : la tomate
+- die Zwiebel : l'oignon
+- der Salat : la salade
+- das Obst : les fruits
+- der Apfel : la pomme
+- die Banane : la banane
+- die Orange : l'orange (fruit)
+- die Zitrone : le citron
+- die Erdbeere : la fraise
+- der Reis : le riz
+- die Nudeln : les pâtes
+- die Suppe : la soupe
+- die Soße : la sauce
+- das Salz : le sel
+- der Pfeffer : le poivre
+- der Zucker : le sucre
+- das Öl : l'huile
+- der Kuchen : le gâteau
+- die Schokolade : le chocolat
+- das Eis : la glace
+- der Durst : la soif
+- der Hunger : la faim
+- der Tee : le thé
+- der Saft : le jus
+- das Bier : la bière
+- der Wein : le vin
+- das Restaurant : le restaurant
+- die Speisekarte : le menu
+- das Trinkgeld : le pourboire
+- der Kellner : le serveur
+
+### La ville et les lieux
+
+- die Bank : la banque, le banc
+- der Supermarkt : le supermarché
+- das Hotel : l'hôtel
+
+### Transports et voyages
+
+- der Zug : le train
+- der Bahnhof : la gare
+- die Fahrkarte : le billet
+- das Flugzeug : l'avion
+- das Fahrrad : le vélo
+
+### Travail et école
+
+- der Lehrer : le professeur
+- der Schüler : l'élève
+- die Frage : la question
+- die Antwort : la réponse
+- die Sprache : la langue
+
+### Objets et technologie
+
+- das Telefon : le téléphone
+- das Handy : le téléphone portable
+- der Computer : l'ordinateur
+
+### Vêtements
+
+- die Kleidung : les vêtements
+- das Hemd : la chemise
+- das T-Shirt : le tee-shirt
+- die Hose : le pantalon
+- das Kleid : la robe
+- der Rock : la jupe
+- die Jacke : la veste
+- der Mantel : le manteau
+- der Pullover : le pull
+- der Anzug : le costume
+- der Schuh : la chaussure
+- die Socke : la chaussette
+- der Hut : le chapeau
+- der Schal : l'écharpe
+- der Handschuh : le gant
+
+### Nature et météo
+
+- der Baum : l'arbre
+- die Blume : la fleur
+- das Tier : l'animal
+
+### Idées et vie sociale
+
+- die Musik : la musique
+- der Film : le film
+- der Sport : le sport
+
+## Palier 3 : A2, se débrouiller
+
+### Verbes essentiels
+
+- legen : poser à plat
+- stellen : poser debout
+- setzen : asseoir, placer
+- hängen : pendre, accrocher
+- erzählen : raconter
+- riechen : sentir (odeur)
+- schmecken : avoir bon goût
+- studieren : étudier (à l'université)
+- zählen : compter
+- malen : peindre
+- lächeln : sourire
+- backen : cuire au four
+- aufwachen : se réveiller
+- sterben : mourir
+- schicken : envoyer
+- gewinnen : gagner (un jeu)
+- benutzen : utiliser
+- aufhören : arrêter
+- enden : finir
+- einladen : inviter
+- feiern : fêter
+- abfahren : partir (en véhicule)
+- einsteigen : monter (dans un véhicule)
+- aussteigen : descendre (d'un véhicule)
+- umsteigen : changer (de train)
+- steigen : monter
+- fallen : tomber
+- springen : sauter
+- wandern : randonner
+- tragen : porter
+- ziehen : tirer
+- drücken : appuyer, pousser
+- halten : tenir, s'arrêter
+- schneiden : couper
+- brechen : casser
+- bauen : construire
+- reparieren : réparer
+- putzen : nettoyer
+- aufräumen : ranger
+- anziehen : habiller, mettre (un vêtement)
+- ausziehen : déshabiller, déménager
+- duschen : prendre une douche
+- hoffen : espérer
+- wünschen : souhaiter
+- träumen : rêver
+- passen : convenir, aller
+- gefallen : plaire
+- üben : s'entraîner, pratiquer
+- rauchen : fumer
+- regnen : pleuvoir
+- schneien : neiger
+- danken : remercier
+- mitnehmen : emporter
+- fernsehen : regarder la télévision
+- einkaufen : faire les courses
+- spazieren : se promener
+- fotografieren : photographier
+- telefonieren : téléphoner
+
+### Adjectifs
+
+- tief : profond
+- breit : large
+- schwierig : difficile
+- hässlich : laid
+- hübsch : joli
+- kühl : frais
+- nass : mouillé
+- trocken : sec
+- hell : clair
+- dunkel : sombre
+- laut : bruyant, fort
+- leise : silencieux, doux
+- ruhig : calme
+- offen : ouvert
+- geschlossen : fermé
+- sauber : propre
+- schmutzig : sale
+- reich : riche
+- arm : pauvre
+- stark : fort
+- schwach : faible
+- wach : éveillé
+- hungrig : affamé
+- durstig : assoiffé
+- satt : rassasié
+- froh : content
+- freundlich : aimable
+- langweilig : ennuyeux
+- interessant : intéressant
+- wichtig : important
+- wahr : vrai
+- klug : intelligent
+- dumm : bête
+- faul : paresseux
+- frei : libre
+- fertig : prêt, terminé
+- verheiratet : marié
+- ledig : célibataire
+- wunderbar : merveilleux
+- toll : génial
+- süß : sucré, mignon
+- sauer : acide, fâché
+- salzig : salé
+- bitter : amer
+- scharf : piquant, tranchant
+- frisch : frais (récent)
+- lecker : délicieux
+- rund : rond
+- gerade : droit, pair
+- weit : loin, large
+- nah : proche
+- fern : lointain
+- deutsch : allemand
+- französisch : français
+- englisch : anglais
+- wenig : peu
+- viel : beaucoup
+- halb : demi
+
+### La ville et les lieux
+
+- das Dorf : le village
+- das Land : le pays, la campagne
+- der Platz : la place
+- die Brücke : le pont
+- die Ecke : le coin
+- die Ampel : le feu de circulation
+- die Kirche : l'église
+- das Rathaus : la mairie
+- die Polizei : la police
+- die Post : la poste
+- das Geschäft : le magasin, l'affaire
+- der Markt : le marché
+- die Bäckerei : la boulangerie
+- das Kaufhaus : le grand magasin
+- das Kino : le cinéma
+- das Theater : le théâtre
+- das Museum : le musée
+- die Bibliothek : la bibliothèque
+- das Café : le café (lieu)
+- der Park : le parc
+- das Schwimmbad : la piscine
+- das Stadion : le stade
+- die Adresse : l'adresse
+- der Eingang : l'entrée
+- der Ausgang : la sortie
+- die Mitte : le milieu
+- die Seite : le côté, la page
+- der Norden : le nord
+- der Süden : le sud
+- der Osten : l'est
+- der Westen : l'ouest
+- Deutschland : l'Allemagne
+- Frankreich : la France
+- Österreich : l'Autriche
+- die Schweiz : la Suisse
+- Europa : l'Europe
+- die Welt : le monde
+
+### Transports et voyages
+
+- die Bahn : le train, la voie
+- die U-Bahn : le métro
+- die Straßenbahn : le tramway
+- die Haltestelle : l'arrêt
+- das Gleis : le quai, la voie
+- der Flughafen : l'aéroport
+- der Flug : le vol
+- das Schiff : le bateau
+- das Motorrad : la moto
+- das Taxi : le taxi
+- die Autobahn : l'autoroute
+- die Tankstelle : la station-service
+- das Benzin : l'essence
+- der Parkplatz : le parking
+- die Reise : le voyage
+- der Koffer : la valise
+- der Pass : le passeport
+- die Karte : la carte
+- der Weg : le chemin
+- die Fahrt : le trajet
+- die Abfahrt : le départ
+- die Ankunft : l'arrivée
+- der Tourist : le touriste
+
+### Travail et école
+
+- der Beruf : le métier
+- die Firma : l'entreprise
+- das Büro : le bureau
+- der Chef : le chef
+- der Kollege : le collègue
+- der Mitarbeiter : l'employé
+- der Euro : l'euro
+- der Cent : le centime
+- der Preis : le prix
+- die Kreditkarte : la carte bancaire
+- das Konto : le compte
+- der Termin : le rendez-vous
+- die Aufgabe : la tâche, l'exercice
+- das Problem : le problème
+- der Student : l'étudiant
+- die Universität : l'université
+- die Klasse : la classe
+- der Unterricht : l'enseignement, les cours
+- der Kurs : le cours, la formation
+- die Prüfung : l'examen
+- die Note : la note
+- die Hausaufgabe : le devoir
+- der Fehler : l'erreur
+- der Satz : la phrase
+- der Text : le texte
+- das Heft : le cahier
+- das Papier : le papier
+- der Stift : le stylo
+- der Bleistift : le crayon
+- die Zeitung : le journal
+- die Zeitschrift : le magazine
+- der Brief : la lettre
+- die Briefmarke : le timbre
+- der Polizist : le policier
+- der Koch : le cuisinier
+- der Verkäufer : le vendeur
+- der Ingenieur : l'ingénieur
+- der Fahrer : le conducteur
+
+### Objets et technologie
+
+- das Ding : la chose
+- die Sache : la chose, l'affaire
+- die Tasche : le sac, la poche
+- der Rucksack : le sac à dos
+- die Brille : les lunettes
+- das Geschenk : le cadeau
+- das Bild : l'image
+- das Foto : la photo
+- das Internet : internet
+- die E-Mail : le courriel
+- die Nachricht : le message, la nouvelle
+- der Fernseher : la télévision
+- das Radio : la radio
+- die Kamera : l'appareil photo
+- die Maschine : la machine
+
+### Nature et météo
+
+- die Natur : la nature
+- das Wetter : le temps (météo)
+- der Mond : la lune
+- der Stern : l'étoile
+- der Himmel : le ciel
+- die Wolke : le nuage
+- der Regen : la pluie
+- der Schnee : la neige
+- der Wind : le vent
+- der Sturm : la tempête
+- das Gewitter : l'orage
+- die Luft : l'air
+- das Feuer : le feu
+- die Erde : la terre
+- der Berg : la montagne
+- das Tal : la vallée
+- der Wald : la forêt
+- das Gras : l'herbe
+- das Blatt : la feuille
+- der Fluss : le fleuve
+- der See : le lac
+- das Meer : la mer
+- der Strand : la plage
+- die Insel : l'île
+- der Stein : la pierre
+- der Sand : le sable
+- das Pferd : le cheval
+- die Kuh : la vache
+- das Schwein : le cochon
+- das Schaf : le mouton
+- das Huhn : la poule
+- der Vogel : l'oiseau
+- die Maus : la souris
+
+## Palier 4 : A2+, nuancer
+
+### Prépositions
+
+- wegen : à cause de
+- während : pendant
+- trotz : malgré
+- gegenüber : en face de
+
+### Conjonctions
+
+- sondern : mais (au contraire)
+- obwohl : bien que
+- damit : afin que
+- nachdem : après que
+- deshalb : c'est pourquoi
+- trotzdem : quand même, malgré tout
+
+### Adverbes
+
+- meistens : la plupart du temps
+- ziemlich : assez
+- wahrscheinlich : probablement
+- weg : parti, loin
+- sogar : même
+- eigentlich : en fait
+- besonders : particulièrement
+- ungefähr : environ
+- plötzlich : soudain
+
+### Verbes essentiels
+
+- verdienen : gagner (de l'argent)
+- sparen : économiser
+- ausgeben : dépenser
+- erklären : expliquer
+- erinnern : rappeler
+- entscheiden : décider
+- wählen : choisir, voter
+- bestellen : commander
+- reservieren : réserver
+- mieten : louer
+- gehören : appartenir
+- bedeuten : signifier
+- übersetzen : traduire
+- wiederholen : répéter
+- prüfen : vérifier, tester
+- scheinen : briller, sembler
+- wachsen : grandir, pousser
+- ändern : changer, modifier
+- stimmen : être exact
+- passieren : se passer, arriver
+- lassen : laisser, faire faire
+- bitten : prier, demander
+- entschuldigen : excuser
+- verbieten : interdire
+- erlauben : permettre
+- teilen : partager
+- diskutieren : discuter
+- beschreiben : décrire
+- bestehen : réussir (un examen), exister
+- verpassen : rater
+- vermissen : regretter l'absence de
+
+### Adjectifs
+
+- niedrig : bas
+- schmal : étroit
+- zufrieden : satisfait
+- böse : méchant, fâché
+- wütend : furieux
+- höflich : poli
+- fleißig : travailleur
+- mutig : courageux
+- ängstlich : craintif
+- ehrlich : honnête
+- besetzt : occupé
+- bereit : prêt, disposé
+- möglich : possible
+- unmöglich : impossible
+- nötig : nécessaire
+- gefährlich : dangereux
+- fremd : étranger, inconnu
+- bekannt : connu
+- berühmt : célèbre
+- beliebt : apprécié
+- schrecklich : terrible
+- ähnlich : semblable
+- verschieden : différent
+
+### Nourriture et boissons
+
+- die Rechnung : l'addition, la facture
+
+### La ville et les lieux
+
+- die Stelle : l'endroit, le poste
+- der Ort : le lieu
+- die Hauptstadt : la capitale
+- die Grenze : la frontière
+
+### Transports et voyages
+
+- der Stau : l'embouteillage
+- die Verspätung : le retard
+
+### Travail et école
+
+- das Gehalt : le salaire
+- die Sitzung : la réunion
+- die Lösung : la solution
+
+### Idées et vie sociale
+
+- die Idee : l'idée
+- der Gedanke : la pensée
+- die Meinung : l'opinion
+- der Grund : la raison
+- das Ziel : le but
+- der Plan : le plan
+- die Möglichkeit : la possibilité
+- die Art : la manière, la sorte
+- das Beispiel : l'exemple
+- die Geschichte : l'histoire
+- die Kultur : la culture
+- das Lied : la chanson
+- die Kunst : l'art
+- das Spiel : le jeu
+- der Fußball : le football
+- das Hobby : le passe-temps
+- die Freizeit : le temps libre
+- das Fest : la fête
+- die Party : la soirée
+- die Regierung : le gouvernement
+- das Gesetz : la loi
+- der Krieg : la guerre
+- der Frieden : la paix
+- die Freiheit : la liberté
+- die Wahrheit : la vérité
+- das Recht : le droit
+- die Gefahr : le danger
+- die Angst : la peur
+- das Glück : le bonheur, la chance
+- die Freude : la joie
+- der Spaß : le plaisir
+- die Lust : l'envie
+- der Traum : le rêve
+- die Hoffnung : l'espoir
+- der Mut : le courage
+- die Kraft : la force
+- die Wirtschaft : l'économie
+- die Wissenschaft : la science
+- die Gesellschaft : la société
+- die Gruppe : le groupe
+- die Mannschaft : l'équipe
+- das Ende : la fin
+- der Anfang : le début
+- der Teil : la partie
+- die Größe : la taille
+- die Form : la forme
+- die Nummer : le numéro
+- das Mal : la fois
+- die Ausnahme : l'exception
+- der Unterschied : la différence
+- der Erfolg : le succès
+
+## Palier 5 : B1, vie courante et opinions
+
+### Verbes
+
+- abholen : aller chercher
+- ablehnen : refuser
+- abnehmen : maigrir, diminuer
+- abschließen : verrouiller, terminer
+- absagen : annuler
+- achten : faire attention, respecter
+- ähneln : ressembler à
+- anbieten : proposer
+- anerkennen : reconnaître
+- angeben : indiquer
+- angreifen : attaquer
+- anmelden : inscrire
+- annehmen : accepter, supposer
+- anpassen : adapter
+- anschauen : regarder
+- ansprechen : aborder
+- ärgern : énerver
+- aufbauen : construire, monter
+- aufgeben : abandonner
+- aufnehmen : enregistrer, accueillir
+- aufpassen : faire attention
+- ausdrücken : exprimer
+- ausfüllen : remplir (un formulaire)
+- ausgehen : sortir
+- auskommen : s'entendre avec
+- ausleihen : emprunter, prêter
+- ausmachen : éteindre, convenir
+- ausprobieren : essayer
+- ausreichen : suffire
+- ausruhen : se reposer
+- aussehen : avoir l'air
+- auswählen : sélectionner
+- bedanken : remercier
+- bedienen : servir, utiliser
+- beeilen : se dépêcher
+- beenden : terminer
+- befinden : se trouver
+- begegnen : croiser
+- begleiten : accompagner
+- begründen : justifier
+- behalten : garder
+- behandeln : traiter, soigner
+- behaupten : affirmer
+- beibringen : apprendre à quelqu'un
+- beißen : mordre
+- bekämpfen : combattre
+- beklagen : se plaindre
+- belegen : prouver, occuper
+- beleidigen : insulter
+- bemerken : remarquer
+- bemühen : s'efforcer
+- beobachten : observer
+- beraten : conseiller
+- bereuen : regretter
+- beruhigen : calmer
+- beschäftigen : occuper, employer
+- beschließen : décider
+- beschweren : se plaindre
+- besitzen : posséder
+- besorgen : se procurer
+- besprechen : discuter de
+- bestätigen : confirmer
+- bestimmen : déterminer
+- bestrafen : punir
+- beteiligen : participer
+- betonen : souligner
+- betreffen : concerner
+- betrügen : tromper
+- beurteilen : juger
+- bewegen : bouger
+- beweisen : prouver
+- bewerben : postuler
+- bewundern : admirer
+- bezeichnen : désigner
+- beziehen : se rapporter à
+- bieten : offrir
+- bilden : former
+- binden : attacher
+- blasen : souffler
+- blicken : regarder
+- blühen : fleurir
+- bremsen : freiner
+- brennen : brûler
+- buchen : réserver
+- dauern : durer
+- decken : couvrir
+- demonstrieren : manifester
+- dienen : servir
+- drehen : tourner
+- drohen : menacer
+- durchführen : réaliser
+- eignen : convenir
+- eilen : se hâter
+- einfallen : venir à l'esprit
+- einführen : introduire
+- einigen : se mettre d'accord
+- einrichten : aménager
+- einschlafen : s'endormir
+- einsetzen : employer, insérer
+- einstellen : régler, embaucher
+- eintreten : entrer
+- einzahlen : verser (de l'argent)
+- empfangen : recevoir
+- empfehlen : recommander
+- empfinden : ressentir
+- enthalten : contenir
+- entlassen : licencier
+- entspannen : se détendre
+- entstehen : naître, apparaître
+- enttäuschen : décevoir
+- erfahren : apprendre (une nouvelle)
+- erfinden : inventer
+- erfüllen : réaliser, remplir
+- ergänzen : compléter
+- erhalten : obtenir
+- erholen : se rétablir
+- erkennen : reconnaître
+- erledigen : régler, accomplir
+- ermöglichen : rendre possible
+- ernähren : nourrir
+- erreichen : atteindre
+- erscheinen : paraître
+- erschrecken : effrayer
+- ersetzen : remplacer
+- erwarten : s'attendre à
+- erwähnen : mentionner
+- fehlen : manquer
+- festlegen : fixer
+- festnehmen : arrêter (police)
+- feststellen : constater
+- flirten : flirter
+- fliehen : fuir
+- fließen : couler
+- fördern : encourager
+- fordern : exiger
+- fortsetzen : poursuivre
+- freuen : réjouir
+- frieren : avoir froid, geler
+- führen : mener, diriger
+- füllen : remplir
+- fürchten : craindre
+- füttern : nourrir (un animal)
+- garantieren : garantir
+- gebrauchen : utiliser
+- gelingen : réussir
+- gelten : valoir, être valable
+- genießen : savourer
+- geraten : tomber dans, se retrouver
+- geschehen : se produire
+- gestalten : organiser, façonner
+- gestehen : avouer
+- gewährleisten : assurer
+- gießen : verser, arroser
+- glänzen : briller
+- gratulieren : féliciter
+- greifen : saisir
+- grillen : griller
+- gründen : fonder
+- grüßen : saluer
+- gucken : regarder
+- handeln : agir
+- herstellen : fabriquer
+- herunterladen : télécharger
+- hinweisen : signaler
+- hinzufügen : ajouter
+- husten : tousser
+- impfen : vacciner
+- informieren : informer
+- interessieren : intéresser
+- investieren : investir
+- irren : se tromper
+- jagen : chasser
+- klagen : se plaindre
+- klappen : marcher, fonctionner
+- klären : clarifier
+- klettern : grimper
+- klingeln : sonner
+- klingen : sonner, paraître
+- klopfen : frapper
+- kontrollieren : contrôler
+- konzentrieren : concentrer
+- korrigieren : corriger
+- kriegen : obtenir
+- kritisieren : critiquer
+- kümmern : s'occuper de
+- kündigen : démissionner, résilier
+- kürzen : raccourcir
+- küssen : embrasser
+- landen : atterrir
+- langweilen : ennuyer
+- leeren : vider
+- leiden : souffrir
+- leihen : prêter
+- leisten : accomplir
+- leiten : diriger
+- lenken : conduire, orienter
+- liefern : livrer
+- loben : féliciter
+- lohnen : valoir la peine
+- löschen : effacer, éteindre
+- lösen : résoudre
+- lügen : mentir
+- messen : mesurer
+- mischen : mélanger
+- misstrauen : se méfier
+- nähen : coudre
+- nennen : nommer
+- nutzen : utiliser
+- operieren : opérer
+- opfern : sacrifier
+- ordnen : ranger, ordonner
+- organisieren : organiser
+- packen : saisir, faire ses bagages
+- parken : se garer
+- pflanzen : planter
+- pflegen : soigner
+- pflücken : cueillir
+- produzieren : produire
+- protestieren : protester
+- raten : conseiller, deviner
+- reagieren : réagir
+- rechnen : calculer, compter sur
+- regeln : régler
+- reichen : suffire, tendre
+- reinigen : nettoyer
+- reißen : déchirer
+- reiten : monter à cheval
+- retten : sauver
+- rollen : rouler
+- rudern : ramer
+- sammeln : collectionner
+- schaden : nuire
+- schaffen : réussir, créer
+- schalten : changer de vitesse
+- schämen : avoir honte
+- schenken : offrir
+- schieben : pousser
+- schießen : tirer (arme)
+- schlagen : frapper
+- schmeißen : balancer
+- schmelzen : fondre
+- schmücken : décorer
+- schonen : ménager
+- schütteln : secouer
+- schweigen : se taire
+- schwitzen : transpirer
+- segeln : faire de la voile
+- senden : envoyer, diffuser
+- senken : baisser
+- sichern : sécuriser
+- siegen : vaincre
+- sorgen : veiller à
+- speichern : enregistrer
+- spenden : faire un don
+- sperren : bloquer
+- spüren : sentir
+- starten : démarrer
+- staunen : s'étonner
+- stecken : mettre, enfoncer
+- stehlen : voler (dérober)
+- steigern : augmenter
+- stören : déranger
+- stoßen : pousser, heurter
+- streichen : peindre, rayer
+- streiken : faire grève
+- streiten : se disputer
+- stürzen : tomber, se précipiter
+- stützen : soutenir
+- tanken : faire le plein
+- täuschen : tromper
+- teilnehmen : participer
+- tippen : taper
+- trainieren : s'entraîner
+- trauen : faire confiance
+- trennen : séparer
+- trösten : consoler
+- überholen : doubler
+- überlegen : réfléchir
+- übernehmen : prendre en charge
+- überprüfen : contrôler
+- überraschen : surprendre
+- überreden : persuader
+- überweisen : virer (de l'argent)
+- überzeugen : convaincre
+- umarmen : serrer dans ses bras
+- umgehen : traiter, contourner
+- umziehen : déménager
+- unterbrechen : interrompre
+- unterhalten : divertir, s'entretenir
+- unterrichten : enseigner
+- unterscheiden : distinguer
+- unterschreiben : signer
+- unterstützen : soutenir
+- untersuchen : examiner
+- verabreden : convenir d'un rendez-vous
+- verabschieden : prendre congé
+- verändern : transformer
+- veranstalten : organiser
+- verbinden : relier
+- verbrauchen : consommer
+- verbreiten : répandre
+- verbringen : passer (du temps)
+- verdächtigen : soupçonner
+- vereinbaren : convenir
+- verfolgen : poursuivre
+- verführen : séduire
+- vergeben : pardonner
+- vergrößern : agrandir
+- verhalten : se comporter
+- verhindern : empêcher
+- verhungern : mourir de faim
+- verlangen : exiger
+- verlassen : quitter
+- verletzen : blesser
+- verlieben : tomber amoureux
+- vermeiden : éviter
+- vermieten : mettre en location
+- vermuten : supposer
+- veröffentlichen : publier
+- verpacken : emballer
+- verraten : trahir
+- verreisen : partir en voyage
+- versagen : échouer
+- verschieben : reporter
+- verschlafen : ne pas se réveiller
+- verschwinden : disparaître
+- versichern : assurer
+- versorgen : approvisionner
+- versprechen : promettre
+- verstecken : cacher
+- verteidigen : défendre
+- verteilen : distribuer
+- vertrauen : faire confiance
+- vertreten : représenter
+- verursachen : causer
+- verurteilen : condamner
+- verwechseln : confondre
+- verwenden : employer
+- verwirklichen : réaliser
+- verzeihen : pardonner
+- verzichten : renoncer
+- vorbereiten : préparer
+- vorhaben : prévoir
+- vorkommen : arriver, sembler
+- vorlesen : lire à voix haute
+- vorschlagen : proposer
+- vorstellen : présenter, imaginer
+- vorziehen : préférer
+- wachen : veiller
+- wagen : oser
+- wahrnehmen : percevoir
+- wandeln : changer
+- warnen : avertir
+- wechseln : changer
+- wecken : réveiller
+- wehren : se défendre
+- wehtun : faire mal
+- weigern : refuser
+- weitergehen : continuer
+- wenden : tourner, s'adresser
+- widersprechen : contredire
+- widmen : consacrer
+- wiegen : peser
+- wirken : agir, sembler
+- wischen : essuyer
+- wundern : s'étonner
+- zahlen : payer
+- zerbrechen : briser
+- zielen : viser
+- zittern : trembler
+- zögern : hésiter
+- zubereiten : préparer (un plat)
+- zugeben : admettre
+- zuhören : écouter
+- zunehmen : grossir, augmenter
+- zurückkehren : revenir
+- zusammenfassen : résumer
+- zustimmen : approuver
+- zweifeln : douter
+
+### Noms
+
+- die Abteilung : le service, le département
+- die Ahnung : l'idée, le pressentiment
+- das Abenteuer : l'aventure
+- der Abschied : l'adieu
+- der Abschluss : le diplôme, la conclusion
+- der Absender : l'expéditeur
+- die Absicht : l'intention
+- der Abstand : la distance
+- die Achtung : l'attention, le respect
+- das Amt : l'administration
+- die Änderung : le changement
+- das Angebot : l'offre
+- der Angehörige : le proche
+- die Angelegenheit : l'affaire
+- der Angestellte : l'employé
+- der Angriff : l'attaque
+- der Anlass : l'occasion
+- die Anmeldung : l'inscription
+- die Anzeige : l'annonce, la plainte
+- die Atmosphäre : l'ambiance
+- die Aufmerksamkeit : l'attention
+- die Auskunft : le renseignement
+- die Ausbildung : la formation
+- der Ausflug : l'excursion
+- die Ausrede : l'excuse
+- die Aussage : la déclaration
+- die Ausstellung : l'exposition
+- die Auswahl : le choix
+- der Ausweis : la carte d'identité
+- der Autor : l'auteur
+- die Behörde : l'autorité
+- die Bedeutung : le sens
+- die Bedingung : la condition
+- das Bedürfnis : le besoin
+- der Beamte : le fonctionnaire
+- die Beziehung : la relation
+- die Bemerkung : la remarque
+- der Bericht : le rapport
+- der Bereich : le domaine
+- die Beschreibung : la description
+- der Besitzer : le propriétaire
+- der Besuch : la visite
+- der Betrieb : l'entreprise
+- die Bevölkerung : la population
+- die Bewegung : le mouvement
+- der Beweis : la preuve
+- die Bewerbung : la candidature
+- die Bewertung : l'évaluation
+- die Bildung : l'éducation
+- der Blick : le regard
+- der Bürger : le citoyen
+- der Bürgermeister : le maire
+- der Charakter : le caractère
+- die Dame : la dame
+- die Datei : le fichier
+- die Dauer : la durée
+- das Denkmal : le monument
+- der Dieb : le voleur
+- die Dienstleistung : le service
+- der Druck : la pression
+- die Ehe : le mariage (union)
+- die Ehre : l'honneur
+- die Eigenschaft : la qualité
+- der Eindruck : l'impression
+- die Einladung : l'invitation
+- die Einstellung : l'attitude, le réglage
+- der Eintritt : l'entrée
+- die Einzelheit : le détail
+- der Empfang : la réception
+- die Empfehlung : la recommandation
+- die Energie : l'énergie
+- die Enttäuschung : la déception
+- die Entscheidung : la décision
+- die Entschuldigung : l'excuse
+- die Entwicklung : le développement
+- das Ereignis : l'événement
+- die Erfahrung : l'expérience
+- die Erfindung : l'invention
+- das Ergebnis : le résultat
+- die Erholung : le repos
+- die Erinnerung : le souvenir
+- die Erklärung : l'explication
+- die Erlaubnis : la permission
+- die Ernährung : l'alimentation
+- der Erwachsene : l'adulte
+- die Erwartung : l'attente
+- die Fabrik : l'usine
+- die Fähigkeit : la capacité
+- die Fahrschule : l'auto-école
+- der Fall : le cas
+- die Fantasie : l'imagination
+- das Fach : la matière, le compartiment
+- die Feier : la fête
+- der Feind : l'ennemi
+- die Feuerwehr : les pompiers
+- der Fleck : la tache
+- der Fleiß : l'application
+- die Flucht : la fuite
+- der Flüchtling : le réfugié
+- die Folge : la conséquence
+- die Forschung : la recherche
+- der Fortschritt : le progrès
+- die Fortsetzung : la suite
+- das Formular : le formulaire
+- die Führung : la direction
+- die Fremdsprache : la langue étrangère
+- die Gebühr : la taxe, les frais
+- die Geburt : la naissance
+- das Gebäude : le bâtiment
+- die Geduld : la patience
+- das Gedächtnis : la mémoire
+- das Gefühl : le sentiment
+- die Gegend : la région
+- der Gegenstand : l'objet
+- das Gegenteil : le contraire
+- die Gegenwart : le présent
+- das Geheimnis : le secret
+- die Geldbörse : le porte-monnaie
+- das Gelände : le terrain
+- die Gelegenheit : l'occasion
+- die Gemeinde : la commune
+- das Gericht : le tribunal, le plat
+- das Geräusch : le bruit
+- das Gerät : l'appareil
+- der Geruch : l'odeur
+- das Gerücht : la rumeur
+- der Geschmack : le goût
+- das Gespräch : la conversation
+- die Gestalt : la silhouette
+- die Gewalt : la violence
+- der Gewinn : le gain
+- die Gewohnheit : l'habitude
+- das Gift : le poison
+- der Glaube : la foi
+- die Gleichberechtigung : l'égalité des droits
+- die Glückwünsche : les vœux
+- die Gebrauchsanweisung : le mode d'emploi
+- die Grundlage : la base
+- die Gewerkschaft : le syndicat
+- der Haushalt : le ménage
+- die Handlung : l'action, l'intrigue
+- der Handel : le commerce
+- die Haltung : l'attitude
+- die Heimat : le pays natal
+- die Herkunft : l'origine
+- der Hinweis : l'indication
+- der Hintergrund : l'arrière-plan
+- die Höhe : la hauteur
+- die Hauptsache : l'essentiel
+- die Industrie : l'industrie
+- der Inhalt : le contenu
+- die Initiative : l'initiative
+- die Institution : l'institution
+- das Interesse : l'intérêt
+- die Jugend : la jeunesse
+- der Jugendliche : l'adolescent
+- die Kasse : la caisse
+- der Kampf : le combat
+- die Kenntnis : la connaissance
+- die Kindheit : l'enfance
+- das Klima : le climat
+- der Knopf : le bouton
+- die Kommunikation : la communication
+- der Kompromiss : le compromis
+- die Konferenz : la conférence
+- der Konflikt : le conflit
+- die Konkurrenz : la concurrence
+- das Konzert : le concert
+- die Kosten : les frais
+- die Krise : la crise
+- die Kritik : la critique
+- der Kunde : le client
+- die Kündigung : la démission, le préavis
+- der Künstler : l'artiste
+- die Lage : la situation
+- das Lager : l'entrepôt, le camp
+- der Lärm : le bruit
+- die Laune : l'humeur
+- die Lebensmittel : les denrées alimentaires
+- die Leistung : la performance
+- der Leiter : le responsable
+- die Leidenschaft : la passion
+- das Lob : l'éloge
+- die Lücke : le vide, la lacune
+- die Lüge : le mensonge
+- die Mahnung : le rappel
+- die Mehrheit : la majorité
+- die Menge : la quantité, la foule
+- das Mitglied : le membre
+- das Mitleid : la pitié
+- das Mittel : le moyen
+- die Mode : la mode
+- das Modell : le modèle
+- der Moment : le moment
+- die Mühe : la peine, l'effort
+- das Muster : le motif, le modèle
+- die Nähe : la proximité
+- die Nachfrage : la demande
+- der Nachteil : l'inconvénient
+- die Neuigkeit : la nouveauté
+- die Not : la détresse
+- der Notfall : l'urgence
+- der Notruf : l'appel d'urgence
+- die Öffentlichkeit : le public
+- die Ordnung : l'ordre
+- die Pause : la pause
+- die Panne : la panne
+- die Pflanze : la plante
+- die Pflicht : le devoir
+- die Politik : la politique
+- der Politiker : l'homme politique
+- die Pünktlichkeit : la ponctualité
+- die Phase : la phase
+- die Qualität : la qualité
+- die Quelle : la source
+- die Rache : la vengeance
+- der Rat : le conseil
+- der Rand : le bord
+- die Reaktion : la réaction
+- der Rechtsanwalt : l'avocat
+- die Rede : le discours
+- die Regel : la règle
+- die Reihe : la rangée, la série
+- die Reinigung : le pressing
+- die Rente : la retraite
+- die Reparatur : la réparation
+- der Respekt : le respect
+- der Rest : le reste
+- das Risiko : le risque
+- die Rolle : le rôle
+- die Rückkehr : le retour
+- die Rücksicht : les égards
+- die Ruhe : le calme
+- der Ruf : la réputation
+- der Schaden : le dégât
+- der Schatten : l'ombre
+- der Schatz : le trésor
+- der Schein : l'apparence, le billet
+- der Schluss : la fin
+- das Schicksal : le destin
+- das Schild : le panneau
+- der Schlag : le coup
+- das Schloss : le château, la serrure
+- der Schmuck : le bijou
+- der Schritt : le pas
+- die Schuld : la faute, la dette
+- der Schutz : la protection
+- der Schwerpunkt : la priorité
+- die Schwierigkeit : la difficulté
+- die Sehenswürdigkeit : la curiosité touristique
+- die Sehnsucht : la nostalgie
+- die Sendung : l'émission
+- die Sicherheit : la sécurité
+- die Sicht : la vue
+- der Sieg : la victoire
+- der Sinn : le sens
+- die Sitte : la coutume
+- die Situation : la situation
+- die Sorge : le souci
+- die Sorte : la sorte
+- die Spannung : le suspense, la tension
+- die Spezialität : la spécialité
+- die Spende : le don
+- das Spiegelbild : le reflet
+- die Spitze : la pointe, le sommet
+- die Spur : la trace
+- der Staat : l'État
+- die Stärke : la force
+- die Stimme : la voix
+- die Stimmung : l'ambiance
+- der Stoff : le tissu, la matière
+- der Stolz : la fierté
+- der Strom : le courant, l'électricité
+- die Strafe : la punition, l'amende
+- der Streik : la grève
+- der Streit : la dispute
+- der Stress : le stress
+- die Studie : l'étude
+- das Stück : le morceau, la pièce
+- das Studium : les études
+- die Stufe : la marche, le niveau
+- die Suche : la recherche
+- das Symbol : le symbole
+- das System : le système
+- die Tat : l'acte
+- die Tatsache : le fait
+- die Technik : la technique
+- der Teilnehmer : le participant
+- das Thema : le sujet
+- die Theorie : la théorie
+- der Tipp : le conseil
+- das Tor : le portail, le but
+- die Tradition : la tradition
+- die Träne : la larme
+- die Trauer : le deuil
+- die Treue : la fidélité
+- der Trick : l'astuce
+- das Trinkwasser : l'eau potable
+- der Typ : le type
+- die Übung : l'exercice
+- die Überraschung : la surprise
+- die Überschrift : le titre
+- die Übersetzung : la traduction
+- die Überzeugung : la conviction
+- die Umgebung : les environs
+- die Umwelt : l'environnement
+- der Umzug : le déménagement
+- die Unterhaltung : la conversation, le divertissement
+- die Unterkunft : l'hébergement
+- die Unterschrift : la signature
+- die Unterstützung : le soutien
+- die Untersuchung : l'examen, l'enquête
+- die Ursache : la cause
+- die Veranstaltung : la manifestation, l'événement
+- die Verantwortung : la responsabilité
+- der Verband : le pansement, l'association
+- die Verbindung : la liaison
+- das Verbot : l'interdiction
+- der Verbrecher : le criminel
+- das Vergnügen : le plaisir
+- die Vergangenheit : le passé
+- der Vergleich : la comparaison
+- das Verhalten : le comportement
+- das Verhältnis : la relation, le rapport
+- der Verkehr : la circulation
+- der Verlag : la maison d'édition
+- der Verlust : la perte
+- die Vermutung : la supposition
+- die Vernunft : la raison
+- die Versicherung : l'assurance
+- das Versprechen : la promesse
+- das Verständnis : la compréhension
+- der Versuch : l'essai
+- der Vertrag : le contrat
+- das Vertrauen : la confiance
+- der Verwandte : le parent (famille)
+- der Verein : l'association
+- die Verwaltung : l'administration
+- die Vielfalt : la diversité
+- das Volk : le peuple
+- die Voraussetzung : la condition préalable
+- die Vorbereitung : la préparation
+- das Vorbild : le modèle
+- das Vorurteil : le préjugé
+- die Vorstellung : la représentation, l'idée
+- der Vorschlag : la proposition
+- die Vorsicht : la prudence
+- der Vorteil : l'avantage
+- der Vortrag : l'exposé
+- die Wahl : l'élection, le choix
+- die Ware : la marchandise
+- die Wärme : la chaleur
+- die Warnung : l'avertissement
+- die Webseite : le site web
+- der Wechsel : le changement
+- die Werbung : la publicité
+- das Werk : l'œuvre, l'usine
+- der Wert : la valeur
+- das Wesen : l'être, la nature
+- der Wettbewerb : la concurrence, le concours
+- der Widerstand : la résistance
+- der Wille : la volonté
+- die Wirklichkeit : la réalité
+- die Wirkung : l'effet
+- das Wissen : le savoir
+- der Witz : la blague
+- der Wunsch : le souhait
+- die Wut : la colère
+- die Zahlung : le paiement
+- das Zeichen : le signe
+- der Zeuge : le témoin
+- das Zeugnis : le certificat
+- die Zukunft : l'avenir
+- die Zusammenarbeit : la collaboration
+- der Zusammenhang : le lien
+- der Zuschauer : le spectateur
+- der Zustand : l'état
+- die Zustimmung : l'accord
+- der Zweck : le but
+- der Zweifel : le doute
+
+### Adjectifs et adverbes
+
+- abhängig : dépendant
+- absichtlich : exprès
+- allgemein : général
+- allerdings : toutefois
+- angenehm : agréable
+- anscheinend : apparemment
+- anständig : convenable
+- anstrengend : fatigant
+- arrogant : arrogant
+- aufgeregt : excité, nerveux
+- aufmerksam : attentif
+- aufregend : palpitant
+- ausgezeichnet : excellent
+- ausländisch : étranger
+- ausreichend : suffisant
+- außerdem : en outre
+- äußerst : extrêmement
+- bedeutend : important
+- begeistert : enthousiaste
+- begabt : doué
+- bequem : confortable
+- bereits : déjà
+- beruflich : professionnel
+- beschäftigt : occupé
+- bescheiden : modeste
+- bestimmt : certainement
+- betrunken : ivre
+- bewusst : conscient
+- bisher : jusqu'à présent
+- blöd : idiot
+- blind : aveugle
+- dankbar : reconnaissant
+- dauernd : continuellement
+- deutlich : clair, net
+- dringend : urgent
+- ebenfalls : également
+- echt : vrai, authentique
+- egoistisch : égoïste
+- eifersüchtig : jaloux
+- eigen : propre (à soi)
+- eilig : pressé
+- einsam : solitaire
+- einverstanden : d'accord
+- einzig : unique
+- elegant : élégant
+- empfindlich : sensible
+- eng : étroit, serré
+- enorm : énorme
+- enttäuscht : déçu
+- entspannt : détendu
+- ernst : sérieux
+- erfolgreich : couronné de succès
+- erlaubt : permis
+- erschöpft : épuisé
+- erstaunlich : étonnant
+- ewig : éternel
+- extrem : extrême
+- fair : équitable
+- fantastisch : fantastique
+- feige : lâche
+- fein : fin
+- fest : solide
+- feucht : humide
+- finanziell : financier
+- flach : plat
+- friedlich : paisible
+- fröhlich : joyeux
+- furchtbar : affreux
+- gebildet : cultivé
+- geduldig : patient
+- geeignet : approprié
+- gefährdet : menacé
+- gegenseitig : mutuel
+- geheim : secret
+- gemeinsam : commun, ensemble
+- gemütlich : confortable, convivial
+- genervt : agacé
+- gerecht : juste
+- gering : faible, minime
+- gewalttätig : violent
+- gewohnt : habitué
+- gierig : avide
+- gleichzeitig : en même temps
+- grausam : cruel
+- großartig : formidable
+- großzügig : généreux
+- gründlich : minutieux
+- gültig : valable
+- günstig : avantageux
+- häufig : fréquent
+- hauptsächlich : principalement
+- heimlich : en secret
+- hilfreich : utile
+- hilflos : impuissant
+- höchstens : tout au plus
+- hoffentlich : espérons que
+- hochnäsig : prétentieux
+- international : international
+- intelligent : intelligent
+- irgendwann : un jour ou l'autre
+- jedenfalls : en tout cas
+- jedoch : cependant
+- kaputt : cassé
+- kaum : à peine
+- klar : clair
+- komisch : bizarre, drôle
+- kompliziert : compliqué
+- konkret : concret
+- kostenlos : gratuit
+- kreativ : créatif
+- künstlich : artificiel
+- kürzlich : récemment
+- lebendig : vivant
+- leidenschaftlich : passionné
+- locker : décontracté
+- logisch : logique
+- mächtig : puissant
+- mager : maigre
+- mehrere : plusieurs
+- menschlich : humain
+- merkwürdig : étrange
+- mindestens : au moins
+- modern : moderne
+- möglicherweise : éventuellement
+- nachdenklich : pensif
+- nachher : plus tard
+- nächste : prochain
+- nämlich : à savoir
+- nervös : nerveux
+- neugierig : curieux
+- normalerweise : normalement
+- notwendig : nécessaire
+- nützlich : utile
+- nutzlos : inutile
+- offensichtlich : manifestement
+- öffentlich : public
+- ordentlich : ordonné
+- persönlich : personnel
+- pleite : fauché
+- politisch : politique
+- positiv : positif
+- praktisch : pratique
+- privat : privé
+- pünktlich : ponctuel
+- ratlos : désemparé
+- raus : dehors
+- realistisch : réaliste
+- rechtzeitig : à temps
+- regelmäßig : régulier
+- reif : mûr
+- rein : pur
+- riesig : gigantesque
+- romantisch : romantique
+- rücksichtsvoll : prévenant
+- schade : dommage
+- schick : chic
+- schlau : malin
+- schlimm : grave
+- schließlich : finalement
+- schüchtern : timide
+- schuldig : coupable
+- seltsam : étrange
+- sinnvoll : sensé
+- sofort : immédiatement
+- sogenannt : soi-disant
+- sonst : sinon
+- sorgfältig : soigneux
+- spannend : captivant
+- sparsam : économe
+- spontan : spontané
+- sportlich : sportif
+- stolz : fier
+- streng : sévère
+- stumm : muet
+- sympathisch : sympathique
+- taub : sourd
+- tatsächlich : effectivement
+- technisch : technique
+- teilweise : en partie
+- tödlich : mortel
+- tot : mort
+- treu : fidèle
+- typisch : typique
+- überflüssig : superflu
+- überhaupt : du tout
+- überraschend : surprenant
+- überzeugt : convaincu
+- übrig : restant
+- übrigens : d'ailleurs
+- umsonst : gratuit, en vain
+- unbedingt : absolument
+- ungeduldig : impatient
+- ungerecht : injuste
+- ungewöhnlich : inhabituel
+- unglücklich : malheureux
+- unheimlich : inquiétant
+- unhöflich : impoli
+- unterschiedlich : différent
+- unzufrieden : mécontent
+- verantwortlich : responsable
+- verärgert : contrarié
+- verboten : interdit
+- verliebt : amoureux
+- verletzt : blessé
+- verloren : perdu
+- vernünftig : raisonnable
+- verrückt : fou
+- verschwunden : disparu
+- verständlich : compréhensible
+- vertraut : familier
+- verwirrt : confus
+- verzweifelt : désespéré
+- völlig : complètement
+- vorbei : passé, fini
+- vorher : auparavant
+- vorsichtig : prudent
+- vorübergehend : temporaire
+- wahnsinnig : fou, dingue
+- weich : mou, doux
+- weiblich : féminin
+- weise : sage
+- weltweit : mondial
+- wertvoll : précieux
+- wild : sauvage
+- wirksam : efficace
+- witzig : drôle
+- zahlreich : nombreux
+- zärtlich : tendre
+- zeitweise : par moments
+- zufällig : par hasard
+- zugleich : à la fois
+- zunächst : tout d'abord
+- zurück : en retour
+- zuverlässig : fiable
+- zwar : certes
+
+## Palier 6 : B2, société, récit et idées
+
+### Verbes
+
+- abbrechen : interrompre
+- abhängen : dépendre
+- ablenken : distraire
+- abschaffen : abolir
+- abstürzen : s'écraser, planter
+- andeuten : laisser entendre
+- anklagen : accuser
+- anlügen : mentir à
+- anstreben : aspirer à
+- aufdecken : révéler
+- auffordern : inviter à, sommer
+- aufklären : élucider
+- auflösen : dissoudre
+- aufwachsen : grandir
+- ausbrechen : éclater, s'évader
+- ausnutzen : exploiter
+- auslösen : déclencher
+- ausschließen : exclure
+- aussetzen : exposer
+- ausweichen : esquiver
+- bedauern : regretter
+- bedrohen : menacer
+- beeinflussen : influencer
+- befreien : libérer
+- befürchten : redouter
+- begehen : commettre
+- beherrschen : maîtriser
+- bekennen : avouer, professer
+- bekräftigen : confirmer
+- belasten : charger, peser sur
+- belohnen : récompenser
+- belügen : mentir à
+- berücksichtigen : prendre en compte
+- beschädigen : endommager
+- beschuldigen : accuser
+- beseitigen : éliminer
+- besiegen : vaincre
+- bestechen : corrompre
+- bewahren : préserver
+- bewältigen : surmonter
+- bezweifeln : douter de
+- einbrechen : cambrioler
+- eingreifen : intervenir
+- einschränken : limiter
+- einschüchtern : intimider
+- entdecken : découvrir
+- entfernen : retirer
+- entführen : enlever
+- entkommen : échapper
+- entlarven : démasquer
+- entsprechen : correspondre
+- entwerfen : concevoir
+- erforschen : explorer
+- erfassen : saisir
+- ergreifen : saisir, prendre
+- erheben : lever
+- erleben : vivre (une expérience)
+- erleichtern : faciliter
+- ermitteln : enquêter
+- ermorden : assassiner
+- ermutigen : encourager
+- erniedrigen : humilier
+- erobern : conquérir
+- erpressen : faire chanter
+- erregen : exciter
+- erschießen : abattre
+- ersticken : étouffer
+- ertragen : supporter
+- ertrinken : se noyer
+- erzwingen : forcer
+- explodieren : exploser
+- fälschen : falsifier
+- fesseln : ligoter, captiver
+- flüchten : s'enfuir
+- foltern : torturer
+- gefährden : mettre en danger
+- gehorchen : obéir
+- herausfinden : découvrir
+- herrschen : régner
+- hindern : empêcher
+- hinterlassen : laisser derrière soi
+- hintergehen : tromper
+- hinrichten : exécuter
+- kapieren : piger
+- klauen : piquer, voler
+- knacken : forcer, craquer
+- kollidieren : entrer en collision
+- leugnen : nier
+- manipulieren : manipuler
+- misshandeln : maltraiter
+- nachgeben : céder
+- nachweisen : prouver
+- nachdenken : réfléchir
+- näherkommen : se rapprocher
+- provozieren : provoquer
+- rächen : venger
+- rechtfertigen : justifier
+- riskieren : risquer
+- schildern : dépeindre
+- schmuggeln : faire de la contrebande
+- schwören : jurer
+- spionieren : espionner
+- stammen : provenir
+- stehen bleiben : s'arrêter
+- stolpern : trébucher
+- strafen : punir
+- überfallen : agresser, braquer
+- überleben : survivre
+- überschätzen : surestimer
+- übertreiben : exagérer
+- überwachen : surveiller
+- überwinden : surmonter
+- umbringen : tuer
+- unterdrücken : opprimer
+- unterschätzen : sous-estimer
+- untergehen : sombrer, se coucher (soleil)
+- verachten : mépriser
+- verdrängen : refouler
+- verfassen : rédiger
+- vergewaltigen : violer
+- vergiften : empoisonner
+- verhaften : arrêter
+- verhandeln : négocier
+- verheimlichen : dissimuler
+- verlängern : prolonger
+- vermitteln : transmettre, servir d'intermédiaire
+- vernichten : anéantir
+- verprügeln : tabasser
+- verschweigen : taire
+- versöhnen : réconcilier
+- verspotten : se moquer de
+- verstoßen : enfreindre
+- verstärken : renforcer
+- vertuschen : étouffer (une affaire)
+- verweigern : refuser
+- verzweifeln : désespérer
+- vollenden : achever
+- vorwerfen : reprocher
+- wahren : préserver
+- widerstehen : résister
+- wiedergutmachen : réparer
+- zerreißen : déchirer
+- zugreifen : se servir, accéder
+- zusammenbrechen : s'effondrer
+- zwingen : forcer
+
+### Noms
+
+- der Abgrund : l'abîme
+- der Ablauf : le déroulement
+- die Abhängigkeit : la dépendance
+- die Abtreibung : l'avortement
+- der Alptraum : le cauchemar
+- die Ablehnung : le refus
+- der Angeklagte : l'accusé
+- die Anklage : l'accusation
+- der Anschlag : l'attentat
+- der Anspruch : l'exigence, le droit
+- die Anstrengung : l'effort
+- die Anwesenheit : la présence
+- die Armee : l'armée
+- die Armut : la pauvreté
+- der Aufstand : le soulèvement
+- der Auftrag : la mission, la commande
+- der Augenzeuge : le témoin oculaire
+- die Auseinandersetzung : le différend
+- der Ausländer : l'étranger
+- der Ausweg : l'issue
+- die Ausrüstung : l'équipement
+- die Aussicht : la vue, la perspective
+- die Auswirkung : l'impact
+- der Ausbruch : l'éruption, l'évasion
+- die Bande : le gang
+- die Beerdigung : l'enterrement
+- die Behauptung : l'affirmation
+- die Beichte : la confession
+- die Belastung : la charge
+- die Belohnung : la récompense
+- die Berechtigung : le droit
+- die Beute : le butin
+- der Betrug : la fraude
+- die Bestechung : la corruption
+- die Bestrafung : la punition
+- die Bewaffnung : l'armement
+- das Bewusstsein : la conscience
+- die Bedrohung : la menace (danger)
+- der Bluff : le bluff
+- die Bombe : la bombe
+- der Brand : l'incendie
+- der Bunker : le bunker
+- die Demokratie : la démocratie
+- die Demütigung : l'humiliation
+- die Diktatur : la dictature
+- der Diebstahl : le vol
+- die Drohung : la menace (paroles)
+- die Droge : la drogue
+- der Dämon : le démon
+- der Ehrgeiz : l'ambition
+- die Eifersucht : la jalousie
+- der Einbruch : le cambriolage
+- die Einsamkeit : la solitude
+- der Einfluss : l'influence
+- die Einwanderung : l'immigration
+- der Ekel : le dégoût
+- das Elend : la misère
+- die Empörung : l'indignation
+- die Entführung : l'enlèvement
+- die Entdeckung : la découverte
+- das Entsetzen : l'horreur
+- der Erbe : l'héritier
+- das Erbe : l'héritage
+- die Ermittlung : l'enquête
+- der Ermittler : l'enquêteur
+- die Erpressung : le chantage
+- die Erleichterung : le soulagement
+- die Erkenntnis : la prise de conscience
+- die Explosion : l'explosion
+- die Existenz : l'existence
+- die Fälschung : le faux
+- die Falle : le piège
+- der Fanatiker : le fanatique
+- die Festnahme : l'arrestation
+- der Fingerabdruck : l'empreinte digitale
+- der Fluch : la malédiction
+- die Folter : la torture
+- der Fremde : l'inconnu
+- die Gefangenschaft : la captivité
+- der Gefangene : le prisonnier
+- das Gefängnis : la prison
+- der Gegner : l'adversaire
+- die Geisel : l'otage
+- der Geist : l'esprit, le fantôme
+- die Gerechtigkeit : la justice
+- die Gier : l'avidité
+- das Geständnis : l'aveu
+- das Gewehr : le fusil
+- das Gewissen : la conscience (morale)
+- die Gnade : la grâce
+- das Grab : la tombe
+- der Hass : la haine
+- der Häftling : le détenu
+- die Heuchelei : l'hypocrisie
+- der Held : le héros
+- die Herausforderung : le défi
+- der Herrscher : le souverain
+- die Hinrichtung : l'exécution
+- die Hölle : l'enfer
+- die Ideologie : l'idéologie
+- die Illusion : l'illusion
+- der Irrtum : l'erreur
+- die Justiz : la justice (institution)
+- die Kaution : la caution
+- die Katastrophe : la catastrophe
+- die Klage : la plainte
+- der Komplize : le complice
+- die Korruption : la corruption
+- der König : le roi
+- die Königin : la reine
+- der Kommissar : le commissaire
+- die Kugel : la balle
+- die Lebensgefahr : le danger de mort
+- die Leiche : le cadavre
+- der Leichnam : la dépouille
+- die Manipulation : la manipulation
+- der Mörder : le meurtrier
+- der Mord : le meurtre
+- die Moral : la morale
+- das Motiv : le mobile
+- der Nachweis : la preuve écrite
+- der Neid : l'envie
+- die Niederlage : la défaite
+- das Opfer : la victime
+- die Pistole : le pistolet
+- die Ohnmacht : l'évanouissement, l'impuissance
+- der Offizier : l'officier
+- die Panik : la panique
+- der Prozess : le procès
+- die Prinzessin : la princesse
+- der Prinz : le prince
+- die Rakete : la fusée, le missile
+- der Raub : le vol à main armée
+- die Rebellion : la rébellion
+- der Rebell : le rebelle
+- der Richter : le juge
+- der Rivale : le rival
+- der Ruhm : la gloire
+- die Rettung : le sauvetage
+- die Scham : la honte
+- der Schrei : le cri
+- der Schuss : le coup de feu
+- die Schande : la honte
+- der Schurke : la crapule
+- der Schock : le choc
+- die Seele : l'âme
+- die Selbstverteidigung : la légitime défense
+- der Selbstmord : le suicide
+- die Sklaverei : l'esclavage
+- die Spionage : l'espionnage
+- der Spion : l'espion
+- der Staatsanwalt : le procureur
+- die Sucht : l'addiction
+- der Täter : l'auteur (d'un crime)
+- die Täuschung : la tromperie
+- der Terrorist : le terroriste
+- das Testament : le testament
+- die Tiefe : la profondeur
+- der Thron : le trône
+- die Überwachung : la surveillance
+- der Überfall : l'agression
+- der Überlebende : le survivant
+- die Unschuld : l'innocence
+- die Unruhe : l'agitation
+- der Untergang : le déclin
+- die Untreue : l'infidélité
+- der Vampir : le vampire
+- der Verdacht : le soupçon
+- der Verdächtige : le suspect
+- die Verfolgung : la poursuite
+- die Verfassung : la constitution
+- die Vergebung : le pardon
+- die Vergeltung : les représailles
+- die Verhaftung : l'interpellation
+- die Verhandlung : la négociation
+- die Verletzung : la blessure
+- der Verrat : la trahison
+- der Verräter : le traître
+- die Versammlung : l'assemblée
+- die Verschwörung : le complot
+- die Verteidigung : la défense
+- der Verteidiger : l'avocat de la défense
+- das Verbrechen : le crime
+- das Verhör : l'interrogatoire
+- das Verlangen : le désir
+- die Verzweiflung : le désespoir
+- die Vorahnung : le pressentiment
+- die Waffe : l'arme
+- der Wächter : le gardien
+- der Wahnsinn : la folie
+- die Wahrscheinlichkeit : la probabilité
+- das Warnsignal : le signal d'alerte
+- das Wunder : le miracle
+- die Wunde : la plaie
+- die Würde : la dignité
+- die Zerstörung : la destruction
+- die Zuflucht : le refuge
+- der Zufall : le hasard
+- der Zusammenbruch : l'effondrement
+- der Zwang : la contrainte
+- der Zwilling : le jumeau
+
+### Adjectifs et adverbes
+
+- abwesend : absent
+- anwesend : présent
+- ahnungslos : qui ne se doute de rien
+- angeblich : prétendument
+- ausgerechnet : justement, précisément
+- ausschließlich : exclusivement
+- barmherzig : miséricordieux
+- bedrohlich : menaçant
+- berechtigt : légitime
+- bewaffnet : armé
+- bewusstlos : inconscient
+- blutig : sanglant
+- brutal : brutal
+- dreist : culotté
+- eindeutig : sans équivoque
+- ehrgeizig : ambitieux
+- ehrenhaft : honorable
+- entschlossen : déterminé
+- entsetzlich : horrible
+- erbärmlich : pitoyable
+- erleichtert : soulagé
+- fassungslos : stupéfait
+- freiwillig : volontaire
+- gefangen : captif
+- geizig : avare
+- gemein : méchant, vil
+- gerissen : rusé
+- gesetzlich : légal
+- gewissenlos : sans scrupules
+- gleichgültig : indifférent
+- grenzenlos : sans limites
+- harmlos : inoffensif
+- herzlos : sans cœur
+- hinterhältig : sournois
+- hoffnungslos : désespéré
+- illegal : illégal
+- ironisch : ironique
+- jämmerlich : lamentable
+- korrupt : corrompu
+- kaltblütig : de sang-froid
+- lächerlich : ridicule
+- machtlos : impuissant
+- misstrauisch : méfiant
+- naiv : naïf
+- offenbar : visiblement
+- rachsüchtig : vindicatif
+- rücksichtslos : impitoyable
+- ruhelos : agité
+- schamlos : éhonté
+- schockiert : choqué
+- skrupellos : sans scrupules
+- sinnlos : absurde
+- tapfer : brave
+- unglaublich : incroyable
+- unschuldig : innocent
+- unsichtbar : invisible
+- unsterblich : immortel
+- unvermeidlich : inévitable
+- unverschämt : insolent
+- vermisst : disparu
+- verdächtig : suspect
+- vergeblich : vain
+- verlogen : hypocrite
+- verräterisch : perfide
+- vorsätzlich : prémédité
+- wehrlos : sans défense
+- widerlich : répugnant
+- zwangsläufig : inévitablement
+- zynisch : cynique
+
+## Palier 7 : Films et oral, la langue parlée
+
+### Mots familiers
+
+- der Kerl : le gars
+- der Bursche : le gaillard
+- das Arschloch : le connard
+- die Scheiße : la merde
+- scheißegal : complètement égal
+- verdammt : bon sang, maudit
+- der Idiot : l'idiot
+- der Mist : la saleté, la poisse
+- der Quatsch : les bêtises
+- der Blödsinn : l'ânerie
+- der Kumpel : le pote
+- der Bulle : le flic
+- die Kohle : le fric
+- die Knete : le pognon
+- die Karre : la bagnole
+- die Bude : la piaule
+- die Klamotten : les fringues
+- die Glotze : la télé
+- der Knast : la taule
+- der Schwachsinn : la connerie
+- der Trottel : l'imbécile
+- der Spinner : le cinglé
+- der Feigling : le lâche
+- der Lügner : le menteur
+- der Säufer : l'ivrogne
+- die Schlampe : la salope
+- die Hure : la pute
+- der Bastard : le bâtard
+- krass : dingue
+- geil : génial, excitant
+- cool : cool
+- mies : minable
+- beschissen : merdique
+- bescheuert : débile
+- durchgeknallt : timbré
+- abgefahren : délirant
+- bekloppt : taré
+- besoffen : bourré
+- spitze : super
+- pennen : pioncer
+- abhauen : se tirer
+- labern : déblatérer
+- verarschen : se foutre de
+- nerven : saouler
+- quatschen : papoter
+- kotzen : gerber
+- saufen : picoler
+- schnappen : choper
+- abknallen : descendre (tuer)
+- ausrasten : péter un câble
+- durchdrehen : péter les plombs
+- reinlegen : rouler, piéger
+- abzocken : arnaquer
+- verpissen : se casser
+- rumhängen : traîner
+- anmachen : draguer
+- aufregen : énerver
+
+### Expressions de films
+
+- Hau ab : dégage
+- Halt die Klappe : ferme-la
+- Halt den Mund : tais-toi
+- Sei still : silence
+- Lass mich in Ruhe : laisse-moi tranquille
+- Lass das : arrête ça
+- Lass uns gehen : allons-y
+- Komm schon : allez, viens
+- Beeil dich : dépêche-toi
+- Pass auf : fais attention
+- Hände hoch : haut les mains
+- Keine Bewegung : pas un geste
+- Stehen bleiben : plus un geste
+- Verschwinde : fiche le camp
+- Raus hier : sortez d'ici
+- Komm her : viens ici
+- Warte mal : attends
+- Moment mal : attends une minute
+- Was ist los : qu'est-ce qui se passe
+- Was soll das : c'est quoi ce cirque
+- Was zum Teufel : que diable
+- Was machst du da : qu'est-ce que tu fais
+- Wer bist du : qui es-tu
+- Wo warst du : où étais-tu
+- Das gibt's doch nicht : c'est pas possible
+- Das geht nicht : ça ne va pas, impossible
+- Das geht dich nichts an : ça ne te regarde pas
+- Das ist mir egal : je m'en fiche
+- Das stimmt nicht : ce n'est pas vrai
+- Das reicht : ça suffit
+- Das war's : c'est fini
+- Das macht nichts : ce n'est pas grave
+- Das kann nicht sein : ce n'est pas possible
+- Du spinnst wohl : tu es fou
+- Du lügst : tu mens
+- Du hast recht : tu as raison
+- Du machst Witze : tu plaisantes
+- Du fehlst mir : tu me manques
+- Ich liebe dich : je t'aime
+- Ich hasse dich : je te déteste
+- Ich weiß nicht : je ne sais pas
+- Ich habe Angst : j'ai peur
+- Ich bringe dich um : je vais te tuer
+- Ich kann nicht mehr : je n'en peux plus
+- Ich vertraue dir : je te fais confiance
+- Ich komme gleich : j'arrive tout de suite
+- Ich schwöre : je le jure
+- Mir ist schlecht : je me sens mal
+- Mir reicht's : j'en ai assez
+- Mach dir keine Sorgen : ne t'inquiète pas
+- Mach schon : vas-y, grouille
+- Mach's gut : prends soin de toi
+- Nimm's leicht : prends-le bien
+- Gib her : donne
+- Gib nicht auf : n'abandonne pas
+- Glaub mir : crois-moi
+- Hör mir zu : écoute-moi
+- Hör auf : arrête
+- Sieh mal : regarde
+- Schau mal : regarde donc
+- Nicht schlecht : pas mal
+- Na und : et alors
+- Na ja : bof, enfin
+- Na klar : bien sûr
+- Na gut : bon, d'accord
+- Na los : allez
+- Klar doch : évidemment
+- Ach so : ah bon, je vois
+- Wirklich nicht : vraiment pas
+- Stimmt : c'est vrai
+- Verdammt noch mal : bon sang de bonsoir
+- Um Gottes willen : pour l'amour de Dieu
+- Oh mein Gott : oh mon Dieu
+- Gott sei Dank : Dieu merci
+- Zum Glück : heureusement
+- Auf jeden Fall : en tout cas
+- Auf keinen Fall : en aucun cas
+- Von wegen : tu parles
+- Kein Wunder : pas étonnant
+- Keine Sorge : pas de souci
+- Keine Zeit : pas le temps
+- Egal : peu importe
+- Prost : santé
+- Gesundheit : à tes souhaits
+- Vergiss es : laisse tomber
+- Los geht's : c'est parti
+- Alles klar : tout est clair, d'accord
+- Alles in Ordnung : tout va bien
+- Bis später : à plus tard
+- Mach's kurz : fais court
+- Wie bitte : pardon, comment
+- Wie auch immer : peu importe
+- Wie du willst : comme tu veux
+- Wieso denn : mais pourquoi
+- Woher weißt du das : comment le sais-tu
+- Lange nicht gesehen : ça fait longtemps
+- Viel Spaß : amuse-toi bien
+- Gute Besserung : bon rétablissement
+- Herzliches Beileid : mes condoléances
+- Es ist vorbei : c'est terminé
+- Es war ein Unfall : c'était un accident
+- Es geht mir gut : je vais bien
+- Es kommt darauf an : ça dépend
+- Es liegt an dir : ça dépend de toi
+- Es tut weh : ça fait mal
+- Sag mal : dis donc
+- Sag es mir : dis-le-moi
+- Sag nichts : ne dis rien
+- Nie im Leben : jamais de la vie
+- Wir müssen reden : il faut qu'on parle
+- Wir haben keine Zeit : on n'a pas le temps
+- Wir sind da : nous y sommes
+- Vertrau mir : fais-moi confiance
+- Bleib hier : reste ici
+- Bleib ruhig : reste calme
+- Bleib bei mir : reste avec moi
+- Fass mich nicht an : ne me touche pas
+- Ruf die Polizei : appelle la police
+- Ruf mich an : appelle-moi

@@ -1,0 +1,1055 @@
+<!-- paires -->
+
+# Anglais, de B2 aux films
+
+## Palier 1 : B2, nuancer et argumenter
+
+### Verbes
+
+- acknowledge : reconnaître, admettre
+- address an issue : traiter un problème
+- allocate : attribuer, répartir
+- anticipate : prévoir, s'attendre à
+- appeal to : plaire à, faire appel à
+- assess : évaluer
+- assume : supposer, présumer
+- attempt : tenter
+- attend : assister à
+- bargain : marchander
+- beg : supplier
+- bend : plier, se pencher
+- bother : déranger, se donner la peine
+- breed : élever, se reproduire
+- bury : enterrer
+- cease : cesser
+- challenge : contester, mettre au défi
+- claim : affirmer, revendiquer
+- comply with : se conformer à
+- conceal : dissimuler
+- concede : concéder, admettre
+- convey : transmettre, exprimer
+- cope with : faire face à
+- crave : avoir très envie de
+- crawl : ramper
+- crush : écraser
+- dare : oser
+- decline : refuser poliment, décliner
+- deem : juger, considérer
+- defeat : vaincre
+- delay : retarder
+- demand : exiger
+- deny : nier
+- depict : dépeindre
+- deserve : mériter
+- discard : jeter, écarter
+- disclose : divulguer
+- dismiss : rejeter, congédier
+- disregard : ne pas tenir compte de
+- disrupt : perturber
+- draw on : puiser dans
+- drown : se noyer
+- dwell on : s'attarder sur, ressasser
+- emphasize : souligner
+- encounter : rencontrer (un obstacle)
+- endure : endurer
+- enhance : améliorer, renforcer
+- ensure : garantir, veiller à
+- entail : entraîner, impliquer
+- exceed : dépasser
+- fade : s'estomper
+- flee : fuir
+- foresee : prévoir
+- forgive : pardonner
+- foster : favoriser, encourager
+- frown : froncer les sourcils
+- fulfil : accomplir, remplir
+- gather : rassembler, déduire
+- grant : accorder
+- grasp : saisir
+- grieve : être en deuil
+- grind : moudre, broyer
+- harm : nuire à
+- heal : guérir, cicatriser
+- highlight : mettre en évidence
+- hire : embaucher, louer
+- imply : sous-entendre
+- infer : déduire
+- inherit : hériter
+- intend : avoir l'intention de
+- involve : impliquer, comporter
+- kneel : s'agenouiller
+- lack : manquer de
+- lean : se pencher, s'appuyer
+- leap : bondir
+- lend : prêter
+- linger : s'attarder
+- mend : réparer, raccommoder
+- mislead : induire en erreur
+- mourn : pleurer (un mort)
+- neglect : négliger
+- occur : se produire, venir à l'esprit
+- overcome : surmonter
+- overlook : négliger, donner sur
+- overtake : dépasser, doubler
+- owe : devoir (de l'argent)
+- pour : verser
+- praise : louer, féliciter
+- prevail : prévaloir, l'emporter
+- prevent : empêcher
+- pretend : faire semblant
+- pursue : poursuivre
+- recall : se rappeler
+- reckon : estimer, penser
+- recover : se rétablir, récupérer
+- refrain from : s'abstenir de
+- refund : rembourser
+- rely on : compter sur
+- remind : rappeler à quelqu'un
+- resent : en vouloir à, s'offusquer de
+- resign : démissionner
+- resume : reprendre
+- retain : conserver
+- retrieve : récupérer
+- reward : récompenser
+- scratch : gratter, rayer
+- seek : chercher
+- seize : saisir
+- settle : régler, s'installer
+- shed : verser (des larmes), se défaire de
+- shift : déplacer, changer
+- shrink : rétrécir
+- sigh : soupirer
+- sink : couler
+- smash : fracasser
+- sneak : se faufiler
+- soak : tremper
+- spare : épargner
+- spill : renverser (un liquide)
+- spoil : gâcher, gâter
+- squeeze : presser
+- stare : fixer du regard
+- starve : mourir de faim
+- stem from : provenir de
+- sting : piquer
+- strive : s'efforcer
+- struggle : lutter, avoir du mal
+- stumble : trébucher
+- sue : poursuivre en justice
+- summon : convoquer
+- surrender : se rendre
+- sustain : soutenir, subir (une blessure)
+- swallow : avaler
+- swear : jurer
+- sweat : transpirer
+- sweep : balayer
+- swell : gonfler
+- tackle : s'attaquer à
+- tear : déchirer
+- tease : taquiner
+- thrive : prospérer
+- trigger : déclencher
+- undergo : subir
+- undermine : saper
+- undertake : entreprendre
+- unfold : se dérouler, déplier
+- uphold : faire respecter, maintenir
+- urge : exhorter
+- utter : prononcer
+- vanish : disparaître
+- wander : errer
+- warn : avertir
+- whisper : chuchoter
+- wipe : essuyer
+- withdraw : retirer, se retirer
+- withstand : résister à
+- wonder : se demander
+- worship : vénérer
+- wound : blesser
+- yell : hurler
+- yield : céder, rapporter
+
+### Noms
+
+- appliance : appareil ménager
+- argument : dispute, argument
+- awareness : prise de conscience
+- background : milieu, parcours, arrière-plan
+- bargain : bonne affaire
+- belief : croyance
+- bias : parti pris, biais
+- blame : responsabilité, faute
+- breakthrough : percée, avancée décisive
+- burden : fardeau
+- clue : indice
+- decay : pourriture, déclin
+- deed : acte, action
+- despair : désespoir
+- disease : maladie
+- drawback : inconvénient
+- duty : devoir, droit de douane
+- fate : destin
+- fault : faute, défaut
+- feature : caractéristique
+- flaw : défaut, faille
+- gap : écart, lacune
+- grief : chagrin
+- guilt : culpabilité
+- hazard : danger
+- heritage : patrimoine
+- hint : allusion, indice
+- hurdle : obstacle
+- insight : aperçu, vision pénétrante
+- issue : problème, question, numéro
+- landscape : paysage
+- lawsuit : procès
+- lawyer : avocat
+- leisure : loisirs
+- mess : désordre, pagaille
+- mood : humeur
+- nightmare : cauchemar
+- outcome : résultat, issue
+- pattern : motif, schéma
+- pity : pitié, dommage
+- pride : fierté
+- purpose : but, raison d'être
+- rage : fureur
+- range : gamme, éventail
+- relief : soulagement
+- rumour : rumeur
+- scar : cicatrice
+- scheme : plan, combine
+- shame : honte
+- shortage : pénurie
+- slope : pente
+- stuff : trucs
+- surroundings : environs
+- survey : enquête, sondage
+- threat : menace
+- tide : marée
+- trend : tendance
+- trial : procès, essai
+- wealth : richesse
+- weapon : arme
+- witness : témoin
+- wisdom : sagesse
+- workload : charge de travail
+
+### Adjectifs et adverbes
+
+- accurate : exact, précis
+- actually : en fait
+- ashamed : honteux
+- awkward : gênant, maladroit
+- aware : conscient
+- barely : à peine
+- bold : audacieux
+- bound to : voué à, certain de
+- broad : large
+- careless : négligent
+- cautious : prudent
+- clumsy : maladroit
+- compelling : convaincant
+- concerned : inquiet, concerné
+- consistent : cohérent, constant
+- cunning : rusé
+- daring : audacieux
+- deliberately : délibérément
+- eager : désireux, impatient
+- eventually : finalement
+- fair : juste, équitable
+- faint : faible, vague
+- fierce : féroce
+- genuine : authentique, sincère
+- gloomy : sombre, morose
+- greedy : avide
+- harsh : dur, sévère
+- hardly : à peine
+- hence : d'où, par conséquent
+- hollow : creux
+- likely : probable
+- loose : lâche, ample
+- moreover : de plus
+- nevertheless : néanmoins
+- notably : notamment
+- nowadays : de nos jours
+- overwhelming : accablant
+- reliable : fiable
+- reluctant : réticent
+- rough : rugueux, approximatif
+- scarce : rare
+- shallow : peu profond, superficiel
+- sensible : raisonnable
+- sensitive : sensible
+- slight : léger
+- steady : stable, régulier
+- steep : raide
+- stubborn : têtu
+- subtle : subtil
+- sufficient : suffisant
+- thorough : minutieux
+- tight : serré
+- tough : dur, coriace
+- unlikely : improbable
+- vivid : vif, éclatant
+- whereas : alors que
+- worthwhile : qui en vaut la peine
+
+## Palier 2 : C1, le monde professionnel
+
+### Réunions et projets
+
+- agenda : ordre du jour
+- action item : point à traiter, tâche à suivre
+- attendee : participant
+- minutes : compte rendu de réunion
+- deadline : date limite
+- milestone : jalon
+- deliverable : livrable
+- roadmap : feuille de route
+- stakeholder : partie prenante
+- scope : périmètre
+- scope creep : dérive du périmètre
+- workaround : solution de contournement
+- bottleneck : goulot d'étranglement
+- backlog : travail en attente
+- rollout : déploiement
+- kick-off meeting : réunion de lancement
+- follow-up : suivi, relance
+- feedback : retour, avis
+- trade-off : compromis
+- sign-off : validation, feu vert
+- lead time : délai de réalisation
+- headcount : effectif
+- turnover : rotation du personnel, chiffre d'affaires
+- buy-in : adhésion
+- ballpark figure : ordre de grandeur, chiffre approximatif
+- rule of thumb : règle empirique
+- pain point : point de friction
+- quick win : gain rapide
+- low-hanging fruit : gain facile
+- best practice : bonne pratique
+- proof of concept : démonstration de faisabilité
+- root cause : cause première
+- contingency plan : plan de secours
+- risk mitigation : réduction des risques
+- status update : point d'avancement
+- to chair a meeting : présider une réunion
+- to postpone : reporter
+- to reschedule : reprogrammer
+- to brief : mettre au courant
+- to streamline : rationaliser
+- to escalate : faire remonter (un problème)
+- to outsource : externaliser
+- to leverage : tirer parti de
+- to align : se mettre d'accord, aligner
+- to benchmark : comparer à une référence
+- to implement : mettre en œuvre
+- to oversee : superviser
+
+### Négociation et finance
+
+- asset : actif, atout
+- liability : passif, responsabilité légale
+- revenue : chiffre d'affaires
+- earnings : bénéfices
+- cash flow : flux de trésorerie
+- overhead : frais généraux
+- budget cut : coupe budgétaire
+- shareholder : actionnaire
+- equity : capitaux propres, participation
+- merger : fusion
+- acquisition : rachat
+- takeover : prise de contrôle
+- layoff : licenciement économique
+- severance pay : indemnité de licenciement
+- quarterly report : rapport trimestriel
+- fiscal year : exercice fiscal
+- forecast : prévision
+- market share : part de marché
+- core business : activité principale
+- supply chain : chaîne d'approvisionnement
+- procurement : achats, approvisionnement
+- invoice : facture
+- quote : devis
+- purchase order : bon de commande
+- contractor : prestataire
+- vendor : fournisseur
+- tender : appel d'offres
+- bid : offre, enchère
+- leverage : moyen de pression, effet de levier
+- non-disclosure agreement : accord de confidentialité
+- terms and conditions : conditions générales
+- breach of contract : rupture de contrat
+- compliance : conformité
+- audit : audit, contrôle
+- deal breaker : point rédhibitoire
+- common ground : terrain d'entente
+- bottom line : résultat net, l'essentiel
+- to break even : atteindre le seuil de rentabilité
+- to raise funds : lever des fonds
+- to cut costs : réduire les coûts
+- to close a deal : conclure une affaire
+- to strike a deal : passer un accord
+- to haggle : marchander
+- to waive a fee : renoncer à des frais
+- to underbid : proposer moins cher
+- to renege on : revenir sur (une promesse)
+- to meet halfway : couper la poire en deux
+- to drive a hard bargain : négocier durement
+- to foot the bill : payer la note
+
+### Carrière et management
+
+- resume : CV (américain)
+- cover letter : lettre de motivation
+- job opening : poste à pourvoir
+- hiring manager : responsable du recrutement
+- onboarding : intégration d'un nouvel employé
+- performance review : entretien d'évaluation
+- raise : augmentation de salaire
+- pay rise : augmentation de salaire (britannique)
+- perks : avantages
+- benefits package : ensemble des avantages sociaux
+- notice period : préavis
+- sick leave : congé maladie
+- parental leave : congé parental
+- burnout : épuisement professionnel
+- line manager : supérieur direct
+- peer : pair, collègue de même niveau
+- subordinate : subordonné
+- intern : stagiaire
+- freelancer : travailleur indépendant
+- to step down : se retirer d'un poste
+- to lay off : licencier pour motif économique
+- to take over : prendre la relève
+- to take on : assumer, embaucher
+- to report to : être sous la responsabilité de
+- to hand in one's notice : donner sa démission
+- to network : développer ses contacts
+- to upskill : monter en compétences
+
+### Phrases de réunion
+
+- Let's get the ball rolling : commençons
+- Let's circle back to that : on y reviendra
+- Let's take this offline : on en reparlera en aparté
+- Let's table this for now : laissons ça de côté pour l'instant (américain)
+- Let's touch base next week : faisons un point la semaine prochaine
+- Let's keep each other posted : tenons-nous au courant
+- Let's wrap up : terminons
+- To put it bluntly : pour parler franchement
+- To be fair : pour être juste
+- To my mind : à mon avis
+- As far as I'm concerned : en ce qui me concerne
+- As far as I know : pour autant que je sache
+- In a nutshell : en bref
+- By and large : dans l'ensemble
+- On the whole : globalement
+- At the end of the day : au bout du compte
+- For the time being : pour le moment
+- In hindsight : avec le recul
+- With all due respect : sauf votre respect
+- I beg to differ : je ne suis pas de cet avis
+- I couldn't agree more : je suis tout à fait d'accord
+- I see your point, but : je vois ce que vous voulez dire, mais
+- That's a fair point : c'est un argument valable
+- That's beside the point : là n'est pas la question
+- That's not what I meant : ce n'est pas ce que je voulais dire
+- Correct me if I'm wrong : corrigez-moi si je me trompe
+- If I may : si vous me permettez
+- Could you elaborate on that? : pourriez-vous développer ?
+- Could we go over this again? : pourrions-nous revoir ce point ?
+- What's the takeaway? : que faut-il en retenir ?
+- Where do we stand? : où en sommes-nous ?
+- Who's in charge of this? : qui s'en occupe ?
+- Bear with me : un instant, patientez
+- I'll get back to you : je vous recontacte
+- I'm afraid that won't work : je crains que ça ne convienne pas
+- I'm on it : je m'en occupe
+- It's on my radar : je l'ai en tête
+- It's not set in stone : rien n'est figé
+- We're on the same page : nous sommes d'accord
+- We're running behind schedule : nous sommes en retard
+- We're short-staffed : nous manquons de personnel
+- We need to think outside the box : il faut sortir des sentiers battus
+- Please find attached : veuillez trouver ci-joint
+- Further to our conversation : suite à notre conversation
+- I look forward to hearing from you : dans l'attente de votre réponse
+- Thanks for your patience : merci de votre patience
+- Sorry for the short notice : désolé de vous prévenir si tard
+- Sorry to interrupt : désolé de vous interrompre
+- For your information : pour information
+
+## Palier 3 : C1+, phrasal verbs et idiomes
+
+### Phrasal verbs
+
+- back down : céder, faire marche arrière
+- back up : soutenir, sauvegarder
+- blow up : exploser, s'emporter
+- bring about : provoquer
+- bring up : élever, aborder (un sujet)
+- brush off : ignorer, envoyer balader
+- call off : annuler
+- carry out : effectuer
+- catch up : rattraper son retard
+- chicken out : se dégonfler
+- come across : tomber sur, donner l'impression d'être
+- come down with : attraper (une maladie)
+- come up with : trouver, imaginer
+- cut down on : réduire
+- cut off : couper, interrompre
+- dig up : déterrer
+- do away with : supprimer
+- drag on : traîner en longueur
+- drop out : abandonner (ses études)
+- ease off : se calmer, ralentir
+- end up : finir par
+- fall apart : s'effondrer, tomber en morceaux
+- fall behind : prendre du retard
+- fall for : tomber amoureux de, se faire avoir par
+- fall out with : se brouiller avec
+- fall through : échouer, tomber à l'eau
+- figure out : comprendre, trouver
+- fill in for : remplacer
+- get across : faire comprendre
+- get along with : bien s'entendre avec
+- get away with : s'en tirer sans punition
+- get by : se débrouiller
+- get over : se remettre de
+- get rid of : se débarrasser de
+- give away : donner, trahir
+- give in : céder
+- go along with : se ranger à, accepter
+- go over : passer en revue
+- go through : traverser, examiner
+- grow on : plaire de plus en plus à
+- hand over : remettre
+- hang out : traîner, passer du temps
+- hold back : retenir
+- hold on : attendre, tenir bon
+- iron out : aplanir
+- keep up with : suivre le rythme de
+- kick out : mettre à la porte
+- lay out : exposer, disposer
+- let down : décevoir
+- live up to : être à la hauteur de
+- look down on : mépriser
+- look into : examiner
+- look up to : admirer
+- make out : distinguer, comprendre
+- make up : inventer, se réconcilier
+- make up for : compenser
+- mess up : tout gâcher
+- miss out on : passer à côté de
+- mull over : réfléchir longuement à
+- nail down : préciser, fixer
+- own up to : avouer
+- pass out : s'évanouir
+- pay off : rembourser, porter ses fruits
+- phase out : supprimer progressivement
+- pick on : s'en prendre à
+- pick up on : remarquer
+- pin down : cerner, coincer
+- point out : faire remarquer
+- pull off : réussir (un exploit)
+- pull through : s'en sortir
+- put away : ranger
+- put down : rabaisser, déposer
+- put off : remettre à plus tard
+- put up with : supporter
+- rip off : arnaquer
+- rule out : exclure
+- run into : tomber sur
+- run out of : être à court de
+- rush into : se précipiter dans
+- screw up : tout foirer
+- see through : percer à jour
+- sell out : se vendre, retourner sa veste
+- set off : partir, déclencher
+- set up : installer, piéger
+- settle down : se ranger, se calmer
+- show off : frimer
+- shut down : fermer, éteindre
+- sort out : régler, trier
+- speak up : parler plus fort, prendre la parole
+- spell out : expliquer clairement
+- stand by : soutenir, se tenir prêt
+- stand for : représenter, tolérer
+- stand out : se démarquer
+- stand up for : défendre
+- step in : intervenir
+- stick to : s'en tenir à
+- stick up for : prendre la défense de
+- take after : tenir de, ressembler à
+- take back : retirer (ses paroles)
+- take in : comprendre, héberger, duper
+- take off : décoller, enlever
+- talk down to : parler avec condescendance à
+- talk someone out of : dissuader quelqu'un de
+- tell off : réprimander
+- think over : réfléchir à
+- throw up : vomir
+- tip off : avertir, renseigner
+- track down : retrouver, localiser
+- turn down : refuser, baisser
+- turn out : s'avérer
+- turn up : arriver, se présenter
+- use up : épuiser
+- wear off : se dissiper
+- wear out : user, épuiser
+- weigh up : peser le pour et le contre
+- work out : s'entraîner, trouver une solution
+- wrap up : conclure
+- write off : considérer comme perdu, passer en pertes
+
+### Idiomes
+
+- a blessing in disguise : un mal pour un bien
+- a dime a dozen : à la pelle, très commun
+- a far cry from : très éloigné de
+- a piece of cake : du gâteau
+- a pain in the neck : une plaie, un casse-pieds
+- a slap in the face : une gifle, un affront
+- a storm in a teacup : une tempête dans un verre d'eau
+- a wild goose chase : une entreprise vaine
+- an arm and a leg : les yeux de la tête
+- against all odds : contre toute attente
+- back to square one : retour à la case départ
+- beat around the bush : tourner autour du pot
+- bite off more than you can chew : avoir les yeux plus gros que le ventre
+- bite the bullet : prendre son courage à deux mains
+- bite the dust : mordre la poussière
+- break the ice : briser la glace
+- burn the midnight oil : travailler tard dans la nuit
+- by the book : selon les règles
+- call it a day : s'arrêter là pour aujourd'hui
+- call the shots : prendre les décisions
+- cross that bridge when we come to it : on verra le moment venu
+- cut corners : bâcler pour économiser
+- cut to the chase : aller droit au but
+- down the drain : gaspillé, perdu
+- face the music : assumer les conséquences
+- get cold feet : avoir la trouille au dernier moment
+- get out of hand : devenir incontrôlable
+- give someone the benefit of the doubt : accorder à quelqu'un le bénéfice du doute
+- go back to the drawing board : tout reprendre à zéro
+- go the extra mile : faire un effort supplémentaire
+- hit the nail on the head : mettre le doigt dessus
+- hit the road : prendre la route, partir
+- hit the sack : aller se coucher
+- in the long run : à la longue
+- jump the gun : agir trop tôt
+- jump on the bandwagon : suivre le mouvement
+- keep a low profile : se faire discret
+- keep one's head above water : se maintenir à flot
+- kill two birds with one stone : faire d'une pierre deux coups
+- leave no stone unturned : remuer ciel et terre
+- let the cat out of the bag : vendre la mèche
+- lose one's temper : se mettre en colère
+- make ends meet : joindre les deux bouts
+- miss the boat : rater le coche
+- my two cents : mon humble avis
+- not my cup of tea : pas mon truc
+- on thin ice : en terrain glissant
+- once in a blue moon : tous les trente-six du mois
+- out of the blue : de façon inattendue
+- pull someone's leg : faire marcher quelqu'un
+- pull strings : faire jouer ses relations
+- raise the bar : placer la barre plus haut
+- read between the lines : lire entre les lignes
+- ring a bell : dire quelque chose
+- rock the boat : faire des vagues
+- sit on the fence : ne pas prendre parti
+- spill the beans : vendre la mèche, tout raconter
+- steal someone's thunder : voler la vedette à quelqu'un
+- take it with a grain of salt : prendre avec des pincettes
+- take the bull by the horns : prendre le taureau par les cornes
+- the ball is in your court : la balle est dans ton camp
+- the elephant in the room : le sujet que tout le monde évite
+- the last straw : la goutte d'eau qui fait déborder le vase
+- the tip of the iceberg : la partie émergée de l'iceberg
+- throw in the towel : jeter l'éponge
+- tie the knot : se marier
+- under the weather : patraque
+- up in the air : encore incertain
+- walk on eggshells : marcher sur des œufs
+- when pigs fly : quand les poules auront des dents
+- your guess is as good as mine : je n'en sais pas plus que toi
+
+## Palier 4 : C2, langue soutenue et littéraire
+
+### Verbes
+
+- abate : s'atténuer
+- abide by : respecter, se soumettre à
+- abhor : avoir en horreur
+- admonish : réprimander
+- alleviate : soulager
+- ascertain : établir, vérifier
+- bemoan : déplorer
+- bequeath : léguer
+- beset : assaillir
+- bolster : renforcer
+- bristle : se hérisser
+- broach : aborder (un sujet délicat)
+- cajole : enjôler
+- circumvent : contourner
+- coerce : contraindre
+- condone : tolérer, fermer les yeux sur
+- corroborate : corroborer
+- curtail : restreindre
+- debunk : démystifier, démonter
+- decry : dénoncer
+- deride : tourner en dérision
+- dissuade : dissuader
+- elucidate : élucider
+- embezzle : détourner des fonds
+- encroach on : empiéter sur
+- enthrall : captiver
+- eschew : éviter, renoncer à
+- exacerbate : aggraver
+- exonerate : disculper
+- expedite : accélérer
+- flout : bafouer
+- forgo : renoncer à
+- galvanize : galvaniser
+- glean : glaner
+- goad : pousser, aiguillonner
+- hamper : entraver
+- harness : exploiter, maîtriser
+- heed : tenir compte de
+- impede : entraver, gêner
+- impinge on : empiéter sur
+- instigate : provoquer, être à l'origine de
+- jeopardize : mettre en péril
+- languish : languir
+- lament : se lamenter sur
+- loathe : détester
+- meander : serpenter
+- mitigate : atténuer
+- muster : rassembler
+- obfuscate : obscurcir
+- ostracize : ostraciser, mettre au ban
+- placate : apaiser
+- plummet : chuter brutalement
+- ponder : méditer, réfléchir
+- preclude : empêcher, exclure
+- quell : réprimer, étouffer
+- rebuke : réprimander
+- recant : se rétracter
+- relinquish : abandonner, céder
+- renounce : renoncer à
+- repudiate : rejeter, renier
+- rescind : annuler, abroger
+- revere : vénérer
+- scoff : se moquer
+- scold : gronder
+- scrutinize : examiner minutieusement
+- shun : fuir, éviter
+- smother : étouffer
+- spurn : rejeter avec mépris
+- squander : gaspiller
+- stifle : étouffer
+- subdue : maîtriser, soumettre
+- substantiate : étayer
+- supersede : remplacer
+- tarnish : ternir
+- thwart : contrecarrer
+- vilify : calomnier
+- vindicate : justifier, innocenter
+- waver : vaciller, hésiter
+- wield : manier, exercer
+- wince : tressaillir
+- wrest : arracher
+- writhe : se tordre
+
+### Noms
+
+- acumen : perspicacité
+- animosity : animosité
+- aplomb : assurance, aplomb
+- backlash : réaction hostile, contrecoup
+- bigotry : sectarisme
+- candor : franchise
+- caveat : réserve, mise en garde
+- chagrin : dépit
+- conundrum : casse-tête
+- crux : point crucial
+- dearth : pénurie
+- demise : disparition, fin
+- discrepancy : écart, divergence
+- disdain : dédain
+- fallacy : erreur de raisonnement
+- foresight : prévoyance
+- fortitude : force d'âme
+- gist : essentiel
+- hubris : orgueil démesuré
+- impetus : impulsion, élan
+- inkling : soupçon, petite idée
+- malice : méchanceté
+- misnomer : appellation trompeuse
+- onslaught : assaut
+- paradigm : paradigme
+- plight : situation difficile
+- predicament : situation délicate
+- propensity : propension
+- quagmire : bourbier
+- rapport : bonne entente
+- remorse : remords
+- resilience : résilience
+- scapegoat : bouc émissaire
+- schism : schisme
+- semblance : apparence
+- sycophant : flagorneur
+- tenet : principe
+- tirade : diatribe
+- turmoil : tourmente
+- upheaval : bouleversement
+- zeal : zèle
+
+### Adjectifs et adverbes
+
+- aloof : distant
+- apprehensive : inquiet
+- arduous : ardu
+- astute : astucieux, fin
+- audacious : audacieux
+- benign : bénin, bienveillant
+- blatant : flagrant
+- brazen : effronté
+- callous : insensible
+- candid : franc
+- capricious : capricieux
+- complacent : suffisant, trop sûr de soi
+- conspicuous : voyant, manifeste
+- contentious : controversé
+- convoluted : alambiqué
+- cumbersome : encombrant, lourd
+- cursory : superficiel, rapide
+- deceitful : trompeur
+- despondent : abattu
+- diligent : appliqué
+- disingenuous : hypocrite, peu sincère
+- dubious : douteux
+- ebullient : exubérant
+- egregious : flagrant, énorme
+- elusive : insaisissable
+- ephemeral : éphémère
+- erudite : érudit
+- fastidious : pointilleux
+- feasible : réalisable
+- fickle : inconstant
+- flippant : désinvolte
+- frugal : économe
+- futile : vain, inutile
+- gregarious : sociable
+- haughty : hautain
+- imperative : impératif
+- incumbent : en poste, sortant
+- indelible : indélébile
+- ineffable : indicible
+- inherent : inhérent
+- innocuous : inoffensif
+- insidious : insidieux
+- intrepid : intrépide
+- irrevocable : irrévocable
+- laconic : laconique
+- lavish : somptueux, prodigue
+- lethargic : léthargique
+- listless : apathique
+- lucid : lucide
+- ludicrous : ridicule
+- magnanimous : magnanime
+- meticulous : méticuleux
+- moot : discutable, sans objet
+- mundane : banal
+- nefarious : infâme
+- notwithstanding : nonobstant
+- oblivious : inconscient de
+- obnoxious : odieux
+- obsequious : obséquieux
+- ominous : inquiétant, de mauvais augure
+- ostensibly : en apparence
+- pedantic : pédant
+- pensive : pensif
+- pernicious : pernicieux
+- petulant : irritable, boudeur
+- pompous : pompeux
+- pragmatic : pragmatique
+- precarious : précaire
+- presumptuous : présomptueux
+- prolific : prolifique
+- quaint : pittoresque, désuet
+- querulous : geignard
+- rampant : endémique, effréné
+- reticent : réservé
+- ruthless : impitoyable
+- sagacious : sagace
+- scathing : cinglant
+- serendipitous : fortuit et heureux
+- spurious : fallacieux
+- squalid : sordide
+- stoic : stoïque
+- surreptitious : furtif
+- tacit : tacite
+- tantamount to : équivalent à
+- tenacious : tenace
+- tenuous : ténu
+- trite : banal, éculé
+- ubiquitous : omniprésent
+- unwieldy : peu maniable
+- vehement : véhément
+- venerable : vénérable
+- vindictive : rancunier
+- volatile : instable
+- wary : méfiant
+- whimsical : fantasque
+- wistful : mélancolique
+- wry : ironique
+- zealous : zélé
+
+## Palier 5 : Films et oral, l'anglais parlé
+
+### Mots familiers
+
+- ain't : n'est pas, ne suis pas
+- gonna : vais, va (going to)
+- wanna : veux (want to)
+- gotta : dois (got to)
+- dude : mec
+- bloke : type (britannique)
+- guy : gars
+- chick : nana
+- buddy : pote
+- mate : pote (britannique)
+- bro : frérot
+- kid : gamin
+- cop : flic
+- jerk : abruti
+- moron : crétin
+- loser : minable
+- creep : type louche
+- scumbag : ordure
+- asshole : connard
+- bastard : salaud
+- bitch : salope
+- bullshit : conneries
+- crap : merde, camelote
+- damn : zut, sacré
+- bloody : sacré (britannique)
+- shit : merde
+- fuck : putain
+- freak : taré
+- nuts : cinglé
+- bonkers : dingue
+- wasted : bourré
+- hammered : ivre mort
+- broke : fauché
+- loaded : bourré de fric
+- dough : fric
+- bucks : dollars
+- grand : mille dollars
+- wheels : bagnole
+- gig : concert, petit boulot
+- booze : alcool, picole
+- ride : voiture, trajet
+- hood : quartier
+- beef : embrouille
+- hustle : arnaque, se démener
+- snitch : balance
+- rat : balance
+- shrink : psy
+- sucker : pigeon
+- badass : dur à cuire
+- legit : réglo
+- sketchy : louche
+- lame : nul
+- awesome : génial
+- sick : génial, malade
+- pissed : énervé (américain), ivre (britannique)
+- knackered : crevé (britannique)
+- gutted : effondré (britannique)
+- pal : copain
+- hooker : prostituée
+
+### Expressions de films
+
+- Back off! : recule !
+- Beats me : aucune idée
+- Bite me : va te faire voir
+- Busted! : pris sur le fait !
+- Calm your tits : calme-toi
+- Cut it out! : arrête ça !
+- Cut the crap : arrête tes conneries
+- Don't push it : n'abuse pas
+- Don't push your luck : ne tente pas le diable
+- Don't sweat it : ne t'en fais pas
+- Easy does it : doucement
+- Fair enough : d'accord, ça se tient
+- Fat chance : aucune chance
+- Fuck off : va te faire foutre
+- Get a grip : ressaisis-toi
+- Get a life : trouve-toi une vie
+- Get lost : dégage
+- Get out of here! : sans blague !
+- Give me a break : lâche-moi
+- Go for it : vas-y, fonce
+- Good riddance : bon débarras
+- Hang in there : tiens bon
+- Hands up! : haut les mains !
+- He's got it coming : il l'aura cherché
+- Hold your horses : pas si vite
+- I don't buy it : je n'y crois pas
+- I got your back : je te couvre
+- I'll be damned : ça alors
+- I owe you one : je te revaudrai ça
+- I'm all ears : je t'écoute
+- I'm done with this : j'en ai fini avec ça
+- I'm fed up : j'en ai marre
+- I'm screwed : je suis foutu
+- It's a long shot : c'est peu probable
+- It's a no-brainer : ça ne se discute pas
+- It's on me : c'est pour moi
+- It's not rocket science : ce n'est pas sorcier
+- Knock it off : arrête ça
+- Long story short : bref
+- Mind your own business : occupe-toi de tes affaires
+- My bad : c'est ma faute
+- No hard feelings : sans rancune
+- No way : pas question, sans blague
+- Nice try : bien essayé
+- Not a chance : aucune chance
+- Over my dead body : il faudra me passer sur le corps
+- Piss off : fous le camp
+- Point taken : message reçu
+- Save it : garde ça pour toi
+- Say no more : pas besoin d'en dire plus
+- Screw you : va te faire voir
+- Shut the hell up : ferme-la
+- Sleep on it : la nuit porte conseil
+- Spit it out : accouche
+- Suck it up : encaisse sans te plaindre
+- Suit yourself : comme tu voudras
+- Take a hike : va voir ailleurs
+- That's a wrap : c'est dans la boîte
+- That's the spirit : à la bonne heure
+- The hell with it : tant pis, au diable
+- There you go : et voilà
+- This is bullshit : c'est n'importe quoi
+- This is on you : c'est ta responsabilité
+- Tough luck : pas de chance, tant pis
+- Watch your mouth : surveille ton langage
+- Watch your back : fais attention à toi
+- We're even : on est quittes
+- What a bummer : quelle poisse
+- What are the odds? : quelle coïncidence !
+- What's the catch? : où est l'arnaque ?
+- What's your deal? : c'est quoi ton problème ?
+- Who cares? : on s'en fiche
+- You can say that again : tu l'as dit
+- You got me : tu m'as eu
+- You're kidding : tu plaisantes
+- You're on : pari tenu
+- You've got a nerve : tu ne manques pas de culot
+- You wish : tu peux toujours rêver
